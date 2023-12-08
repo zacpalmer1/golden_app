@@ -5,55 +5,116 @@
 //  Created by Zachary Palmer on 10/25/23.
 //
 import SwiftUI
-
+struct VisualEffectView: UIViewRepresentable {
+    var effect: UIVisualEffect?
+    func makeUIView(context: UIViewRepresentableContext<Self>) -> UIVisualEffectView { UIVisualEffectView() }
+    func updateUIView(_ uiView: UIVisualEffectView, context: UIViewRepresentableContext<Self>) { uiView.effect = effect }
+}
 struct Home: View {
+    @Namespace var animation
+    @State var expand = false
     var body: some View {
-        VStack{
-            ScrollView(.vertical, showsIndicators: false){
-                VStack(spacing:0){
-                   // ForEach(MockData.items){ item in
-                    
+        
+            VStack{
+                ZStack{
                     Image("test")
                         .resizable()
-                        .frame(width:345, height:640)
-                        .cornerRadius(15)
-                        .containerRelativeFrame(.vertical, count: 1, spacing: 12)
-                        .scrollTransition{ content, phase in
-                            content
-                                .opacity(phase.isIdentity ? 1 : 0.5)
-                                .scaleEffect(x: phase.isIdentity ? 1 : 0.7,
-                                                y: phase.isIdentity ? 1 : 0.7)
-                            }
-                            
+                        .frame(width: .infinity, height: .infinity)
+                        .ignoresSafeArea()
+                    // .padding(.bottom, 20)
+                    Rectangle()
+                        .foregroundStyle(.bar)
+                        .ignoresSafeArea()
+                ScrollView(.vertical, showsIndicators: false){
+                    
+                    VStack(spacing:0){
+                        // ForEach(MockData.items){ item in
                         
-                    Image("test3")
-                        .resizable()
-                        .frame(width:345, height:640)
-                        .cornerRadius(15)
-                        .containerRelativeFrame(.vertical, count: 1, spacing: 12)
-                        .scrollTransition{ content, phase in
-                            content
-                                .opacity(phase.isIdentity ? 1 : 0.5)
-                                .scaleEffect(x: phase.isIdentity ? 1 : 0.7,
-                                             y: phase.isIdentity ? 1 : 0.7)
-                        }
-                    Image("test4")
-                        .resizable()
-                        .frame(width:345, height:640)
-                        .cornerRadius(15)
-                        .containerRelativeFrame(.vertical, count: 1, spacing: 12)
-                        .scrollTransition{ content, phase in
-                            content
-                                .opacity(phase.isIdentity ? 1 : 0.5)
-                                .scaleEffect(x: phase.isIdentity ? 1 : 0.7,
-                                             y: phase.isIdentity ? 1 : 0.7)
-                        }
-                    //}
+                        Image("test")
+                            
+                            .resizable()
+                            .frame(width:345, height:640)
+                            .cornerRadius(15)
+                            .containerRelativeFrame(.vertical, count: 1, spacing: 12)
+                            .scrollTransition{ content, phase in
+                                content
+                                    .opacity(phase.isIdentity ? 1 : 0.5)
+                                    .scaleEffect(x: phase.isIdentity ? 1 : 0.7,
+                                                 y: phase.isIdentity ? 1 : 0.7)
+                            }
+                            .tag(1)
+                        
+                        
+                        Image("test3")
+                            .resizable()
+                            .frame(width:345, height:640)
+                            .cornerRadius(15)
+                            .aspectRatio(contentMode: .fill)
+                            .clipped()
+                            .containerRelativeFrame(.vertical, count: 1, spacing: 12)
+                            .scrollTransition{ content, phase in
+                                content
+                                    .opacity(phase.isIdentity ? 1 : 0.5)
+                                    .scaleEffect(x: phase.isIdentity ? 1 : 0.7,
+                                                 y: phase.isIdentity ? 1 : 0.7)
+                            }
+                        Image("test4")
+                            .resizable()
+                            .frame(width:345, height:640)
+                            .cornerRadius(15)
+                            .containerRelativeFrame(.vertical, count: 1, spacing: 12)
+                            .scrollTransition{ content, phase in
+                                content
+                                    .opacity(phase.isIdentity ? 1 : 0.5)
+                                    .scaleEffect(x: phase.isIdentity ? 1 : 0.7,
+                                                 y: phase.isIdentity ? 1 : 0.7)
+                            }
+                        Image("test5")
+                            .resizable()
+                            .frame(width:345, height:640)
+                            .cornerRadius(15)
+                            .containerRelativeFrame(.vertical, count: 1, spacing: 12)
+                            .scrollTransition{ content, phase in
+                                content
+                                    .opacity(phase.isIdentity ? 1 : 0.5)
+                                    .scaleEffect(x: phase.isIdentity ? 1 : 0.7,
+                                                 y: phase.isIdentity ? 1 : 0.7)
+                            }
+                        Image("test6")
+                            .resizable()
+                            .frame(width:345, height:640)
+                            .cornerRadius(15)
+                            .containerRelativeFrame(.vertical, count: 1, spacing: 12)
+                            .scrollTransition{ content, phase in
+                                content
+                                    .opacity(phase.isIdentity ? 1 : 0.5)
+                                    .scaleEffect(x: phase.isIdentity ? 1 : 0.7,
+                                                 y: phase.isIdentity ? 1 : 0.7)
+                            }
+                        Image("test7")
+                            .resizable()
+                            .frame(width:345, height:640)
+                            .cornerRadius(15)
+                            .containerRelativeFrame(.vertical, count: 1, spacing: 12)
+                            .scrollTransition{ content, phase in
+                                content
+                                    .opacity(phase.isIdentity ? 1 : 0.5)
+                                    .scaleEffect(x: phase.isIdentity ? 1 : 0.7,
+                                                 y: phase.isIdentity ? 1 : 0.7)
+                          
+                            }
+                        //}
+                    }
+                    
+                    .scrollTargetLayout()
+                    
                 }
-                .scrollTargetLayout()
+                .frame(width:345, height:650)
+                .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                .scrollTargetBehavior(.paging)
+                //UserBubble(animation: animation, expand: $expand)
             }
-            .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-            .scrollTargetBehavior(.paging)
+                
         }
         
     }
@@ -63,17 +124,3 @@ struct Home: View {
     Home()
 }
     
-struct Item: Identifiable {
-    let id = UUID()
-    let color: Color
-    let count: Int
-}
-
-struct MockData {
-    static var items = [Item(color: .blue, count: 1),
-                        Item(color: .orange, count: 2),
-                        Item(color: .yellow, count: 3),
-                        Item(color: .red, count: 4),
-                        Item(color: .green, count: 5),
-                        Item(color: .pink, count: 6)]
-}

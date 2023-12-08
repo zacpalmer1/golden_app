@@ -7,11 +7,7 @@
 
 import SwiftUI
 
-struct VisualEffectView: UIViewRepresentable {
-    var effect: UIVisualEffect?
-    func makeUIView(context: UIViewRepresentableContext<Self>) -> UIVisualEffectView { UIVisualEffectView() }
-    func updateUIView(_ uiView: UIVisualEffectView, context: UIViewRepresentableContext<Self>) { uiView.effect = effect }
-}
+
 
 struct ContentView: View {
     
@@ -21,19 +17,42 @@ struct ContentView: View {
     
     
     var body: some View {
-        VStack{
-            ZStack{
-                Home()
-                    .padding(.bottom, 40)
-                    .offset(y:15)
-                TabBarView(selectedTabs: $selectedTab)
-                TopBarView()
-                    .offset(y:-362)
-                    .padding(.bottom)
-                UserBubble(animation: animation, expand: $expand)
-                    .offset(y:expand ? 0 : 0)
-            }
-        }
+        VStack {
+                    ZStack {
+                        // Views corresponding to the selected tab
+                        switch selectedTab {
+                        case .home:
+                            Home().zIndex(0)
+                            TestTabBarView(selectedTab: $selectedTab)
+                            TopBarView()
+                                .offset(y: -362)
+                                .padding(.bottom)
+                            UserBubble(animation: animation, expand: $expand)
+                        case .favorites:
+                            Favorites().zIndex(0)
+                            TestTabBarView(selectedTab: $selectedTab)
+                            TopBarView()
+                                .offset(y: -362)
+                                .padding(.bottom)
+                            UserBubble(animation: animation, expand: $expand)
+                        case .activity:
+                            Activity().zIndex(0)
+                            TestTabBarView(selectedTab: $selectedTab)
+                            TopBarView()
+                                .offset(y: -362)
+                                .padding(.bottom)
+                            UserBubble(animation: animation, expand: $expand)
+                        case .profile:
+                            Profile().zIndex(0)
+                            TestTabBarView(selectedTab: $selectedTab)
+                            TopBarView()
+                                .offset(y: -362)
+                                .padding(.bottom)
+                        }
+                        
+                       
+                    }
+                }
     }
 }
 

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C0B0AFB2B21557D008FD4CC /* UserBubbleExpanded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0B0AFA2B21557D008FD4CC /* UserBubbleExpanded.swift */; };
+		8C0B0AFF2B226A21008FD4CC /* TestHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0B0AFE2B226A21008FD4CC /* TestHome.swift */; };
+		8C0B0B042B22723D008FD4CC /* TimerSplash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0B0B032B22723D008FD4CC /* TimerSplash.swift */; };
 		8C218E4E2AF1C93700E0BBF2 /* Pods_golden.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5C8C1CE0C6B6415BEA34C3 /* Pods_golden.framework */; };
 		8C218E522AF2A9D500E0BBF2 /* TopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C218E512AF2A9D500E0BBF2 /* TopBarView.swift */; };
 		8C218E542AF46B5000E0BBF2 /* TestTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C218E532AF46B5000E0BBF2 /* TestTabBarView.swift */; };
@@ -26,6 +29,9 @@
 /* Begin PBXFileReference section */
 		0DE91D2D91CFE7367BD618E6 /* Pods-golden.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-golden.release.xcconfig"; path = "Target Support Files/Pods-golden/Pods-golden.release.xcconfig"; sourceTree = "<group>"; };
 		43B5117A104CEA3906CF6333 /* Pods-golden.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-golden.debug.xcconfig"; path = "Target Support Files/Pods-golden/Pods-golden.debug.xcconfig"; sourceTree = "<group>"; };
+		8C0B0AFA2B21557D008FD4CC /* UserBubbleExpanded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBubbleExpanded.swift; sourceTree = "<group>"; };
+		8C0B0AFE2B226A21008FD4CC /* TestHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHome.swift; sourceTree = "<group>"; };
+		8C0B0B032B22723D008FD4CC /* TimerSplash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerSplash.swift; sourceTree = "<group>"; };
 		8C218E512AF2A9D500E0BBF2 /* TopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarView.swift; sourceTree = "<group>"; };
 		8C218E532AF46B5000E0BBF2 /* TestTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTabBarView.swift; sourceTree = "<group>"; };
 		8C9831D32AE849E300DA5E0A /* golden.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = golden.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +78,40 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8C0B0AFC2B215605008FD4CC /* UserBubble */ = {
+			isa = PBXGroup;
+			children = (
+				8C0B0AFA2B21557D008FD4CC /* UserBubbleExpanded.swift */,
+				8C9831EF2AEC1E4500DA5E0A /* UserBubble.swift */,
+			);
+			path = UserBubble;
+			sourceTree = "<group>";
+		};
+		8C0B0AFD2B215620008FD4CC /* TopBar */ = {
+			isa = PBXGroup;
+			children = (
+				8C218E512AF2A9D500E0BBF2 /* TopBarView.swift */,
+			);
+			path = TopBar;
+			sourceTree = "<group>";
+		};
+		8C0B0B002B226A25008FD4CC /* TestGroup */ = {
+			isa = PBXGroup;
+			children = (
+				8C218E532AF46B5000E0BBF2 /* TestTabBarView.swift */,
+				8C0B0AFE2B226A21008FD4CC /* TestHome.swift */,
+			);
+			path = TestGroup;
+			sourceTree = "<group>";
+		};
+		8C0B0B022B227221008FD4CC /* SplashView */ = {
+			isa = PBXGroup;
+			children = (
+				8C0B0B032B22723D008FD4CC /* TimerSplash.swift */,
+			);
+			path = SplashView;
+			sourceTree = "<group>";
+		};
 		8C9831CA2AE849E300DA5E0A = {
 			isa = PBXGroup;
 			children = (
@@ -94,8 +134,10 @@
 			isa = PBXGroup;
 			children = (
 				8CA9E6152AF1438C00D15B94 /* TabBarView */,
-				8C9831EF2AEC1E4500DA5E0A /* UserBubble.swift */,
-				8C218E512AF2A9D500E0BBF2 /* TopBarView.swift */,
+				8C0B0B022B227221008FD4CC /* SplashView */,
+				8C0B0AFC2B215605008FD4CC /* UserBubble */,
+				8C0B0AFD2B215620008FD4CC /* TopBar */,
+				8C0B0B002B226A25008FD4CC /* TestGroup */,
 				8C9831E42AE9C8F300DA5E0A /* Views */,
 				8C9831D62AE849E300DA5E0A /* goldenApp.swift */,
 				8C9831D82AE849E300DA5E0A /* ContentView.swift */,
@@ -129,7 +171,6 @@
 			isa = PBXGroup;
 			children = (
 				8CA9E6162AF143A100D15B94 /* TabBarView.swift */,
-				8C218E532AF46B5000E0BBF2 /* TestTabBarView.swift */,
 			);
 			path = TabBarView;
 			sourceTree = "<group>";
@@ -248,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C0B0AFF2B226A21008FD4CC /* TestHome.swift in Sources */,
 				8C218E522AF2A9D500E0BBF2 /* TopBarView.swift in Sources */,
 				8C9831EA2AE9C96900DA5E0A /* Activity.swift in Sources */,
 				8CA9E6172AF143A100D15B94 /* TabBarView.swift in Sources */,
@@ -255,6 +297,8 @@
 				8C9831EE2AE9FC4500DA5E0A /* Timer.swift in Sources */,
 				8C9831D92AE849E300DA5E0A /* ContentView.swift in Sources */,
 				8C9831E82AE9C94B00DA5E0A /* Favorites.swift in Sources */,
+				8C0B0B042B22723D008FD4CC /* TimerSplash.swift in Sources */,
+				8C0B0AFB2B21557D008FD4CC /* UserBubbleExpanded.swift in Sources */,
 				8C9831E62AE9C92E00DA5E0A /* Home.swift in Sources */,
 				8C9831F02AEC1E4600DA5E0A /* UserBubble.swift in Sources */,
 				8C9831D72AE849E300DA5E0A /* goldenApp.swift in Sources */,
