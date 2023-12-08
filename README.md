@@ -23,7 +23,7 @@
   - Allow user to scroll though student services
   - Enable user to call any of services provided 
   
-  <img width="250" alt="Screenshot 2023-04-07 at 5 23 09 PM" src="https://github.com/zacpalmer1/golden_app/assets/75393933/7dfc32e6-3a95-40b5-822c-f429003de4ca"> 
+  <img width="250" alt="Screenshot 2023-04-07 at 5 23 09 PM" src="https://github.com/zacpalmer1/golden_app/assets/75393933/a30f6760-c31b-4fba-a878-e89d0e6a6766"> 
   
 
 ### Favorites 
