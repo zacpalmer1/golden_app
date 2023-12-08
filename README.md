@@ -1,7 +1,7 @@
 # golden 
 ## Social Media Application
 
-<img width="200" alt="Screenshot 2023-03-16 at 7 32 32 PM" src="https://github.com/zacpalmer1/golden_app/assets/75393933/a03fab39-6daf-40f0-a5ff-ba5c7fae0f97">
+<img width="200" alt="Screenshot 2023-03-16 at 7 32 32 PM" src="https://user-images.githubusercontent.com/75393933/226000780-5e2f7756-0c09-41be-ad54-b78fcbd8845a.png">
 
 
 ## Goals: 
