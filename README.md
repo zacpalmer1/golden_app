@@ -18,7 +18,8 @@
 #### Backend Goals
   - Timer connected to API that pulls Sunset Time 🟡
   - TimerEngine Calculates time until Sunset 🟢
-  <img width="250" alt="Screenshot 2023-04-07 at 5 23 09 PM" src="https://github.com/zacpalmer1/golden_app/assets/75393933/f0b025a9-a672-4df7-bf43-a619d7d57863"> 
+  <img width="250" alt="Screenshot 2023-04-07 at 5 23 09 PM" src="https://github.com/zacpalmer1/golden_app/assets/75393933/71c16054-9192-4b41-8bd5-d2a0e9c8179b"> 
+
 
 
 ### Feed
