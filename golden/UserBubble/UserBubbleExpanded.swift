@@ -41,13 +41,16 @@ struct UserBubbleExpanded: View {
                         .font(.system(size: 15, weight: .heavy, design: .rounded))
                         .foregroundColor(.white)
                 }
+                
+                .padding(.bottom, 5)
             }
-            .offset(y:-15)
-            ScrollView{
+            .offset(y:-10)
+            
+            ScrollView(.vertical, showsIndicators: false){
                 VStack(spacing: 5){
                     VStack{
                         Text("November")
-                            
+                        
                             .font(.system(size: 35, weight: .heavy, design: .rounded))
                     }
                     .frame(maxWidth: 350, alignment: .leading)
@@ -59,27 +62,27 @@ struct UserBubbleExpanded: View {
                                 .aspectRatio(contentMode: .fill)
                                 .frame(width: 110, height:180)
                                 .cornerRadius(8)
-                                
+                            
                             Image("test3")
                                 .resizable()
                                 .clipped()
                                 .aspectRatio(contentMode: .fill)
                                 .frame(width: 110, height:180)
                                 .cornerRadius(8)
-                                
+                            
                             Image("test4")
                                 .resizable()
                                 .clipped()
                                 .aspectRatio(contentMode: .fill)
                                 .frame(width: 110, height:180)
                                 .cornerRadius(8)
-                                
+                            
                         }
                         Spacer()
                     }
                     VStack{
                         Text("October")
-                            
+                        
                             .font(.system(size: 35, weight: .heavy, design: .rounded))
                     }
                     .frame(maxWidth: 350, alignment: .leading)
@@ -106,7 +109,7 @@ struct UserBubbleExpanded: View {
                     Spacer()
                     VStack{
                         Text("September")
-                            
+                        
                             .font(.system(size: 35, weight: .heavy, design: .rounded))
                     }
                     .frame(maxWidth: 350, alignment: .leading)
@@ -126,9 +129,17 @@ struct UserBubbleExpanded: View {
                             .cornerRadius(8)
                             .foregroundStyle(.ultraThickMaterial)
                     }
+                    
                 }
+                
+                
             }
+            
         }
+        .frame(width: .infinity, height:600)
+        .containerRelativeFrame(.vertical, count: 2, spacing: 15)
+        .scrollTargetBehavior(.paging)
+        .offset(y:-135)
     }
 }
 

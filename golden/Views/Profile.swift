@@ -107,7 +107,7 @@ struct Profile: View {
                     }
                     
                 }
-                
+                .scrollTargetBehavior(.paging)
             }
             .offset(y: 80)
         }

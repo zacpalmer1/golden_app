@@ -35,7 +35,7 @@ struct UserBubble: View {
                     Image("profile")
                         .resizable()
                         .frame(width: expand ? height : 35, height: expand ? height : 35)
-                        .offset(x:0, y: expand ? -240 :300)
+                        .offset(x:0, y: expand ? -250 :300)
                         //.foregroundColor(.red)
                 }
                 if !expand{
