@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8C0B0AFB2B21557D008FD4CC /* UserBubbleExpanded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0B0AFA2B21557D008FD4CC /* UserBubbleExpanded.swift */; };
-		8C0B0AFF2B226A21008FD4CC /* TestHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0B0AFE2B226A21008FD4CC /* TestHome.swift */; };
 		8C0B0B042B22723D008FD4CC /* TimerSplash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0B0B032B22723D008FD4CC /* TimerSplash.swift */; };
 		8C218E4E2AF1C93700E0BBF2 /* Pods_golden.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5C8C1CE0C6B6415BEA34C3 /* Pods_golden.framework */; };
 		8C218E522AF2A9D500E0BBF2 /* TopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C218E512AF2A9D500E0BBF2 /* TopBarView.swift */; };
@@ -30,7 +29,6 @@
 		0DE91D2D91CFE7367BD618E6 /* Pods-golden.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-golden.release.xcconfig"; path = "Target Support Files/Pods-golden/Pods-golden.release.xcconfig"; sourceTree = "<group>"; };
 		43B5117A104CEA3906CF6333 /* Pods-golden.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-golden.debug.xcconfig"; path = "Target Support Files/Pods-golden/Pods-golden.debug.xcconfig"; sourceTree = "<group>"; };
 		8C0B0AFA2B21557D008FD4CC /* UserBubbleExpanded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBubbleExpanded.swift; sourceTree = "<group>"; };
-		8C0B0AFE2B226A21008FD4CC /* TestHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHome.swift; sourceTree = "<group>"; };
 		8C0B0B032B22723D008FD4CC /* TimerSplash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerSplash.swift; sourceTree = "<group>"; };
 		8C218E512AF2A9D500E0BBF2 /* TopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarView.swift; sourceTree = "<group>"; };
 		8C218E532AF46B5000E0BBF2 /* TestTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTabBarView.swift; sourceTree = "<group>"; };
@@ -99,7 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				8C218E532AF46B5000E0BBF2 /* TestTabBarView.swift */,
-				8C0B0AFE2B226A21008FD4CC /* TestHome.swift */,
 			);
 			path = TestGroup;
 			sourceTree = "<group>";
@@ -193,6 +190,8 @@
 			dependencies = (
 			);
 			name = golden;
+			packageProductDependencies = (
+			);
 			productName = golden;
 			productReference = 8C9831D32AE849E300DA5E0A /* golden.app */;
 			productType = "com.apple.product-type.application";
@@ -221,6 +220,9 @@
 				Base,
 			);
 			mainGroup = 8C9831CA2AE849E300DA5E0A;
+			packageReferences = (
+				8C325BE92B2922AE006BE508 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
+			);
 			productRefGroup = 8C9831D42AE849E300DA5E0A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -289,7 +291,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C0B0AFF2B226A21008FD4CC /* TestHome.swift in Sources */,
 				8C218E522AF2A9D500E0BBF2 /* TopBarView.swift in Sources */,
 				8C9831EA2AE9C96900DA5E0A /* Activity.swift in Sources */,
 				8CA9E6172AF143A100D15B94 /* TabBarView.swift in Sources */,
@@ -518,6 +519,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8C325BE92B2922AE006BE508 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 8C9831CB2AE849E300DA5E0A /* Project object */;
 }

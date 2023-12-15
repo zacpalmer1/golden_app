@@ -72,7 +72,7 @@ struct UserBubble: View {
                 }
                 
             }
-            .animation(.snappy(duration: 0.2))
+            .animation(.snappy(duration: 0.3))
             }
             .onTapGesture(perform: {withAnimation(.snappy()){expand.toggle()}
             })

@@ -18,41 +18,40 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-                    ZStack {
-                        // Views corresponding to the selected tab
-                        switch selectedTab {
-                        case .home:
-                            Home().zIndex(0)
-                            TestTabBarView(selectedTab: $selectedTab)
-                            TopBarView()
-                                .offset(y: -362)
-                                .padding(.bottom)
-                            UserBubble(animation: animation, expand: $expand)
-                        case .favorites:
-                            Favorites().zIndex(0)
-                            TestTabBarView(selectedTab: $selectedTab)
-                            TopBarView()
-                                .offset(y: -362)
-                                .padding(.bottom)
-                            UserBubble(animation: animation, expand: $expand)
-                        case .activity:
-                            Activity().zIndex(0)
-                            TestTabBarView(selectedTab: $selectedTab)
-                            TopBarView()
-                                .offset(y: -362)
-                                .padding(.bottom)
-                            UserBubble(animation: animation, expand: $expand)
-                        case .profile:
-                            Profile().zIndex(0)
-                            TestTabBarView(selectedTab: $selectedTab)
-                            TopBarView()
-                                .offset(y: -362)
-                                .padding(.bottom)
-                        }
-                        
-                       
-                    }
+            ZStack {
+                // Views corresponding to the selected tab
+                switch selectedTab {
+                case .home:
+                    Home().zIndex(0)
+                    
+                    TopBarView()
+                        .offset(y: -362)
+                        .padding(.bottom)
+                    UserBubble(animation: animation, expand: $expand)
+                case .favorites:
+                    Favorites().zIndex(0)
+                    
+                    TopBarView()
+                        .offset(y: -362)
+                        .padding(.bottom)
+                    UserBubble(animation: animation, expand: $expand)
+                case .activity:
+                    Activity().zIndex(0)
+                    
+                    TopBarView()
+                        .offset(y: -362)
+                        .padding(.bottom)
+                    UserBubble(animation: animation, expand: $expand)
+                case .profile:
+                    Profile().zIndex(0)
+                    
+                    TopBarView()
+                        .offset(y: -362)
+                        .padding(.bottom)
                 }
+                TestTabBarView(selectedTab: $selectedTab)
+            }
+        }
     }
 }
 

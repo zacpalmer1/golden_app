@@ -46,100 +46,91 @@ struct UserBubbleExpanded: View {
             }
             .offset(y:-10)
             
+            VStack{
+                Text("November")
+                    .font(.system(size: 35, weight: .heavy, design: .rounded))
+                }
+            .offset(y:-10)
+                .frame(maxWidth: 350, alignment: .leading)
             ScrollView(.vertical, showsIndicators: false){
-                VStack(spacing: 5){
-                    VStack{
-                        Text("November")
-                        
-                            .font(.system(size: 35, weight: .heavy, design: .rounded))
-                    }
-                    .frame(maxWidth: 350, alignment: .leading)
-                    ScrollView{
-                        HStack{
-                            Image("test")
-                                .resizable()
-                                .clipped()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: 110, height:180)
-                                .cornerRadius(8)
-                            
-                            Image("test3")
-                                .resizable()
-                                .clipped()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: 110, height:180)
-                                .cornerRadius(8)
-                            
-                            Image("test4")
-                                .resizable()
-                                .clipped()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: 110, height:180)
-                                .cornerRadius(8)
-                            
-                        }
-                        Spacer()
-                    }
-                    VStack{
-                        Text("October")
-                        
-                            .font(.system(size: 35, weight: .heavy, design: .rounded))
-                    }
-                    .frame(maxWidth: 350, alignment: .leading)
+                VStack{
                     HStack{
-                        Image("test5")
+                        Image("test")
                             .resizable()
-                            .frame(width: 110, height:180)
                             .clipped()
                             .aspectRatio(contentMode: .fill)
-                            .cornerRadius(8)
-                        Image("test6")
-                            .resizable()
                             .frame(width: 110, height:180)
+                            .cornerRadius(8)
+                        
+                        Image("test3")
+                            .resizable()
                             .clipped()
                             .aspectRatio(contentMode: .fill)
-                            .cornerRadius(8)
-                        Image("test7")
-                            .resizable()
                             .frame(width: 110, height:180)
+                            .cornerRadius(8)
+                        
+                        Image("test4")
+                            .resizable()
                             .clipped()
                             .aspectRatio(contentMode: .fill)
+                            .frame(width: 110, height:180)
                             .cornerRadius(8)
+                        
                     }
                     Spacer()
-                    VStack{
-                        Text("September")
-                        
-                            .font(.system(size: 35, weight: .heavy, design: .rounded))
-                    }
-                    .frame(maxWidth: 350, alignment: .leading)
-                    HStack{
-                        Rectangle()
-                            .frame(width: 110, height:180)
-                            .cornerRadius(8)
-                            .foregroundStyle(.ultraThickMaterial)
-                        
-                        Rectangle()
-                            .frame(width: 110, height:180)
-                            .cornerRadius(8)
-                            .foregroundStyle(.ultraThickMaterial)
-                        
-                        Rectangle()
-                            .frame(width: 110, height:180)
-                            .cornerRadius(8)
-                            .foregroundStyle(.ultraThickMaterial)
-                    }
-                    
                 }
                 
-                
+                HStack{
+                    Image("test5")
+                        .resizable()
+                        .frame(width: 110, height:180)
+                        .clipped()
+                        .aspectRatio(contentMode: .fill)
+                        .cornerRadius(8)
+                    Image("test6")
+                        .resizable()
+                        .frame(width: 110, height:180)
+                        .clipped()
+                        .aspectRatio(contentMode: .fill)
+                        .cornerRadius(8)
+                    Image("test7")
+                        .resizable()
+                        .frame(width: 110, height:180)
+                        .clipped()
+                        .aspectRatio(contentMode: .fill)
+                        .cornerRadius(8)
+                }
+                Spacer()
+                HStack{
+                    Image("test4")
+                        .resizable()
+                        .frame(width: 110, height:180)
+                        .clipped()
+                        .aspectRatio(contentMode: .fill)
+                        .cornerRadius(8)
+                    Image("test3")
+                        .resizable()
+                        .frame(width: 110, height:180)
+                        .clipped()
+                        .aspectRatio(contentMode: .fill)
+                        .cornerRadius(8)
+                    Image("test6")
+                        .resizable()
+                        .frame(width: 110, height:180)
+                        .clipped()
+                        .aspectRatio(contentMode: .fill)
+                        .cornerRadius(8)
+                    
+                }
             }
+            .offset(y:-20)
+            
             
         }
-        .frame(width: .infinity, height:600)
+        .frame(width: .infinity, height:570)
         .containerRelativeFrame(.vertical, count: 2, spacing: 15)
         .scrollTargetBehavior(.paging)
-        .offset(y:-135)
+        .offset(y:-165)
     }
 }
 
