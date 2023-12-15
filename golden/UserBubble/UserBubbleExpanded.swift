@@ -16,10 +16,10 @@ struct UserBubbleExpanded: View {
                         .frame(width: 40, height: 6)
                         .cornerRadius(20)
                         .foregroundStyle(.gray)
-                        .offset(y:-168)
+                        .offset(y:-138)
                     Text("...")
                         .font(.system(size: 25, weight: .heavy, design: .rounded))
-                        .offset(x:155, y:-174)
+                        .offset(x:155, y:-144)
                     
                 }
                 Text("zacpalmer1")
@@ -45,93 +45,124 @@ struct UserBubbleExpanded: View {
                 .padding(.bottom, 5)
             }
             .offset(y:-10)
-            
-            VStack{
-                Text("November")
-                    .font(.system(size: 35, weight: .heavy, design: .rounded))
-                }
-            .offset(y:-10)
-                .frame(maxWidth: 350, alignment: .leading)
-            ScrollView(.vertical, showsIndicators: false){
+            ScrollView(.horizontal, showsIndicators: false){
                 VStack{
+                    Text("November")
+                        .font(.system(size: 35, weight: .heavy, design: .rounded))
+                }
+                .offset(y:-10)
+                .frame(maxWidth: 350, alignment: .leading)
+                ScrollView(.vertical, showsIndicators: false){
+                    VStack{
+                        HStack{
+                            Image("test")
+                                .resizable()
+                                .clipped()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 110, height:180)
+                                .cornerRadius(8)
+                            
+                            Image("test3")
+                                .resizable()
+                                .clipped()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 110, height:180)
+                                .cornerRadius(8)
+                            
+                            Image("test4")
+                                .resizable()
+                                .clipped()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 110, height:180)
+                                .cornerRadius(8)
+                            
+                        }
+                        Spacer()
+                    }
+                    
                     HStack{
-                        Image("test")
+                        Image("test5")
                             .resizable()
+                            .frame(width: 110, height:180)
                             .clipped()
                             .aspectRatio(contentMode: .fill)
-                            .frame(width: 110, height:180)
                             .cornerRadius(8)
-                        
-                        Image("test3")
+                        Image("test6")
                             .resizable()
+                            .frame(width: 110, height:180)
                             .clipped()
                             .aspectRatio(contentMode: .fill)
-                            .frame(width: 110, height:180)
                             .cornerRadius(8)
-                        
+                        Image("test7")
+                            .resizable()
+                            .frame(width: 110, height:180)
+                            .clipped()
+                            .aspectRatio(contentMode: .fill)
+                            .cornerRadius(8)
+                    }
+                    Spacer()
+                    HStack{
                         Image("test4")
                             .resizable()
+                            .frame(width: 110, height:180)
                             .clipped()
                             .aspectRatio(contentMode: .fill)
+                            .cornerRadius(8)
+                        Image("test3")
+                            .resizable()
                             .frame(width: 110, height:180)
+                            .clipped()
+                            .aspectRatio(contentMode: .fill)
+                            .cornerRadius(8)
+                        Image("test6")
+                            .resizable()
+                            .frame(width: 110, height:180)
+                            .clipped()
+                            .aspectRatio(contentMode: .fill)
                             .cornerRadius(8)
                         
                     }
                     Spacer()
-                }
-                
-                HStack{
-                    Image("test5")
-                        .resizable()
-                        .frame(width: 110, height:180)
-                        .clipped()
-                        .aspectRatio(contentMode: .fill)
-                        .cornerRadius(8)
-                    Image("test6")
-                        .resizable()
-                        .frame(width: 110, height:180)
-                        .clipped()
-                        .aspectRatio(contentMode: .fill)
-                        .cornerRadius(8)
-                    Image("test7")
-                        .resizable()
-                        .frame(width: 110, height:180)
-                        .clipped()
-                        .aspectRatio(contentMode: .fill)
-                        .cornerRadius(8)
-                }
-                Spacer()
-                HStack{
-                    Image("test4")
-                        .resizable()
-                        .frame(width: 110, height:180)
-                        .clipped()
-                        .aspectRatio(contentMode: .fill)
-                        .cornerRadius(8)
-                    Image("test3")
-                        .resizable()
-                        .frame(width: 110, height:180)
-                        .clipped()
-                        .aspectRatio(contentMode: .fill)
-                        .cornerRadius(8)
-                    Image("test6")
-                        .resizable()
-                        .frame(width: 110, height:180)
-                        .clipped()
-                        .aspectRatio(contentMode: .fill)
-                        .cornerRadius(8)
+                    HStack{
+                        Image("test7")
+                            .resizable()
+                            .frame(width: 110, height:180)
+                            .clipped()
+                            .aspectRatio(contentMode: .fill)
+                            .cornerRadius(8)
+                        Image("test")
+                            .resizable()
+                            .frame(width: 110, height:180)
+                            .clipped()
+                            .aspectRatio(contentMode: .fill)
+                            .cornerRadius(8)
+                        Image("test5")
+                            .resizable()
+                            .frame(width: 110, height:180)
+                            .clipped()
+                            .aspectRatio(contentMode: .fill)
+                            .cornerRadius(8)
+                        
+                    }
                     
                 }
+                
+                .offset(y:-20)
+                .scrollTargetBehavior(.paging)
+                
+                //.padding()
             }
-            .offset(y:-20)
             
+            }
+        
+            .frame(width: 350, height:565)
+            .containerRelativeFrame(.vertical, count: 2, spacing: 15)
             
+            .offset(y:-165)
+        
         }
-        .frame(width: .infinity, height:570)
-        .containerRelativeFrame(.vertical, count: 2, spacing: 15)
-        .scrollTargetBehavior(.paging)
-        .offset(y:-165)
-    }
+        
+    
 }
 
 #Preview {

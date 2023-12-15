@@ -10,16 +10,12 @@ import SwiftUI
 
 
 struct ContentView: View {
-    
     @State var selectedTab: Tabs = .home
     @State var expand = false
     @Namespace var animation
-    
-    
     var body: some View {
         VStack {
             ZStack {
-                // Views corresponding to the selected tab
                 switch selectedTab {
                 case .home:
                     Home().zIndex(0)
