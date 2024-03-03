@@ -3,7 +3,6 @@ import SwiftUI
 struct Home: View {
     @Namespace var animation
     @State var currentImageIndex = 0
-
     var body: some View {
         VStack {
             ZStack {
@@ -12,7 +11,7 @@ struct Home: View {
                     .frame(width: .infinity, height: .infinity)
                     .ignoresSafeArea()
                 Rectangle()
-                    .foregroundStyle(.bar)
+                    .foregroundStyle(.ultraThinMaterial)
                     .ignoresSafeArea()
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(spacing: 0) {
@@ -28,28 +27,32 @@ struct Home: View {
                                     .scaleEffect(x: phase.isIdentity ? 1 : 0.7,
                                                  y: phase.isIdentity ? 1 : 0.7)
                             }
-                            .tag(index)
+                            
+                            .id(index)
                     }
+                    
                 }
+                
                 .scrollTargetLayout()
             }
+               
             .frame(width: 345, height: 650)
             .padding(.all)
             .scrollTargetBehavior(.paging)
-            .background(GeometryReader {
-                Color.clear.preference(key: ViewOffsetKey.self,
-                                       value: [$0.frame(in: .global).minY])
-            })
-
             
-            }
-            .onPreferenceChange(ViewOffsetKey.self, perform: { offsets in
-                if let firstVisibleOffset = offsets.first {
-                    let newIndex = Int(firstVisibleOffset / 650) // Assuming image height is 640
-                    currentImageIndex = max(0, min(MockData.items.count - 1, newIndex))
+            Button("Change Background"){
+                if (currentImageIndex < 5){
+                    currentImageIndex += 1
                 }
-            })
+                else{
+                    currentImageIndex = 0
+                }
+            }
+                
+            }
+            
         }
+        
     }
 }
 

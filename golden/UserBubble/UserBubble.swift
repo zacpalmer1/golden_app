@@ -13,14 +13,7 @@ struct UserBubble: View {
     var height = UIScreen.main.bounds.height / 7
     var body: some View {
         ZStack{
-            Image("backdrop")
-                .resizable()
-                //.aspectRatio(contentMode: .fill)
-                .clipped()
-                
-                .cornerRadius(15)
-                .frame(maxWidth: expand ? .infinity : 350, maxHeight: expand ? .infinity : 50)
-                .offset(x:0, y: expand ? 0 : 300)
+            
             Rectangle()
                 .frame(maxWidth: expand ? .infinity : 360, maxHeight: expand ? .infinity : 52)
                 .cornerRadius(15)

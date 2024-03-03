@@ -21,7 +21,7 @@ struct Favorites: View {
                         .ignoresSafeArea()
                     // .padding(.bottom, 20)
                     Rectangle()
-                        .foregroundStyle(.bar)
+                        .foregroundStyle(.ultraThinMaterial)
                         .ignoresSafeArea()
                 ScrollView(.vertical, showsIndicators: false){
                     

@@ -23,6 +23,7 @@
 		8C9831EE2AE9FC4500DA5E0A /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9831ED2AE9FC4500DA5E0A /* Timer.swift */; };
 		8C9831F02AEC1E4600DA5E0A /* UserBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9831EF2AEC1E4500DA5E0A /* UserBubble.swift */; };
 		8CA9E6172AF143A100D15B94 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA9E6162AF143A100D15B94 /* TabBarView.swift */; };
+		8CB935B22B93CD85009F30E8 /* ScrollViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB935B12B93CD85009F30E8 /* ScrollViewTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		8C9831ED2AE9FC4500DA5E0A /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		8C9831EF2AEC1E4500DA5E0A /* UserBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBubble.swift; sourceTree = "<group>"; };
 		8CA9E6162AF143A100D15B94 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		8CB935B12B93CD85009F30E8 /* ScrollViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewTest.swift; sourceTree = "<group>"; };
 		AA5C8C1CE0C6B6415BEA34C3 /* Pods_golden.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_golden.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -138,6 +140,7 @@
 				8C9831E42AE9C8F300DA5E0A /* Views */,
 				8C9831D62AE849E300DA5E0A /* goldenApp.swift */,
 				8C9831D82AE849E300DA5E0A /* ContentView.swift */,
+				8CB935B12B93CD85009F30E8 /* ScrollViewTest.swift */,
 				8C9831DA2AE849E400DA5E0A /* Assets.xcassets */,
 				8C9831DC2AE849E400DA5E0A /* Preview Content */,
 			);
@@ -298,6 +301,7 @@
 				8C9831EE2AE9FC4500DA5E0A /* Timer.swift in Sources */,
 				8C9831D92AE849E300DA5E0A /* ContentView.swift in Sources */,
 				8C9831E82AE9C94B00DA5E0A /* Favorites.swift in Sources */,
+				8CB935B22B93CD85009F30E8 /* ScrollViewTest.swift in Sources */,
 				8C0B0B042B22723D008FD4CC /* TimerSplash.swift in Sources */,
 				8C0B0AFB2B21557D008FD4CC /* UserBubbleExpanded.swift in Sources */,
 				8C9831E62AE9C92E00DA5E0A /* Home.swift in Sources */,

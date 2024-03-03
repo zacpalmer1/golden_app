@@ -50,26 +50,45 @@ struct UserBubbleExpanded: View {
                     Text("November")
                         .font(.system(size: 35, weight: .heavy, design: .rounded))
                 }
-                .offset(y:-10)
+                .offset(y:-4)
                 .frame(maxWidth: 350, alignment: .leading)
                 ScrollView(.vertical, showsIndicators: false){
                     VStack{
                         HStack{
-                            Image("test")
-                                .resizable()
-                                .clipped()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: 110, height:180)
-                                .cornerRadius(8)
-                            
-                            Image("test3")
-                                .resizable()
-                                .clipped()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: 110, height:180)
-                                .cornerRadius(8)
-                            
-                            Image("test4")
+                            ZStack{
+                                Image("test")
+                                    .resizable()
+                                    .clipped()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: 110, height:180)
+                                    .cornerRadius(8)
+                               
+                            }
+                            ZStack{
+                                Image("test3")
+                                    .resizable()
+                                    .clipped()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: 110, height:180)
+                                    .cornerRadius(8)
+                                
+                            }
+                            ZStack{
+                                Image("test4")
+                                    .resizable()
+                                    .clipped()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: 110, height:180)
+                                    .cornerRadius(8)
+                               
+                            }
+                        }
+                        Spacer()
+                    }
+                    
+                    HStack{
+                        ZStack{
+                            Image("test5")
                                 .resizable()
                                 .clipped()
                                 .aspectRatio(contentMode: .fill)
@@ -77,28 +96,24 @@ struct UserBubbleExpanded: View {
                                 .cornerRadius(8)
                             
                         }
-                        Spacer()
-                    }
-                    
-                    HStack{
-                        Image("test5")
-                            .resizable()
-                            .frame(width: 110, height:180)
-                            .clipped()
-                            .aspectRatio(contentMode: .fill)
-                            .cornerRadius(8)
-                        Image("test6")
-                            .resizable()
-                            .frame(width: 110, height:180)
-                            .clipped()
-                            .aspectRatio(contentMode: .fill)
-                            .cornerRadius(8)
-                        Image("test7")
-                            .resizable()
-                            .frame(width: 110, height:180)
-                            .clipped()
-                            .aspectRatio(contentMode: .fill)
-                            .cornerRadius(8)
+                        ZStack{
+                            Image("test6")
+                                .resizable()
+                                .clipped()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 110, height:180)
+                                .cornerRadius(8)
+                          
+                        }
+                        ZStack{
+                            Image("test7")
+                                .resizable()
+                                .clipped()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 110, height:180)
+                                .cornerRadius(8)
+                            
+                        }
                     }
                     Spacer()
                     HStack{
