@@ -23,21 +23,21 @@ struct ContentView: View {
                     TopBarView()
                         .offset(y: -362)
                         .padding(.bottom)
-                    UserBubble(animation: animation, expand: $expand)
+                    
                 case .favorites:
                     Favorites().zIndex(0)
                     
                     TopBarView()
                         .offset(y: -362)
                         .padding(.bottom)
-                    UserBubble(animation: animation, expand: $expand)
+                    
                 case .activity:
                     Activity().zIndex(0)
                     
                     TopBarView()
                         .offset(y: -362)
                         .padding(.bottom)
-                    UserBubble(animation: animation, expand: $expand)
+                    
                 case .profile:
                     Profile().zIndex(0)
                     
@@ -45,7 +45,9 @@ struct ContentView: View {
                         .offset(y: -362)
                         .padding(.bottom)
                 }
+                
                 TestTabBarView(selectedTab: $selectedTab)
+                UserBubble(animation: animation, expand: $expand)
             }
         }
     }

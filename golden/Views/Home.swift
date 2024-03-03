@@ -3,12 +3,14 @@ import SwiftUI
 struct Home: View {
     @Namespace var animation
     @State var currentImageIndex = 0
+    @State private var backgroundOpacity: Double = 1.0
     var body: some View {
         VStack {
             ZStack {
                 Image(MockData.items[currentImageIndex])
                     .resizable()
                     .frame(width: .infinity, height: .infinity)
+                    .opacity(backgroundOpacity)
                     .ignoresSafeArea()
                 Rectangle()
                     .foregroundStyle(.ultraThinMaterial)
@@ -27,27 +29,29 @@ struct Home: View {
                                     .scaleEffect(x: phase.isIdentity ? 1 : 0.7,
                                                  y: phase.isIdentity ? 1 : 0.7)
                             }
-                            
+            
                             .id(index)
                     }
-                    
+    
                 }
-                
+
                 .scrollTargetLayout()
             }
-               
+
             .frame(width: 345, height: 650)
             .padding(.all)
             .scrollTargetBehavior(.paging)
             
-            Button("Change Background"){
-                if (currentImageIndex < 5){
-                    currentImageIndex += 1
+                Button("    ") {
+                    withAnimation(Animation.linear(duration: 0.9)) {
+                        if currentImageIndex < 5 {
+                            currentImageIndex += 1
+                        } else {
+                            currentImageIndex = 0
+                        }
+                        backgroundOpacity = 1.0 // Set the desired fade-out opacity
+                    }
                 }
-                else{
-                    currentImageIndex = 0
-                }
-            }
                 
             }
             

@@ -16,10 +16,10 @@ struct UserBubbleExpanded: View {
                         .frame(width: 40, height: 6)
                         .cornerRadius(20)
                         .foregroundStyle(.gray)
-                        .offset(y:-138)
+                        .offset(y:-150)
                     Text("...")
                         .font(.system(size: 25, weight: .heavy, design: .rounded))
-                        .offset(x:155, y:-144)
+                        .offset(x:155, y:-156)
                     
                 }
                 Text("zacpalmer1")
@@ -50,7 +50,7 @@ struct UserBubbleExpanded: View {
                     Text("November")
                         .font(.system(size: 35, weight: .heavy, design: .rounded))
                 }
-                .offset(y:-4)
+                .offset(y:25)
                 .frame(maxWidth: 350, alignment: .leading)
                 ScrollView(.vertical, showsIndicators: false){
                     VStack{
@@ -162,7 +162,7 @@ struct UserBubbleExpanded: View {
                     
                 }
                 
-                .offset(y:-20)
+                .offset(y:20)
                 .scrollTargetBehavior(.paging)
                 
                 //.padding()
@@ -170,7 +170,7 @@ struct UserBubbleExpanded: View {
             
             }
         
-            .frame(width: 350, height:565)
+            .frame(width: 350, height:585)
             .containerRelativeFrame(.vertical, count: 2, spacing: 15)
             
             .offset(y:-165)
