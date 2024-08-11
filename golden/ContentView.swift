@@ -19,35 +19,38 @@ struct ContentView: View {
                 switch selectedTab {
                 case .home:
                     Home().zIndex(0)
-                    
+                    TestTabBarView(selectedTab: $selectedTab)
+                    UserBubble(animation: animation, expand: $expand)
                     TopBarView()
                         .offset(y: -362)
                         .padding(.bottom)
                     
                 case .favorites:
                     Favorites().zIndex(0)
-                    
+                    TestTabBarView(selectedTab: $selectedTab)
+                    UserBubble(animation: animation, expand: $expand)
                     TopBarView()
                         .offset(y: -362)
                         .padding(.bottom)
                     
                 case .activity:
                     Activity().zIndex(0)
-                    
+                    TestTabBarView(selectedTab: $selectedTab)
+                    UserBubble(animation: animation, expand: $expand)
                     TopBarView()
                         .offset(y: -362)
                         .padding(.bottom)
                     
                 case .profile:
                     Profile().zIndex(0)
-                    
+                    TestTabBarView(selectedTab: $selectedTab)
                     TopBarView()
                         .offset(y: -362)
                         .padding(.bottom)
                 }
                 
-                TestTabBarView(selectedTab: $selectedTab)
-                UserBubble(animation: animation, expand: $expand)
+                //TestTabBarView(selectedTab: $selectedTab)
+                // UserBubble(animation: animation, expand: $expand)
             }
         }
     }

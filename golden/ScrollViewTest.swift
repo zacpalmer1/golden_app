@@ -12,9 +12,9 @@ struct ScrollViewTest: View {
                             Image(photos[index])
                                 .resizable()
                                 .scaledToFill()
-                                .frame(width: geometry.size.width - 50, height:geometry.size.height - 120)
+                                .frame(width: geometry.size.width , height:geometry.size.height )
                                 .cornerRadius(25)
-                                .padding(.horizontal, 25)
+                                .padding(.vertical, 105)
                                 .id(index)
                                 .onChange(of: currentIndex, {
                                     currentIndex += 1

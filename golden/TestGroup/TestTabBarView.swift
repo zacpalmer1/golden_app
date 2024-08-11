@@ -7,13 +7,21 @@ struct TestTabBarView: View {
         VStack {
             Spacer()
             ZStack {
-              
+                Rectangle()
+                            .fill(
+                                LinearGradient(
+                                    gradient: Gradient(colors: [Color.black, Color.black.opacity(0)]),
+                                    startPoint: .bottom,
+                                    endPoint: .top
+                                )
+                            )
+                            .frame(width: .infinity, height: 200)
 
                 HStack {
                     Spacer()
                     tabButton(tab: .home, imageName: "sun.max.fill")
                     Spacer()
-                    tabButton(tab: .favorites, imageName: "star.fill")
+                    tabButton(tab: .favorites, imageName: "magnifyingglass")
                     Spacer()
                     TimerView()
                         .onLongPressGesture(minimumDuration: 1.0) {
@@ -25,10 +33,12 @@ struct TestTabBarView: View {
                     tabButton(tab: .profile, imageName: "person.fill")
                     Spacer()
                 }
+                .offset(y:50)
                 
-                .padding(.bottom, 40)
                // Spacer()
-                    
+             // Rectangle()
+                  //  .frame(width: .infinity, height: 100)
+                   // .foregroundColor(.black)
             }
         }
         .edgesIgnoringSafeArea(.all)
@@ -41,7 +51,7 @@ struct TestTabBarView: View {
             Image(systemName: imageName)
                 .resizable()
                 .frame(width: 22, height: 22)
-                .foregroundColor(selectedTab == tab ? .orange : .gray)
+                .foregroundColor(selectedTab == tab ? .white : .gray)
         }
         //.frame(maxWidth: .infinity, maxHeight: .infinity) // Ensure the button covers the entire available space
     }

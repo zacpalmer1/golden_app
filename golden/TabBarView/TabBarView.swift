@@ -25,6 +25,15 @@ struct TabBarView: View {
             Spacer()
             ZStack{
                 Rectangle()
+                            .fill(
+                                LinearGradient(
+                                    gradient: Gradient(colors: [Color.black, Color.black.opacity(0)]),
+                                    startPoint: .bottom,
+                                    endPoint: .top
+                                )
+                            )
+                            .frame(width: .infinity, height: 300)
+                Rectangle()
                     .frame(maxWidth: .infinity, maxHeight: 115)
                     .foregroundStyle(.clear)
                 // Custom Tab Bar
@@ -69,7 +78,9 @@ struct TabBarView: View {
                     }
                     Spacer()
                 }
-                
+                Rectangle()
+                    .frame(width: .infinity, height: 100)
+                    .foregroundColor(.black)
             }
             
         }
