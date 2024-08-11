@@ -19,7 +19,7 @@ struct UserBubble: View {
                 .frame(maxWidth: expand ? .infinity : 360, maxHeight: expand ? .infinity : 52)
                 .cornerRadius(15)
                 .offset(x: 0, y: expand ? dragOffset.height : 300)
-                .foregroundStyle(expand ? .ultraThinMaterial : .ultraThinMaterial)
+                .foregroundStyle(expand ? .thinMaterial : .ultraThinMaterial)
 
             HStack {
                 if expand { Spacer(minLength: 0) }

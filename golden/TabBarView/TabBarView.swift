@@ -12,6 +12,8 @@ enum Tabs: Int {
     case favorites = 2
     case activity = 3
     case profile = 4
+    case homeYesterday = 5
+    case homeFeatured = 6
 }
 struct TabBarView: View {
     @State private var secondsRemaining = 60 // Initial countdown time in seconds

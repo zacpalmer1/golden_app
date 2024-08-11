@@ -21,7 +21,7 @@ struct ContentView: View {
                     Home().zIndex(0)
                     TestTabBarView(selectedTab: $selectedTab)
                     UserBubble(animation: animation, expand: $expand)
-                    TopBarView()
+                    TopBarView(selectedTab: $selectedTab)
                         .offset(y: -362)
                         .padding(.bottom)
                     
@@ -29,7 +29,7 @@ struct ContentView: View {
                     Favorites().zIndex(0)
                     TestTabBarView(selectedTab: $selectedTab)
                     UserBubble(animation: animation, expand: $expand)
-                    TopBarView()
+                    TopBarView(selectedTab: $selectedTab)
                         .offset(y: -362)
                         .padding(.bottom)
                     
@@ -37,14 +37,28 @@ struct ContentView: View {
                     Activity().zIndex(0)
                     TestTabBarView(selectedTab: $selectedTab)
                     UserBubble(animation: animation, expand: $expand)
-                    TopBarView()
+                    TopBarView(selectedTab: $selectedTab)
                         .offset(y: -362)
                         .padding(.bottom)
                     
                 case .profile:
                     Profile().zIndex(0)
                     TestTabBarView(selectedTab: $selectedTab)
-                    TopBarView()
+                    TopBarView(selectedTab: $selectedTab)
+                        .offset(y: -362)
+                        .padding(.bottom)
+                case .homeYesterday:
+                    HomeYesterday().zIndex(0)
+                    TestTabBarView(selectedTab: $selectedTab)
+                    UserBubble(animation: animation, expand: $expand)
+                    TopBarView(selectedTab: $selectedTab)
+                        .offset(y: -362)
+                        .padding(.bottom)
+                case .homeFeatured:
+                    HomeFeatured().zIndex(0)
+                    TestTabBarView(selectedTab: $selectedTab)
+                    UserBubble(animation: animation, expand: $expand)
+                    TopBarView(selectedTab: $selectedTab)
                         .offset(y: -362)
                         .padding(.bottom)
                 }

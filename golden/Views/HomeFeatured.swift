@@ -1,8 +1,8 @@
 import SwiftUI
 
-struct Home: View {
+struct HomeFeatured: View {
     @Namespace var animation
-    @State private var currentImageIndex = 0
+    @State private var currentImageIndex1 = 0
     @State private var backgroundOpacity: Double = 1.0
 
     var body: some View {
@@ -10,7 +10,7 @@ struct Home: View {
             ZStack {
                 // Background image with dynamic opacity
                 
-                Image(MockData.items[currentImageIndex])
+                Image(MockData2.items1[currentImageIndex1])
                     .resizable()
                     .frame(width: .infinity, height: .infinity)
                     .opacity(backgroundOpacity)
@@ -39,11 +39,12 @@ struct Home: View {
                 ScrollView(.vertical, showsIndicators: false) {
                     ScrollViewReader { proxy in
                         VStack(spacing: 0) {
-                            ForEach(MockData.items.indices, id: \.self) { index in
-                                Image(MockData.items[index])
-                                    .resizable()
+                            ForEach(MockData2.items1.indices, id: \.self) { index in
+                                Image(MockData2.items1[index])
                                 
-                                    .frame(width: .infinity, height: 750) // Adjust size as needed
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: 390, height: 750) // Adjust size as needed
                                     .cornerRadius(45)
                                     .containerRelativeFrame(.vertical, count: 1, spacing: 0)
                                     
@@ -60,14 +61,16 @@ struct Home: View {
                                                 // Update the background image index
                                                 if abs(newValue) < 500 { // Adjust this threshold based on your image height
                                                     DispatchQueue.main.async {
-                                                        currentImageIndex = index
+                                                        currentImageIndex1 = index
                                                     }
                                                 }
                                             }
                                     })
                             }
+                            
                             .padding(.vertical, 0)
                         }
+                        
                         .scrollTargetLayout()
                         .background(GeometryReader { geo in
                             Color.clear
@@ -92,12 +95,12 @@ struct Home: View {
     }
 }
 
-struct MockData {
-    static let items = ["test", "test3", "test4", "test5", "test6", "test7"]
+struct MockData2 {
+    static let items1 = [ "favorite2"]
 }
 
-struct Home_Previews: PreviewProvider {
+struct HomeFeatured_Preview: PreviewProvider {
     static var previews: some View {
-        Home()
+        HomeFeatured()
     }
 }
