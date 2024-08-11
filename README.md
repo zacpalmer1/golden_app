@@ -28,7 +28,7 @@
 ### Feed
 #### UI Goals
   - Allow user to scroll though photos posted by friends 🟢
-  - Background displays photo of ScrollView image (fades in) 🟡
+  - Background displays photo of ScrollView image (fades in) 🟢
   - UserBubble opens to display UserProfile 🟢
   - UserBubble updates with ScrollView 🔴
 #### Backend Goals
