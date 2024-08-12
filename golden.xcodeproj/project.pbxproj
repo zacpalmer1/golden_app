@@ -19,18 +19,18 @@
 		8C71733D2C695C92008983FB /* SignUp1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C71733C2C695C92008983FB /* SignUp1.swift */; };
 		8C71733F2C69627B008983FB /* SignUp2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C71733E2C69627B008983FB /* SignUp2.swift */; };
 		8C7173412C696811008983FB /* SignUp3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7173402C696811008983FB /* SignUp3.swift */; };
+		8C7173432C698172008983FB /* ModalGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7173422C698172008983FB /* ModalGroupView.swift */; };
+		8C7173462C69B6F1008983FB /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7173452C69B6F1008983FB /* Favorites.swift */; };
 		8C9831D72AE849E300DA5E0A /* goldenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9831D62AE849E300DA5E0A /* goldenApp.swift */; };
 		8C9831D92AE849E300DA5E0A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9831D82AE849E300DA5E0A /* ContentView.swift */; };
 		8C9831DB2AE849E400DA5E0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C9831DA2AE849E400DA5E0A /* Assets.xcassets */; };
 		8C9831DE2AE849E400DA5E0A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C9831DD2AE849E400DA5E0A /* Preview Assets.xcassets */; };
 		8C9831E62AE9C92E00DA5E0A /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9831E52AE9C92E00DA5E0A /* Home.swift */; };
-		8C9831E82AE9C94B00DA5E0A /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9831E72AE9C94B00DA5E0A /* Favorites.swift */; };
 		8C9831EA2AE9C96900DA5E0A /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9831E92AE9C96900DA5E0A /* Activity.swift */; };
 		8C9831EC2AE9C97200DA5E0A /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9831EB2AE9C97200DA5E0A /* Profile.swift */; };
 		8C9831EE2AE9FC4500DA5E0A /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9831ED2AE9FC4500DA5E0A /* Timer.swift */; };
 		8C9831F02AEC1E4600DA5E0A /* UserBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9831EF2AEC1E4500DA5E0A /* UserBubble.swift */; };
 		8CA9E6172AF143A100D15B94 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA9E6162AF143A100D15B94 /* TabBarView.swift */; };
-		8CB935B22B93CD85009F30E8 /* ScrollViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB935B12B93CD85009F30E8 /* ScrollViewTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,19 +47,19 @@
 		8C71733C2C695C92008983FB /* SignUp1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp1.swift; sourceTree = "<group>"; };
 		8C71733E2C69627B008983FB /* SignUp2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp2.swift; sourceTree = "<group>"; };
 		8C7173402C696811008983FB /* SignUp3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp3.swift; sourceTree = "<group>"; };
+		8C7173422C698172008983FB /* ModalGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalGroupView.swift; sourceTree = "<group>"; };
+		8C7173452C69B6F1008983FB /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
 		8C9831D32AE849E300DA5E0A /* golden.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = golden.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C9831D62AE849E300DA5E0A /* goldenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goldenApp.swift; sourceTree = "<group>"; };
 		8C9831D82AE849E300DA5E0A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8C9831DA2AE849E400DA5E0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C9831DD2AE849E400DA5E0A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8C9831E52AE9C92E00DA5E0A /* Home.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
-		8C9831E72AE9C94B00DA5E0A /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
 		8C9831E92AE9C96900DA5E0A /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		8C9831EB2AE9C97200DA5E0A /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		8C9831ED2AE9FC4500DA5E0A /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		8C9831EF2AEC1E4500DA5E0A /* UserBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBubble.swift; sourceTree = "<group>"; };
 		8CA9E6162AF143A100D15B94 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
-		8CB935B12B93CD85009F30E8 /* ScrollViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewTest.swift; sourceTree = "<group>"; };
 		AA5C8C1CE0C6B6415BEA34C3 /* Pods_golden.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_golden.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -137,6 +137,16 @@
 			path = Startup;
 			sourceTree = "<group>";
 		};
+		8C7173442C69B672008983FB /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8C7173352C6939C3008983FB /* HomeYesterday.swift */,
+				8C7173372C694017008983FB /* HomeFeatured.swift */,
+				8C9831E52AE9C92E00DA5E0A /* Home.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		8C9831CA2AE849E300DA5E0A = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +168,7 @@
 		8C9831D52AE849E300DA5E0A /* golden */ = {
 			isa = PBXGroup;
 			children = (
+				8C7173442C69B672008983FB /* Home */,
 				8C7173392C69566E008983FB /* Startup */,
 				8CA9E6152AF1438C00D15B94 /* TabBarView */,
 				8C0B0B022B227221008FD4CC /* SplashView */,
@@ -167,7 +178,6 @@
 				8C9831E42AE9C8F300DA5E0A /* Views */,
 				8C9831D62AE849E300DA5E0A /* goldenApp.swift */,
 				8C9831D82AE849E300DA5E0A /* ContentView.swift */,
-				8CB935B12B93CD85009F30E8 /* ScrollViewTest.swift */,
 				8C9831DA2AE849E400DA5E0A /* Assets.xcassets */,
 				8C9831DC2AE849E400DA5E0A /* Preview Content */,
 			);
@@ -185,13 +195,11 @@
 		8C9831E42AE9C8F300DA5E0A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				8C9831E52AE9C92E00DA5E0A /* Home.swift */,
-				8C7173352C6939C3008983FB /* HomeYesterday.swift */,
-				8C7173372C694017008983FB /* HomeFeatured.swift */,
-				8C9831E72AE9C94B00DA5E0A /* Favorites.swift */,
 				8C9831E92AE9C96900DA5E0A /* Activity.swift */,
 				8C9831EB2AE9C97200DA5E0A /* Profile.swift */,
 				8C9831ED2AE9FC4500DA5E0A /* Timer.swift */,
+				8C7173422C698172008983FB /* ModalGroupView.swift */,
+				8C7173452C69B6F1008983FB /* Favorites.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -325,6 +333,7 @@
 			files = (
 				8C218E522AF2A9D500E0BBF2 /* TopBarView.swift in Sources */,
 				8C7173362C6939C3008983FB /* HomeYesterday.swift in Sources */,
+				8C7173432C698172008983FB /* ModalGroupView.swift in Sources */,
 				8C9831EA2AE9C96900DA5E0A /* Activity.swift in Sources */,
 				8CA9E6172AF143A100D15B94 /* TabBarView.swift in Sources */,
 				8C71733F2C69627B008983FB /* SignUp2.swift in Sources */,
@@ -332,8 +341,6 @@
 				8C9831EE2AE9FC4500DA5E0A /* Timer.swift in Sources */,
 				8C9831D92AE849E300DA5E0A /* ContentView.swift in Sources */,
 				8C71733B2C695692008983FB /* LogIn.swift in Sources */,
-				8C9831E82AE9C94B00DA5E0A /* Favorites.swift in Sources */,
-				8CB935B22B93CD85009F30E8 /* ScrollViewTest.swift in Sources */,
 				8C0B0B042B22723D008FD4CC /* TimerSplash.swift in Sources */,
 				8C7173382C694017008983FB /* HomeFeatured.swift in Sources */,
 				8C0B0AFB2B21557D008FD4CC /* UserBubbleExpanded.swift in Sources */,
@@ -342,6 +349,7 @@
 				8C9831D72AE849E300DA5E0A /* goldenApp.swift in Sources */,
 				8C218E542AF46B5000E0BBF2 /* TestTabBarView.swift in Sources */,
 				8C7173342C693722008983FB /* TestCarosel.swift in Sources */,
+				8C7173462C69B6F1008983FB /* Favorites.swift in Sources */,
 				8C7173412C696811008983FB /* SignUp3.swift in Sources */,
 				8C71733D2C695C92008983FB /* SignUp1.swift in Sources */,
 			);

@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-
-
 struct ContentView: View {
     @State var selectedTab: Tabs = .home
     @State var expand = false
@@ -62,9 +60,6 @@ struct ContentView: View {
                         .offset(y: -362)
                         .padding(.bottom)
                 }
-                
-                //TestTabBarView(selectedTab: $selectedTab)
-                // UserBubble(animation: animation, expand: $expand)
             }
         }
     }

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TopBarView: View {
     @Binding var selectedTab: Tabs
+    @State private var showingModal = false
     var body: some View {
         
         ZStack{
@@ -23,25 +24,37 @@ struct TopBarView: View {
                     //.foregroundColor(.gray)
                     
                     Spacer()
-                    ZStack{
-                        RoundedRectangle(cornerRadius: 30)
-                            .foregroundStyle(.ultraThinMaterial)// Fill color for the RoundedRectangle
-                            .frame(width: 118, height: 35) // Background color of the view
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 30)
-                                    .stroke(Color.white, lineWidth: 0.2) // Stroke color and line width
-                            )
-                        HStack{
-                            Image(systemName: "person.2.fill")
-                                .resizable()
-                                .frame(width: 20, height: 15)
-                            
-                            Text("Friends")
-                                .foregroundColor(.white)
-                            
-                            
+                    
+                        Button(action: {
+                            showingModal = true // Show the modal when the button is tapped
+                        }) {
+                            ZStack{
+                            RoundedRectangle(cornerRadius: 30)
+                                .foregroundStyle(.ultraThinMaterial)// Fill color for the RoundedRectangle
+                                .frame(width: 118, height: 35) // Background color of the view
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 30)
+                                        .stroke(Color.white, lineWidth: 0.2) // Stroke color and line width
+                                )
+                            HStack{
+                                Image(systemName: "person.2.fill")
+                                    .resizable()
+                                    .frame(width: 20, height: 15)
+                                    .foregroundColor(.white)
+                                
+                                Text("Friends")
+                                    .foregroundColor(.white)
+                                
+                                
+                            }
                         }
+                        
                     }
+                    .sheet(isPresented: $showingModal) {
+                        ModalGroupView() // The view to be presented in the modal
+                    }
+                
+            
                 }
                 
                 .padding(.vertical, 15)
@@ -61,6 +74,7 @@ struct TopBarView: View {
                     Spacer()
                 }
                 .frame(maxWidth: .infinity)
+                
             }
             
             

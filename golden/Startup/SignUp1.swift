@@ -70,7 +70,7 @@ struct SignUp1: View {
                                 
                             }
                             .sheet(isPresented: $showingModal) {
-                                ModalView() // The view to be presented in the modal
+                                ModalGroupView() // The view to be presented in the modal
                             }
                             
                             Text("Phone Number")
@@ -134,27 +134,7 @@ struct SignUp1: View {
     
 }
 
-struct ModalView: View {
-    var body: some View {
-        VStack {
-            Text("This is a modal view")
-                .font(.largeTitle)
-                .padding()
 
-            Button(action: {
-                // Action to dismiss the modal
-                // You can add functionality here if needed
-            }) {
-                Text("Dismiss")
-                    .padding()
-                    .background(Color.red)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-            }
-        }
-        .padding()
-    }
-}
 
 #Preview {
     SignUp1()
