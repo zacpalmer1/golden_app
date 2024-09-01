@@ -9,225 +9,130 @@ import SwiftUI
 
 struct Activity: View {
     var body: some View {
-        ZStack{
-            Image("test5")
+        ZStack {
+            // Background image with dynamic opacity
+            
+            Image("image3")
                 .resizable()
                 .frame(width: .infinity, height: .infinity)
             
                 .ignoresSafeArea()
-            // .padding(.bottom, 20)
+            
             Rectangle()
-                .foregroundStyle(.bar)
+                .foregroundStyle(.ultraThinMaterial)
                 .ignoresSafeArea()
+            
+            
             ZStack{
-                VStack(alignment:.leading){
-                    Spacer()
-                    Text("Golden")
-                        .font(.system(size: 28, weight: .heavy, design: .rounded))
-                    Spacer()
-                    Text("Likes")
-                        .font(.system(size: 25, weight: .heavy, design: .rounded))
-                    ScrollView(.vertical, showsIndicators: false){
-                        VStack(spacing: 5){
-                            ZStack(alignment:.leading){
-                                Rectangle()
-                                    .frame(width:140, height:40)
-                                    .foregroundStyle(.bar)
-                                    .cornerRadius(15)
-                                HStack{
-                                    Image("profile")
-                                        .resizable()
-                                        .frame(width: 30, height: 30)
-                                    Text("leebron3")
-                                        .font(.system(size: 17, weight: .heavy, design: .rounded))
-                                    Spacer()
-                                    Text("20sec")
-                                        .font(.system(size: 14, design: .rounded))
-                                        .offset(x:-10)
-                                }
-                                .offset(x:7)
-                            }
-                            ZStack(alignment:.leading){
-                                Rectangle()
-                                    .frame(width:140, height:40)
-                                    .foregroundStyle(.bar)
-                                    .cornerRadius(15)
-                                HStack{
-                                    Image("profile")
-                                        .resizable()
-                                        .frame(width: 30, height: 30)
-                                    Text("cooneyd")
-                                        .font(.system(size: 17, weight: .heavy, design: .rounded))
-                                    Spacer()
-                                    Text("56sec")
-                                        .font(.system(size: 14, design: .rounded))
-                                        .offset(x:-10)
-                                }
-                                .offset(x:7)
-                            }
-                            ZStack(alignment:.leading){
-                                Rectangle()
-                                    .frame(width:160, height:40)
-                                    .foregroundStyle(.bar)
-                                    .cornerRadius(15)
-                                HStack{
-                                    Image("profile")
-                                        .resizable()
-                                        .frame(width: 30, height: 30)
-                                    Text("joshpowers")
-                                        .font(.system(size: 17, weight: .heavy, design: .rounded))
-                                    Spacer()
-                                    Text("1min")
-                                        .font(.system(size: 14, design: .rounded))
-                                        .offset(x:-10)
-                                }
-                                .offset(x:7)
-                            }
-                        }
-                    }
-                    .frame(maxHeight:140)
+                VStack(spacing: 0){
                     Rectangle()
-                        .frame(width: 350, height: 1)
-                        .cornerRadius(19)
-                        .foregroundColor(.gray)
+                        .fill(
+                            LinearGradient(
+                                gradient: Gradient(colors: [Color.black, Color.clear]), // Gradient from black to clear
+                                startPoint: .bottom, // Gradient starts at the bottom
+                                endPoint: .top // Gradient ends at the top
+                            )
+                        )
+                        
+                    
+                    Rectangle()
+                        .frame(width: .infinity, height: .infinity)
+                        .foregroundColor(.black)
+                }
+                .padding(.top,190)
+                .ignoresSafeArea()
+                
+                VStack(alignment: .leading, spacing: 16) { // Adjust spacing as needed
+                   
+                    Text("Activity")
+                        .font(.system(size: 31, weight: .heavy, design: .rounded))
+                    Text("Likes")
+                        .font(.system(size: 22, weight: .heavy, design: .rounded))
+                    
+                    HStack {
+                        Image("profile")
+                            .resizable()
+                            .frame(width: 40, height: 40)
+                            .foregroundColor(.white)
+                        Text("Josh Powers")
+                        Spacer()
+                        Text("8:23 AM")
+                    }
+                    
+                    HStack {
+                        Image("profile")
+                            .resizable()
+                            .frame(width: 40, height: 40)
+                            .foregroundColor(.white)
+                        Text("Davis Cooney")
+                        Spacer()
+                        Text("1:17 AM")
+                    }
+                    
+                    HStack {
+                        Image("profile")
+                            .resizable()
+                            .frame(width: 40, height: 40)
+                            .foregroundColor(.white)
+                        Text("Lee Eberly")
+                        Spacer()
+                        Text("10:21 PM")
+                    }
+                    
+                    Divider()
+                        .frame(width: 350)
+                    
                     Text("Comments")
-                        .font(.system(size: 25, weight: .heavy, design: .rounded))
-                    ScrollView(.vertical, showsIndicators: false){
-                        VStack(spacing: 5){
-                            ZStack(alignment:.leading){
-                                Rectangle()
-                                    .frame(width:160, height:40)
-                                    .foregroundStyle(.bar)
-                                    .cornerRadius(15)
-                                HStack{
-                                    Image("profile")
-                                        .resizable()
-                                        .frame(width: 30, height: 30)
-                                    Text("joshpowers")
-                                        .font(.system(size: 17, weight: .heavy, design: .rounded))
-                                    Spacer()
-                                    Text("Wow! This is beau...")
-                                        .font(.system(size: 14, design: .rounded))
-                                        .offset(x:-10)
-                                }
-                                .offset(x:7)
-                            }
-                            ZStack(alignment:.leading){
-                                Rectangle()
-                                    .frame(width:140, height:40)
-                                    .foregroundStyle(.bar)
-                                    .cornerRadius(15)
-                                HStack{
-                                    Image("profile")
-                                        .resizable()
-                                        .frame(width: 30, height: 30)
-                                    Text("jackmalo")
-                                        .font(.system(size: 17, weight: .heavy, design: .rounded))
-                                    Spacer()
-                                    Text("My sunset is so m...")
-                                        .font(.system(size: 14, design: .rounded))
-                                        .offset(x:-10)
-                                }
-                                .offset(x:7)
-                            }
-                        }
+                        .font(.system(size: 22, weight: .heavy, design: .rounded))
+                    
+                    
+                    
+                    HStack {
+                        
+                        Image("profile")
+                            .resizable()
+                            .frame(width: 40, height: 40)
+                            .foregroundColor(.white)
+                        
+                        Text("Jack Malo")
+                        Spacer()
+                        Text("Wow this looks...")
                     }
-                    .frame(maxHeight:95)
-                    HStack(alignment: .center){
-                        Rectangle()
-                            .frame(width: 350, height: 1)
-                            .cornerRadius(19)
-                            .foregroundColor(.gray)
+                    
+                    HStack {
+                        Image("profile")
+                            .resizable()
+                            .frame(width: 40, height: 40)
+                            .foregroundColor(.white)
+                        Text("Kanye West")
+                        Spacer()
+                        Text("Find God")
                     }
-                    Text("Suggested")
-                        .font(.system(size: 25, weight: .heavy, design: .rounded))
-                    ZStack(alignment:.leading){
-                        Rectangle()
-                            .frame(width:130, height:40)
-                            .foregroundStyle(.bar)
-                            .cornerRadius(15)
-                        HStack{
-                            Image("profile")
-                                .resizable()
-                                .frame(width: 30, height: 30)
-                            Text("leodicap")
-                                .font(.system(size: 17, weight: .heavy, design: .rounded))
-                            Spacer()
-                            ZStack{
-                                Rectangle()
-                                    .frame(width: 80, height: 30)
-                                    .cornerRadius(30)
-                                    .foregroundColor(.blue)
-                                Text("Follow")
-                                    .font(.system(size: 15, weight: .heavy, design: .rounded))
-                                    .foregroundColor(.white)
-                            }
-                            .offset(x:-10)
-                        }
-                        .offset(x:7)
+                    
+                    HStack {
+                        Image("profile")
+                            .resizable()
+                            .frame(width: 40, height: 40)
+                            .foregroundColor(.white)
+                        Text("Emma Chamberland")
+                        Spacer()
+                        Text("I was their l...")
                     }
-                    ZStack(alignment:.leading){
-                        Rectangle()
-                            .frame(width:150, height:40)
-                            .foregroundStyle(.bar)
-                            .cornerRadius(15)
-                        HStack{
-                            Image("profile")
-                                .resizable()
-                                .frame(width: 30, height: 30)
-                            Text("thimothee")
-                                .font(.system(size: 17, weight: .heavy, design: .rounded))
-                            Spacer()
-                            ZStack{
-                                Rectangle()
-                                    .frame(width: 80, height: 30)
-                                    .cornerRadius(30)
-                                    .foregroundColor(.blue)
-                                Text("Follow")
-                                    .font(.system(size: 15, weight: .heavy, design: .rounded))
-                                    .foregroundColor(.white)
-                            }
-                            .offset(x:-10)
-                        }
-                        .offset(x:7)
-                    }
-                    ZStack(alignment:.leading){
-                        Rectangle()
-                            .frame(width:140, height:40)
-                            .foregroundStyle(.bar)
-                            .cornerRadius(15)
-                        HStack{
-                            Image("profile")
-                                .resizable()
-                                .frame(width: 30, height: 30)
-                            Text("margor13")
-                                .font(.system(size: 17, weight: .heavy, design: .rounded))
-                            Spacer()
-                            ZStack{
-                                Rectangle()
-                                    .frame(width: 80, height: 30)
-                                    .cornerRadius(30)
-                                    .foregroundColor(.blue)
-                                Text("Follow")
-                                    .font(.system(size: 15, weight: .heavy, design: .rounded))
-                                    .foregroundColor(.white)
-                            }
-                            .offset(x:-10)
-                        }
-                        .offset(x:7)
-                    }
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
+                    
+                    // The Spacer pushes the VStack content to the top of the screen
                     Spacer()
                 }
-                .frame(maxWidth: 350, alignment: .leading)
+                .frame(maxWidth: 350, maxHeight: .infinity)
+                .padding(.top, 20)
+                    
                 
+                
+              
             }
+            
+            
         }
+        
     }
 }
 
