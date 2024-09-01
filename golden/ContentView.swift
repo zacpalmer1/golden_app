@@ -15,6 +15,7 @@ struct ContentView: View {
     @Namespace var animation
     var body: some View {
         VStack {
+            
             ZStack {
                 switch selectedTab {
                 case .home:

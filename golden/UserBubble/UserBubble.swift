@@ -23,7 +23,7 @@ struct UserBubble: View {
                 Button(action: {
                     profile.toggle()
                 }) {
-                    Text("zacpalmer1")
+                    Text("Zac Palmer")
                         .foregroundColor(.white)
                 }
                 .fullScreenCover(isPresented: $profile) {
@@ -34,10 +34,11 @@ struct UserBubble: View {
                 Spacer()
                 Spacer()
                 Spacer()
+                
                 Image(systemName: "sun.horizon.fill")
                     .foregroundColor(.white)
                 
-                Text("2")
+                Text("12")
                     .foregroundColor(.white)
                 Spacer()
                 Button(action: {

@@ -13,15 +13,7 @@ struct ModalGroupView: View {
         ZStack {
             // Background image with dynamic opacity
             
-            Image("image2")
-                .resizable()
-                .frame(width: .infinity, height: .infinity)
-            
-                .ignoresSafeArea()
-            
-            Rectangle()
-                .foregroundStyle(.ultraThinMaterial)
-                .ignoresSafeArea()
+           
             
             
             ZStack{
