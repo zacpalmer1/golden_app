@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Profile: View {
+    @Environment(\.presentationMode) var presentationMode
     var body: some View {
         
         ZStack{
@@ -23,7 +24,15 @@ struct Profile: View {
             VStack{
                 
                 VStack{
-                    
+                    Button(action: {
+                        presentationMode.wrappedValue.dismiss()
+                                }) {
+                                    Rectangle()
+                                        .frame(width:40, height:6)
+                                        .cornerRadius(20)
+                                        .foregroundColor(.gray)
+                                        .padding(.bottom, 20)
+                                }
                     Image("profile")
                         .resizable()
                         .frame(width: 105, height: 105)
@@ -56,22 +65,11 @@ struct Profile: View {
                                     .resizable()
                                     .clipped()
                                     .aspectRatio(contentMode: .fill)
-                                    .frame(width: 110, height:180)
+                                    .frame(width: 170, height:280)
                                     .cornerRadius(8)
                                 
-                                Image("test3")
-                                    .resizable()
-                                    .clipped()
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(width: 110, height:180)
-                                    .cornerRadius(8)
+    
                                 
-                                Image("test4")
-                                    .resizable()
-                                    .clipped()
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(width: 110, height:180)
-                                    .cornerRadius(8)
                                 
                             }
                             Spacer()
@@ -82,24 +80,14 @@ struct Profile: View {
                                     .resizable()
                                     .clipped()
                                     .aspectRatio(contentMode: .fill)
-                                    .frame(width: 110, height:180)
+                                    .frame(width: 170, height:280)
                                     .cornerRadius(8)
                                 
-                                Image("test6")
-                                    .resizable()
-                                    .clipped()
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(width: 110, height:180)
-                                    .cornerRadius(8)
                                 
-                                Image("test7")
-                                    .resizable()
-                                    .clipped()
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(width: 110, height:180)
-                                    .cornerRadius(8)
                                 
                             }
+                            
+                            
                         }
                         .frame(maxWidth: 350, alignment: .leading)
                         
@@ -109,7 +97,7 @@ struct Profile: View {
                 }
                 .scrollTargetBehavior(.paging)
             }
-            .offset(y: 80)
+            .offset(y: 35)
         }
         //.padding(.top, 200)
     }

@@ -34,7 +34,7 @@ struct TabBarView: View {
                                     endPoint: .top
                                 )
                             )
-                            .frame(width: .infinity, height: 300)
+                            .frame(width: .infinity, height: 100)
                 Rectangle()
                     .frame(maxWidth: .infinity, maxHeight: 115)
                     .foregroundStyle(.clear)

@@ -22,6 +22,9 @@ struct Activity: View {
             ZStack{
                 VStack(alignment:.leading){
                     Spacer()
+                    Text("Golden")
+                        .font(.system(size: 28, weight: .heavy, design: .rounded))
+                    Spacer()
                     Text("Likes")
                         .font(.system(size: 25, weight: .heavy, design: .rounded))
                     ScrollView(.vertical, showsIndicators: false){
@@ -215,18 +218,14 @@ struct Activity: View {
                     }
                     Spacer()
                     Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
                 }
                 .frame(maxWidth: 350, alignment: .leading)
-                Rectangle()
-                    .frame(maxWidth: 360, maxHeight: 52)
-                    .cornerRadius(15)
-                    .offset(x:0, y: 300)
-                    .foregroundStyle(.bar)
-                    .edgesIgnoringSafeArea(.all)
-                Image(systemName: "magnifyingglass")
-                    .offset(x:-155, y: 300)
-                Text("Find Friends")
-                    .offset(x:-85, y: 300)
+                
             }
         }
     }

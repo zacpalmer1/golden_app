@@ -15,7 +15,7 @@ struct TestTabBarView: View {
                                     endPoint: .top
                                 )
                             )
-                            .frame(width: .infinity, height: 200)
+                            .frame(width: .infinity, height: 210)
 
                 HStack {
                     Spacer()

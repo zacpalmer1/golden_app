@@ -20,7 +20,7 @@ struct ContentView: View {
                 case .home:
                     Home().zIndex(0)
                     TestTabBarView(selectedTab: $selectedTab)
-                    UserBubble(animation: animation, expand: $expand)
+                    UserBubble()
                     TopBarView(selectedTab: $selectedTab)
                         .offset(y: -362)
                         .padding(.bottom)
@@ -28,43 +28,31 @@ struct ContentView: View {
                 case .favorites:
                     Favorites().zIndex(0)
                     TestTabBarView(selectedTab: $selectedTab)
-                    UserBubble(animation: animation, expand: $expand)
-                    TopBarView(selectedTab: $selectedTab)
-                        .offset(y: -362)
-                        .padding(.bottom)
-                    
+
                 case .activity:
                     Activity().zIndex(0)
                     TestTabBarView(selectedTab: $selectedTab)
-                    UserBubble(animation: animation, expand: $expand)
-                    TopBarView(selectedTab: $selectedTab)
-                        .offset(y: -362)
-                        .padding(.bottom)
                     
                 case .profile:
                     Profile().zIndex(0)
                     TestTabBarView(selectedTab: $selectedTab)
-                    TopBarView(selectedTab: $selectedTab)
-                        .offset(y: -362)
-                        .padding(.bottom)
+                    
                 case .homeYesterday:
                     HomeYesterday().zIndex(0)
                     TestTabBarView(selectedTab: $selectedTab)
-                    UserBubble(animation: animation, expand: $expand)
+                    UserBubble()
                     TopBarView(selectedTab: $selectedTab)
                         .offset(y: -362)
                         .padding(.bottom)
+                    
                 case .homeFeatured:
                     HomeFeatured().zIndex(0)
                     TestTabBarView(selectedTab: $selectedTab)
-                    UserBubble(animation: animation, expand: $expand)
+                    UserBubble()
                     TopBarView(selectedTab: $selectedTab)
                         .offset(y: -362)
                         .padding(.bottom)
                 }
-                
-                //TestTabBarView(selectedTab: $selectedTab)
-                // UserBubble(animation: animation, expand: $expand)
             }
         }
     }

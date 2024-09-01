@@ -34,7 +34,7 @@ struct TopBarView: View {
                                 .frame(width: 118, height: 35) // Background color of the view
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 30)
-                                        .stroke(Color.white, lineWidth: 0.2) // Stroke color and line width
+                                        .stroke(Color.gray, lineWidth: 0.2) // Stroke color and line width
                                 )
                             HStack{
                                 Image(systemName: "person.2.fill")
