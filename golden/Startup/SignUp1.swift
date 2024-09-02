@@ -44,12 +44,12 @@ struct SignUp1: View {
                         Text("Create Account")
                             .font(.system(size: 18, weight: .heavy, design: .rounded))
                             .frame(maxWidth: .infinity, alignment: .center) // Center text
-                            .offset(y:30)
+                            .offset(y:35)
                         
                         Text("Step 1 of 5")
                             .font(.system(size: 13, weight: .regular, design: .rounded))
                             .frame(maxWidth: .infinity, alignment: .center) // Center text
-                            .offset(y:35)
+                            .offset(y:40)
                         Spacer()
                         
                         VStack(alignment: .center) { // Center non-text elements

@@ -6,46 +6,7 @@
 //
 
 import SwiftUI
-import Combine
 
-struct KeyboardAwareModifier: ViewModifier {
-    @State private var keyboardHeight: CGFloat = 0
-    
-    func body(content: Content) -> some View {
-        content
-            .padding(.bottom, keyboardHeight)
-            .onReceive(Publishers.keyboardHeight) { self.keyboardHeight = $0 }
-            .animation(.easeOut(duration: 0.16))
-    }
-}
-
-extension View {
-    func keyboardAware() -> some View {
-        self.modifier(KeyboardAwareModifier())
-    }
-}
-
-extension Publishers {
-    static var keyboardHeight: AnyPublisher<CGFloat, Never> {
-        let willShow = NotificationCenter.default
-            .publisher(for: UIApplication.keyboardWillShowNotification)
-            .map { $0.keyboardHeight }
-        
-        let willHide = NotificationCenter.default
-            .publisher(for: UIApplication.keyboardWillHideNotification)
-            .map { _ in CGFloat(0) }
-        
-        return MergeMany(willShow, willHide)
-            .removeDuplicates()
-            .eraseToAnyPublisher()
-    }
-}
-
-extension Notification {
-    var keyboardHeight: CGFloat {
-        (userInfo?[UIApplication.keyboardFrameEndUserInfoKey] as? CGRect)?.height ?? 0
-    }
-}
 struct Favorites: View {
     @State private var usersearch: String = ""
     
@@ -56,12 +17,15 @@ struct Favorites: View {
                 .resizable()
                 .frame(width: .infinity, height: .infinity)
                 .ignoresSafeArea()
-            
+                .onTapGesture {
+                                   // Dismiss the keyboard when tapping outside
+                                   UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+                               }
             Rectangle()
                 .foregroundStyle(.ultraThinMaterial)
                 .ignoresSafeArea()
             
-            ZStack {
+            ZStack(alignment: .top) { // Aligns content to the top
                 VStack(spacing: 0) {
                     Rectangle()
                         .fill(
@@ -71,143 +35,170 @@ struct Favorites: View {
                                 endPoint: .top
                             )
                         )
-                    
+                        .frame(height: .infinity) // Set height for the gradient Rectangle
+
                     Rectangle()
-                        .frame(width: .infinity, height: .infinity)
+                        .frame(height: 350) // Set height for the black Rectangle
                         .foregroundColor(.black)
                 }
-                .padding(.top, 190)
-                .ignoresSafeArea()
+                .ignoresSafeArea() // Ensures the rectangles extend to the edges
+            
                 
                 VStack {
+                    
                     VStack(alignment: .leading, spacing: 16) {
                         Text("Search")
                             .font(.system(size: 28, weight: .heavy, design: .rounded))
-                            .padding(.top, 25)
-                        TextField("Find Friends", text: $usersearch)
-                            .padding()
-                            .foregroundColor(.white)
-                            .frame(height: 40)
-                            .background(Color.gray.opacity(0.4))
-                            .cornerRadius(10)
-                        
-                        Text("Recent")
-                            .font(.system(size: 22, weight: .heavy, design: .rounded))
-                        
+                            .padding(.top, 0)
                         HStack {
-                                                    Image("profile")
-                                                        .resizable()
-                                                        .frame(width: 40, height: 40)
-                                                        .foregroundColor(.white)
-                                                    Text("Josh Powers")
-                                                    Spacer()
-                                                    Text("34")
-                                                }
-                                                
-                                                HStack {
-                                                    Image("profile")
-                                                        .resizable()
-                                                        .frame(width: 40, height: 40)
-                                                        .foregroundColor(.white)
-                                                    Text("Davis Cooney")
-                                                    Spacer()
-                                                    Text("13")
-                                                }
-                                                
-                                                HStack {
-                                                    Image("profile")
-                                                        .resizable()
-                                                        .frame(width: 40, height: 40)
-                                                        .foregroundColor(.white)
-                                                    Text("Lee Eberly")
-                                                    Spacer()
-                                                    Text("21")
-                                                }
-                                                
-                                                Divider() // Remove fixed width
-                                                
-                                                Text("Suggested")
-                                                    .font(.system(size: 22, weight: .heavy, design: .rounded))
-                                                
-                                                HStack {
-                                                    Image("profile")
-                                                        .resizable()
-                                                        .frame(width: 40, height: 40)
-                                                        .foregroundColor(.white)
-                                                    
-                                                    Text("Jack Malo")
-                                                    Spacer()
-                                                    Text("6")
-                                                }
-                                                
-                                                HStack {
-                                                    Image("profile")
-                                                        .resizable()
-                                                        .frame(width: 40, height: 40)
-                                                        .foregroundColor(.white)
-                                                    Text("Kanye West")
-                                                    Spacer()
-                                                    Text("1.2k")
-                                                }
-                                                
-                                                HStack {
-                                                    Image("profile")
-                                                        .resizable()
-                                                        .frame(width: 40, height: 40)
-                                                        .foregroundColor(.white)
-                                                    Text("Emma Chamberland")
-                                                    Spacer()
-                                                    Text("19k")
-                                                }
-                        Divider() // Remove fixed width
+                            Image(systemName: "magnifyingglass") // Use system name or custom image
+                                .foregroundColor(.white)
+                                .frame(height: 0)
+
+                            TextField("Find Friends", text: $usersearch)
+                                .foregroundColor(.white)
+                                .frame(height: 10)
+                        }
+                        .padding()
+                        .background(Color.gray.opacity(0.4))
+                        .cornerRadius(10)
+                        .padding(.bottom, 10)
+                        
+                        HStack(spacing: 0) { // Set spacing to 0 to remove the default spacing
+                            VStack {
+                                ZStack{
+                                    
+                                    Image("zacprofile")
+                                        .resizable()
+                                        .frame(width: 70, height: 70)
+                                        .foregroundColor(.white)
+                                    Circle()
+                                        .frame(width: 18)
+                                        .foregroundStyle(.ultraThinMaterial)
+                                        .offset(x:25, y:-28)
+                                    Circle()
+                                        .frame(width: 14)
+                                        .foregroundColor(Color(hex: "8F3761"))
+                                        .offset(x:25, y:-28)
+                                }
+                                Text("Zac P.")
+                                    .font(.system(size: 14, weight: .regular, design: .rounded))
+                                    
+                            }
+                            .frame(maxWidth: .infinity) // Each VStack takes up equal width
+
+                            VStack {
+                                ZStack{
+                                    
+                                    Image("joshprofile")
+                                        .resizable()
+                                        .frame(width: 70, height: 70)
+                                        .foregroundColor(.white)
+                                    Circle()
+                                        .frame(width: 18)
+                                        .foregroundStyle(.ultraThinMaterial)
+                                        .offset(x:25, y:-28)
+                                    Circle()
+                                        .frame(width: 14)
+                                        .foregroundColor(Color(hex: "FF7365"))
+                                        .offset(x:25, y:-28)
+                                }
+                                Text("Josh P.")
+                                    .font(.system(size: 14, weight: .regular, design: .rounded))
+                                    
+                            }
+                            .frame(maxWidth: .infinity)
+
+                            VStack {
+                                ZStack{
+                                    
+                                    Image("leeprofile")
+                                        .resizable()
+                                        .frame(width: 70, height: 70)
+                                        .foregroundColor(.white)
+                                    Circle()
+                                        .frame(width: 18)
+                                        .foregroundStyle(.ultraThinMaterial)
+                                        .offset(x:25, y:-28)
+                                    Circle()
+                                        .frame(width: 14)
+                                        .foregroundColor(Color(hex: "FFA72B"))
+                                        .offset(x:25, y:-28)
+                                }
+                                Text("Lee E.")
+                                    .font(.system(size: 14, weight: .regular, design: .rounded))
+                                    
+                            }
+                            .frame(maxWidth: .infinity)
+
+                            VStack {
+                                ZStack{
+                                    
+                                    Image("kennprofile")
+                                        .resizable()
+                                        .frame(width: 70, height: 70)
+                                        .foregroundColor(.white)
+                                    Circle()
+                                        .frame(width: 18)
+                                        .foregroundStyle(.ultraThinMaterial)
+                                        .offset(x:25, y:-28)
+                                    Circle()
+                                        .frame(width: 14)
+                                        .foregroundColor(Color(hex: "372136"))
+                                        .offset(x:25, y:-28)
+                                }
+                                Text("Kennedy S.")
+                                    .font(.system(size: 14, weight: .regular, design: .rounded))
+                                    
+                            }
+                            .frame(maxWidth: .infinity)
+                        }
+                        
+                        Divider()
                         
                         Text("Trending")
                             .font(.system(size: 22, weight: .heavy, design: .rounded))
                         
                         HStack {
-                            Image("profile")
+                            Image("jackprofile")
                                 .resizable()
                                 .frame(width: 40, height: 40)
                                 .foregroundColor(.white)
                             
-                            Text("Joe Biden")
+                            Text("Jack Malo")
                             Spacer()
-                            Text("22k")
+                            Text("6k")
                         }
                         
                         HStack {
-                            Image("profile")
+                            Image("roryprofile")
                                 .resizable()
                                 .frame(width: 40, height: 40)
                                 .foregroundColor(.white)
-                            Text("Zendaya")
+                            Text("Rory Bostwick")
                             Spacer()
-                            Text("18k")
+                            Text("1.2k")
                         }
                         
                         HStack {
-                            Image("profile")
+                            Image("blakeprofile")
                                 .resizable()
                                 .frame(width: 40, height: 40)
                                 .foregroundColor(.white)
-                            Text("Leo Dicaprio")
+                            Text("Blake Gillian")
                             Spacer()
-                            Text("16k")
+                            Text("19k")
                         }
-                                                Spacer()
-                                            }
-                                            .padding(.top, 10)
-                                            .frame(maxWidth: .infinity) // Allow VStack to take up available width
-                                        }
-                                        .padding(.horizontal, 25) // Add margin on both sides, allowing for more padding
-                                    
-
                         
-                    
-                    .frame(maxWidth: .infinity)
-                
-                
-                .keyboardAware() // Apply the custom modifier here
+                       
+                        
+                    }
+                    .padding(.top, 10)
+                    .frame(maxWidth: .infinity) // Allow VStack to take up available width
+                    .padding(.horizontal, 25) // Add margin on both sides, allowing for more padding
+                   
+                }
+                .frame(maxWidth: .infinity)
             }
         }
     }
