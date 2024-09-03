@@ -3,7 +3,7 @@ import SwiftUI
 struct MovingRectanglesView: View {
     @State private var offset: CGFloat = 0
     @State private var offset2: CGFloat = 0 // For the second group
-    let labels = ["Charleston", "New York", "Omaha", "Charlotte", "Houston"] // Different text for each rectangle
+    let labels = ["Charleston", "New York", "Lexington", "Charlotte", "Greenville"] // Different text for each rectangle
     let labels2 = ["Chicago", "Miami", "Seattle", "Denver", "Austin"] // Different text for the second set
     private let scrollDuration: Double = 40.0 // Duration of the scroll animation
 
@@ -146,6 +146,7 @@ struct ModalGroupView: View {
                     .padding(.top, 180)
                     .padding(.bottom, 10)
                 
+                // Make MovingRectanglesView span the entire width of the screen
                 MovingRectanglesView()
                     .frame(maxWidth: .infinity, maxHeight: 50) // Full width of the screen
                     .padding(.top, 35)
@@ -248,9 +249,7 @@ struct ModalGroupView: View {
                         Circle()
                             .frame(width: 40)
                             .foregroundStyle(.thinMaterial)
-                        Image(systemName:
-
- "graduationcap")
+                        Image(systemName: "graduationcap")
                             .resizable()
                             .frame(width: 20, height: 20)
                             .foregroundColor(.white)

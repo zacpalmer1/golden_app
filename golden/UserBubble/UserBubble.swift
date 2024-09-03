@@ -16,18 +16,18 @@ struct UserBubble: View {
             HStack {
                  // Add Spacer to push elements to the center
                 Spacer()
-                Image("profile")
+                Image("joshprofile")
                     .resizable()
                     .frame(width: 35, height: 35)
                 
                 Button(action: {
                     profile.toggle()
                 }) {
-                    Text("Zac Palmer")
+                    Text("Josh Powers")
                         .foregroundColor(.white)
                 }
                 .fullScreenCover(isPresented: $profile) {
-                    Profile()
+                    OtherProfile()
                 }
                 Spacer()
                 Spacer()

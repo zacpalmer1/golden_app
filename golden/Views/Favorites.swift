@@ -9,7 +9,9 @@ import SwiftUI
 
 struct Favorites: View {
     @State private var usersearch: String = ""
-    
+    @State private var profile = false
+    @State private var isPressed = false
+
     var body: some View {
         ZStack {
             // Background image with dynamic opacity
@@ -78,7 +80,7 @@ struct Favorites: View {
                                         .offset(x:25, y:-28)
                                     Circle()
                                         .frame(width: 14)
-                                        .foregroundColor(Color(hex: "8F3761"))
+                                        .foregroundColor(Color(hex: "E85367"))
                                         .offset(x:25, y:-28)
                                 }
                                 Text("Zac P.")
@@ -87,24 +89,36 @@ struct Favorites: View {
                             }
                             .frame(maxWidth: .infinity) // Each VStack takes up equal width
 
-                            VStack {
-                                ZStack{
-                                    
-                                    Image("joshprofile")
-                                        .resizable()
-                                        .frame(width: 70, height: 70)
-                                        .foregroundColor(.white)
-                                    Circle()
-                                        .frame(width: 18)
-                                        .foregroundStyle(.ultraThinMaterial)
-                                        .offset(x:25, y:-28)
-                                    Circle()
-                                        .frame(width: 14)
-                                        .foregroundColor(Color(hex: "FF7365"))
-                                        .offset(x:25, y:-28)
+                            
+                                Button(action: {
+                                    profile.toggle()
+                                }) {
+                                    VStack {
+                                        VStack{
+                                        ZStack{
+                                            
+                                                Image("joshprofile")
+                                                    .resizable()
+                                                    .frame(width: 70, height: 70)
+                                                    .foregroundColor(.white)
+                                                Circle()
+                                                    .frame(width: 18)
+                                                    .foregroundStyle(.ultraThinMaterial)
+                                                    .offset(x:25, y:-28)
+                                                Circle()
+                                                    .frame(width: 14)
+                                                    .foregroundColor(Color(hex: "8F3761"))
+                                                    .offset(x:25, y:-28)
+                                            }
+                                            Text("Josh P.")
+                                                .font(.system(size: 14, weight: .regular, design: .rounded))
+                                                .foregroundColor(.white)
+                                        }
                                 }
-                                Text("Josh P.")
-                                    .font(.system(size: 14, weight: .regular, design: .rounded))
+                                .fullScreenCover(isPresented: $profile) {
+                                    OtherProfile()
+                                }
+                                
                                     
                             }
                             .frame(maxWidth: .infinity)
@@ -144,7 +158,7 @@ struct Favorites: View {
                                         .offset(x:25, y:-28)
                                     Circle()
                                         .frame(width: 14)
-                                        .foregroundColor(Color(hex: "372136"))
+                                        .foregroundColor(Color(hex: "FF7365"))
                                         .offset(x:25, y:-28)
                                 }
                                 Text("Kennedy S.")

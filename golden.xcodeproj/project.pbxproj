@@ -22,6 +22,8 @@
 		8C7173432C698172008983FB /* ModalGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7173422C698172008983FB /* ModalGroupView.swift */; };
 		8C7173462C69B6F1008983FB /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7173452C69B6F1008983FB /* Favorites.swift */; };
 		8C962A6E2C8525E200D436EE /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C962A6D2C8525E200D436EE /* Color.swift */; };
+		8C962A702C8647A900D436EE /* OtherProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C962A6F2C8647A900D436EE /* OtherProfile.swift */; };
+		8C962A722C865D4100D436EE /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C962A712C865D4100D436EE /* Messages.swift */; };
 		8C9831D72AE849E300DA5E0A /* goldenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9831D62AE849E300DA5E0A /* goldenApp.swift */; };
 		8C9831D92AE849E300DA5E0A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9831D82AE849E300DA5E0A /* ContentView.swift */; };
 		8C9831DB2AE849E400DA5E0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C9831DA2AE849E400DA5E0A /* Assets.xcassets */; };
@@ -51,6 +53,8 @@
 		8C7173422C698172008983FB /* ModalGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalGroupView.swift; sourceTree = "<group>"; };
 		8C7173452C69B6F1008983FB /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
 		8C962A6D2C8525E200D436EE /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		8C962A6F2C8647A900D436EE /* OtherProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherProfile.swift; sourceTree = "<group>"; };
+		8C962A712C865D4100D436EE /* Messages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
 		8C9831D32AE849E300DA5E0A /* golden.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = golden.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C9831D62AE849E300DA5E0A /* goldenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goldenApp.swift; sourceTree = "<group>"; };
 		8C9831D82AE849E300DA5E0A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -199,7 +203,9 @@
 			isa = PBXGroup;
 			children = (
 				8C9831E92AE9C96900DA5E0A /* Activity.swift */,
+				8C962A712C865D4100D436EE /* Messages.swift */,
 				8C9831EB2AE9C97200DA5E0A /* Profile.swift */,
+				8C962A6F2C8647A900D436EE /* OtherProfile.swift */,
 				8C9831ED2AE9FC4500DA5E0A /* Timer.swift */,
 				8C7173422C698172008983FB /* ModalGroupView.swift */,
 				8C7173452C69B6F1008983FB /* Favorites.swift */,
@@ -334,6 +340,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C962A702C8647A900D436EE /* OtherProfile.swift in Sources */,
+				8C962A722C865D4100D436EE /* Messages.swift in Sources */,
 				8C218E522AF2A9D500E0BBF2 /* TopBarView.swift in Sources */,
 				8C7173362C6939C3008983FB /* HomeYesterday.swift in Sources */,
 				8C7173432C698172008983FB /* ModalGroupView.swift in Sources */,
