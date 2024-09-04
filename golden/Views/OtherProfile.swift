@@ -66,7 +66,8 @@ struct OtherProfile: View {
                                                         .foregroundColor(.white)
                                                 }
                                             }
-                                            
+                                            .padding(.horizontal, 25)
+                                            Spacer()
                                             Spacer()
                                             ZStack{
                                                 
@@ -84,13 +85,16 @@ struct OtherProfile: View {
                                                     .offset(x:35, y:-38)
                                             }
                                             Spacer()
+                                            Spacer()
                                             ZStack{
                                                 Circle()
                                                     .frame(width:35)
                                                     .foregroundStyle(.ultraThinMaterial)
                                                 Image(systemName: "gear")
                                                     .foregroundColor(.white)
+                                                
                                             }
+                                            .padding(.horizontal, 25)
                                             Spacer()
                                         }
                                         
@@ -101,14 +105,32 @@ struct OtherProfile: View {
                                             .font(.system(size: 16, weight: .regular, design: .rounded))
                                             .padding(.bottom, 10)
                                             .foregroundColor(.white)
-                                        
+                                        HStack{
+                                            Spacer()
+                                            Text("Following:")
+                                                .font(.system(size: 16, weight: .bold, design: .rounded))
+                                                .foregroundColor(.white)
+                                            Text("102")
+                                                .font(.system(size: 16, weight: .regular, design: .rounded))
+                                                .foregroundColor(.white)
+                                            Spacer()
+                                            Text("Followers:")
+                                                .font(.system(size: 16, weight: .bold, design: .rounded))
+                                                .foregroundColor(.white)
+                                            Text("156")
+                                                .font(.system(size: 16, weight: .bold, design: .rounded))
+                                                .foregroundColor(.white)
+                                            Spacer()
+                                        }
+                                        .padding(.horizontal, 25)
+                                        .padding(.bottom,15)
                                         HStack{
                                             ZStack{
                                                 Rectangle()
                                                     .frame(width:100, height:30)
                                                     .foregroundColor(.green)
                                                     .cornerRadius(10)
-                                                Text("Friends")
+                                                Text("Follow")
                                                     .font(.system(size: 16, weight: .bold, design: .rounded))
                                                     .foregroundColor(.white)
                                             }
@@ -117,17 +139,18 @@ struct OtherProfile: View {
                                                     .frame(width:100, height:30)
                                                     .foregroundColor(.blue)
                                                     .cornerRadius(10)
-                                                Text("Follow")
+                                                Text("Message")
                                                     .font(.system(size: 16, weight: .bold, design: .rounded))
                                                     .foregroundColor(.white)
                                             }
                                             
                                         }
-                                        .padding(.bottom,10)
+                                        
+                                        
                                         HStack{
                                             
                                            MovingRectanglesView()
-                                                .padding(.top,10)
+                                                .padding(.top,20)
                                         }
                                         
                                     }
@@ -138,6 +161,7 @@ struct OtherProfile: View {
                                 Text("September")
                                     .font(.system(size: 22, weight: .heavy, design: .rounded))
                                     .foregroundColor(.white)
+                                    .padding(.horizontal, 25)
                                 HStack{
                                     Text("S")
                                         .frame(width:42, height:6)
@@ -161,6 +185,7 @@ struct OtherProfile: View {
                                         .frame(width:42, height:6)
                                         .foregroundColor(.gray)
                                 }
+                                .padding(.horizontal, 25)
                                 HStack{
                                     Image("test")
                                         .resizable()
@@ -205,6 +230,7 @@ struct OtherProfile: View {
                                         .frame(width:42, height:42)
                                         .cornerRadius(10)
                                 }
+                                .padding(.horizontal, 25)
                                 HStack{
                                     Image("test5")
                                         .resizable()
@@ -263,6 +289,7 @@ struct OtherProfile: View {
                                         .frame(width:42, height:42)
                                         .cornerRadius(10)
                                 }
+                                .padding(.horizontal, 25)
                                 HStack{
                                     Image("test3")
                                         .resizable()
@@ -308,6 +335,7 @@ struct OtherProfile: View {
                                         .frame(width:42, height:42)
                                         .cornerRadius(10)
                                 }
+                                .padding(.horizontal, 25)
                                 HStack{
                                     Image("test7")
                                         .resizable()
@@ -362,6 +390,7 @@ struct OtherProfile: View {
                                             .font(.system(size: 18, weight: .heavy, design: .rounded))
                                     }
                                 }
+                                .padding(.horizontal, 25)
                                 HStack{
                                     Image("test3")
                                         .resizable()
@@ -389,45 +418,12 @@ struct OtherProfile: View {
                                     }
                                     
                                 }
-                                Divider()
-                                ZStack {
-                                    Image("favorite2")
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fill)
-                                        .clipped()
-                                        .frame(width: .infinity, height: 150) // Use maxWidth for full width
-                                        .cornerRadius(20)
-                                    
-                                    Rectangle()
-                                        .fill(
-                                            LinearGradient(
-                                                gradient: Gradient(colors: [Color.black, Color.clear]),
-                                                startPoint: .bottom,
-                                                endPoint: .center
-                                                
-                                            )
-                                            
-                                        )
-                                    
-                                        .cornerRadius(20)
-                                        .frame(height: 150)
-                                    
-                                    VStack {
-                                        Spacer() // Pushes the text to the bottom
-                                        HStack {
-                                            Text("Favorites")
-                                                .font(.system(size: 22, weight: .heavy, design: .rounded))
-                                                .foregroundColor(.white) // Ensure the text is visible
-                                                .padding([.leading, .bottom], 10) // Add padding to the bottom and left
-                                            Spacer() // Pushes the text to the left
-                                        }
-                                    }
-                                    .frame(height: 150) // Match the frame height to the image and gradient
-                                }
+                                .padding(.horizontal, 25)
                             }
+                            
                             .padding(.top, 10)
                             .frame(maxWidth: .infinity) // Allow VStack to take up available width
-                            .padding(.horizontal, 25) // Add margin on both sides, allowing for more padding
+                             // Add margin on both sides, allowing for more padding
                             
                         }
                         .frame(maxWidth: .infinity)

@@ -13,7 +13,7 @@ struct Profile: View {
     var body: some View {
         ZStack {
             // Background image with dynamic opacity
-            Image("image")
+            Image("test3")
                 .resizable()
                 .frame(width: .infinity, height: .infinity)
                 .ignoresSafeArea()
@@ -62,6 +62,8 @@ struct Profile: View {
                                                 .foregroundColor(.white)
                                                 
                                         }
+                                        .padding(.horizontal, 25) 
+                                        Spacer()
                                         Spacer()
                                         ZStack{
                                             
@@ -79,6 +81,7 @@ struct Profile: View {
                                                 .offset(x:35, y:-38)
                                         }
                                         Spacer()
+                                        Spacer()
                                         ZStack{
                                             Circle()
                                                 .frame(width:35)
@@ -86,6 +89,7 @@ struct Profile: View {
                                             Image(systemName: "gear")
                                                 .foregroundColor(.white)
                                         }
+                                        .padding(.horizontal, 25)
                                         Spacer()
                                     }
                                     
@@ -112,6 +116,7 @@ struct Profile: View {
                                             .font(.system(size: 18, weight: .regular, design: .rounded))
                                         
                                     }
+                                    .padding(.horizontal, 25)
                                     MovingRectanglesView()
                                          .padding(.top,10)
                                 }
@@ -120,6 +125,7 @@ struct Profile: View {
                             }
                             Text("Activity")
                                 .font(.system(size: 22, weight: .heavy, design: .rounded))
+                                .padding(.horizontal, 25)
                             HStack{
                                 Image("joshprofile")
                                     .resizable()
@@ -131,6 +137,7 @@ struct Profile: View {
                                 Spacer()
                                 Text("10:32 AM")
                             }
+                            .padding(.horizontal, 25)
                             HStack{
                                 Image("leeprofile")
                                     .resizable()
@@ -142,6 +149,7 @@ struct Profile: View {
                                 Spacer()
                                 Text("Wow I was just ...")
                             }
+                            .padding(.horizontal, 25)
                             HStack{
                                 Image("kennprofile")
                                     .resizable()
@@ -153,11 +161,13 @@ struct Profile: View {
                                 Spacer()
                                 Text("When are we h ...")
                             }
+                            .padding(.horizontal, 25)
                             Divider()
                             
                             Text("September")
                                 .font(.system(size: 22, weight: .heavy, design: .rounded))
                                 .foregroundColor(.white)
+                                .padding(.horizontal, 25)
                             HStack{
                                 Text("S")
                                     .frame(width:42, height:6)
@@ -181,6 +191,7 @@ struct Profile: View {
                                     .frame(width:42, height:6)
                                     .foregroundColor(.gray)
                             }
+                            .padding(.horizontal, 25)
                             HStack{
                                 Image("test")
                                     .resizable()
@@ -225,6 +236,7 @@ struct Profile: View {
                                     .frame(width:42, height:42)
                                     .cornerRadius(10)
                             }
+                            .padding(.horizontal, 25)
                             HStack{
                                 Image("test5")
                                     .resizable()
@@ -283,6 +295,7 @@ struct Profile: View {
                                     .frame(width:42, height:42)
                                     .cornerRadius(10)
                             }
+                            .padding(.horizontal, 25)
                             HStack{
                                 Image("test3")
                                     .resizable()
@@ -328,6 +341,7 @@ struct Profile: View {
                                     .frame(width:42, height:42)
                                     .cornerRadius(10)
                             }
+                            .padding(.horizontal, 25)
                             HStack{
                                 Image("test7")
                                     .resizable()
@@ -382,6 +396,7 @@ struct Profile: View {
                                         .font(.system(size: 18, weight: .heavy, design: .rounded))
                                 }
                             }
+                            .padding(.horizontal, 25)
                             HStack{
                                 Image("test3")
                                     .resizable()
@@ -409,10 +424,12 @@ struct Profile: View {
                                 }
                                 
                             }
+                            .padding(.horizontal, 25)
                             Divider()
                             Text("Folders")
                                 .font(.system(size: 22, weight: .heavy, design: .rounded))
                                 .foregroundColor(.white)
+                                .padding(.horizontal, 25)
                             ZStack {
                                         Image("test4")
                                             .resizable()
@@ -449,6 +466,7 @@ struct Profile: View {
                                         }
                                         .frame(height: 150) // Match the frame height to the image and gradient
                                     }
+                            .padding(.horizontal, 25)
                                      // Add some horizontal padding if needed
                             ZStack {
                                         Image("test")
@@ -485,16 +503,17 @@ struct Profile: View {
                                         }
                                         .frame(height: 150) // Match the frame height to the image and gradient
                                     }
-                            
+                            .padding(.horizontal, 25)
                         }
                         .padding(.top, 10)
                         .frame(maxWidth: .infinity) // Allow VStack to take up available width
-                        .padding(.horizontal, 25) // Add margin on both sides, allowing for more padding
+                        // Add margin on both sides, allowing for more padding
                         
                     }
                     .frame(maxWidth: .infinity)
                 }
             }
+            .scrollIndicators(.hidden)
         }
     }
 }

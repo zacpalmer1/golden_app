@@ -23,9 +23,9 @@ struct TestTabBarView: View {
                     Spacer()
                     tabButton(tab: .favorites, imageName: "magnifyingglass")
                     Spacer()
-                    TimerView()
+                    TestView()
                         .onLongPressGesture(minimumDuration: 1.0) {
-                            TimerSplash()
+                            TestView()
                         }
                     Spacer()
                     tabButton(tab: .activity, imageName: "hand.wave.fill")

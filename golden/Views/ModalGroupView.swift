@@ -3,8 +3,8 @@ import SwiftUI
 struct MovingRectanglesView: View {
     @State private var offset: CGFloat = 0
     @State private var offset2: CGFloat = 0 // For the second group
-    let labels = ["Charleston", "New York", "Lexington", "Charlotte", "Greenville"] // Different text for each rectangle
-    let labels2 = ["Chicago", "Miami", "Seattle", "Denver", "Austin"] // Different text for the second set
+    let labels = ["Charleston", "Furman", "Greenville", "Cross Country", "Greenville"] // Different text for each rectangle
+    let labels2 = ["MUSC", "Washington", "Man Buns", "New Orleans", "Austin"] // Different text for the second set
     private let scrollDuration: Double = 40.0 // Duration of the scroll animation
 
     var body: some View {
@@ -145,7 +145,7 @@ struct ModalGroupView: View {
                     .cornerRadius(10)
                     .padding(.top, 180)
                     .padding(.bottom, 10)
-                
+                    .padding(.horizontal, 25) 
                 // Make MovingRectanglesView span the entire width of the screen
                 MovingRectanglesView()
                     .frame(maxWidth: .infinity, maxHeight: 50) // Full width of the screen
@@ -154,7 +154,7 @@ struct ModalGroupView: View {
                 
                 Text("Favorites")
                     .font(.system(size: 18, weight: .heavy, design: .rounded))
-                
+                    .padding(.horizontal, 25)
                 HStack {
                     ZStack {
                         Circle()
@@ -169,7 +169,7 @@ struct ModalGroupView: View {
                     Spacer()
                     Text("304")
                 }
-                
+                .padding(.horizontal, 25)
                 HStack {
                     ZStack {
                         Circle()
@@ -184,7 +184,7 @@ struct ModalGroupView: View {
                     Spacer()
                     Text("2.3M")
                 }
-                
+                .padding(.horizontal, 25)
                 HStack {
                     ZStack {
                         Circle()
@@ -199,15 +199,15 @@ struct ModalGroupView: View {
                     Spacer()
                     Text("21M")
                 }
-                
+                .padding(.horizontal, 25)
                 Divider()
                     .frame(width: 350)
                     .padding(.top, 10)
                     .padding(.bottom, 10)
-                
+                    .padding(.horizontal, 25)
                 Text("My Groups")
                     .font(.system(size: 18, weight: .heavy, design: .rounded))
-                
+                    .padding(.horizontal, 25)
                 HStack {
                     ZStack {
                         Circle()
@@ -220,7 +220,7 @@ struct ModalGroupView: View {
                     }
                     Text("New Group")
                 }
-                
+                .padding(.horizontal, 25)
                 HStack {
                     Image(systemName: "star")
                         .resizable()
@@ -239,7 +239,7 @@ struct ModalGroupView: View {
                     Spacer()
                     Text("6")
                 }
-                
+                .padding(.horizontal, 25)
                 HStack {
                     Image(systemName: "star")
                         .resizable()
@@ -258,7 +258,7 @@ struct ModalGroupView: View {
                     Spacer()
                     Text("1.2k")
                 }
-                
+                .padding(.horizontal, 25)
                 HStack {
                     Image(systemName: "star")
                         .resizable()
@@ -277,10 +277,10 @@ struct ModalGroupView: View {
                     Spacer()
                     Text("19k")
                 }
-                
+                .padding(.horizontal, 25)
                 Spacer()
             }
-            .frame(width: 350)
+            
         }
     }
 }
