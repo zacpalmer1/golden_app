@@ -20,7 +20,8 @@
   - TimerEngine Calculates time until Sunset 🟢
 #### Bugs
   - Timer refreshes with every TabBar onClick
-  <img width="250" alt="Screenshot 2023-04-07 at 5 23 09 PM" src="https://github.com/user-attachments/assets/dc7cd175-7313-4480-bedd-17fb26f4c45f"> 
+ 
+
 
 
 
@@ -31,18 +32,29 @@
   - Background displays photo of ScrollView image (fades in) 🟢
   - UserBubble opens to display UserProfile 🟢
   - UserBubble updates with ScrollView 🔴
-#### Backend Goals
-  <img width="250" alt="Screenshot 2023-04-07 at 5 23 09 PM" src="https://github.com/zacpalmer1/golden_app/assets/75393933/a30f6760-c31b-4fba-a878-e89d0e6a6766"> 
-  
 
-### Favorites 
+   <img width="250" alt="Screenshot 2023-04-07 at 5 23 09 PM" src="https://github.com/user-attachments/assets/1a2ba0b2-7609-4a1e-a0b7-554e59526ceb">
+   
+### Groups
+   <img width="250" src="https://github.com/user-attachments/assets/b50f0444-be2a-4e79-b708-e6bab8a79d6c"> 
+
+
+
+### Search 
 #### UI Goals
   - Allow user to scroll though most popular photos 🟢
   - Background displays photo of ScrollView image (fades in) 🟡
   - UserBubble opens to display UserProfile 🟢
   - UserBubble updates with ScrollView 🔴
 #### Backend Goals
-  <img width="250" alt="Screenshot 2023-04-21 at 11 34 17 PM" src="https://github.com/zacpalmer1/golden_app/assets/75393933/8aa8272b-624a-4a6a-a049-8a9ab958d734">
+  <img width="250" alt="Screenshot 2023-04-21 at 11 34 17 PM" src="https://github.com/user-attachments/assets/c1e2507f-3039-4079-b526-6b4848c5228b">
+
+### Messages 
+<img width="250" alt="Screenshot 2023-04-21 at 11 34 17 PM" src="https://github.com/user-attachments/assets/2caafc45-9810-4804-9dfe-9aa9d1d4a708">
+
+### Profile 
+<img width="250" alt="Screenshot 2023-04-21 at 11 34 17 PM" src="https://github.com/user-attachments/assets/a4fc3306-701c-42a7-a1bc-3d1bbec7a778">
+
 
 
 ## Languages and API's
