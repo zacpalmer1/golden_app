@@ -1,0 +1,18 @@
+"/Users/zacharypalmer/Desktop/golden/golden/Core/Messages/Activity.swift":
+  diagnostics: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Activity.dia"
+  object: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Activity.o"
+  dependencies: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Activity.d"
+  const-values: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Activity.swiftconstvalues"
+  swift-dependencies: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Activity.swiftdeps"
+"/Users/zacharypalmer/Desktop/golden/golden/Core/TabBarView/TabBarView.swift":
+  diagnostics: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TabBarView.dia"
+  swift-dependencies: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TabBarView.swiftdeps"
+  object: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TabBarView.o"
+  const-values: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TabBarView.swiftconstvalues"
+  dependencies: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TabBarView.d"
+"/Users/zacharypalmer/Desktop/golden/golden/Core/Authentification/AuthView/SignUp2.swift":
+  swift-dependencies: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/SignUp2.swiftdeps"
+  const-values: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/SignUp2.swiftconstvalues"
+  diagnostics: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/SignUp2.dia"
+  dependencies: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/SignUp2.d"
+  object: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/SignUp2.o"

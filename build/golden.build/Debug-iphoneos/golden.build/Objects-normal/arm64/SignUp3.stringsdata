@@ -1,0 +1,32 @@
+{
+  "source": "/Users/zacharypalmer/Desktop/golden/golden/Core/Authentification/AuthView/SignUp3.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Select Dates",
+        "location": {
+          "startingColumn": 25,
+          "startingLine": 18
+        }
+      },
+      {
+        "comment": "",
+        "key": "Select Date",
+        "location": {
+          "startingColumn": 33,
+          "startingLine": 34
+        }
+      },
+      {
+        "comment": "",
+        "key": "Add Date",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 46
+        }
+      }
+    ]
+  },
+  "version": 1
+}

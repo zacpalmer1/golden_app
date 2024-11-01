@@ -1,0 +1,24 @@
+{
+  "source": "/Users/zacharypalmer/Desktop/golden/golden/Core/TabBarView/Timer/TimerSplash.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Almost time Zac",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 17
+        }
+      },
+      {
+        "comment": "",
+        "key": "Sunset is in ",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 20
+        }
+      }
+    ]
+  },
+  "version": 1
+}

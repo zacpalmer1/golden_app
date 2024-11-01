@@ -1,0 +1,32 @@
+{
+  "source": "/Users/zacharypalmer/Desktop/golden/golden/Core/Messages/Messages.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Josh Powers",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 62
+        }
+      },
+      {
+        "comment": "",
+        "key": "@joshpowers1",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 64
+        }
+      },
+      {
+        "comment": "",
+        "key": "Message ...",
+        "location": {
+          "startingColumn": 35,
+          "startingLine": 80
+        }
+      }
+    ]
+  },
+  "version": 1
+}

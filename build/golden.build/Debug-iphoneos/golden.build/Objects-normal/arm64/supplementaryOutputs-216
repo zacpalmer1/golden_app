@@ -1,0 +1,18 @@
+"/Users/zacharypalmer/Desktop/golden/golden/Core/Profile/OtherProfile.swift":
+  const-values: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/OtherProfile.swiftconstvalues"
+  diagnostics: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/OtherProfile.dia"
+  object: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/OtherProfile.o"
+  dependencies: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/OtherProfile.d"
+  swift-dependencies: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/OtherProfile.swiftdeps"
+"/Users/zacharypalmer/Desktop/golden/golden/Core/Messages/Messages.swift":
+  object: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Messages.o"
+  swift-dependencies: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Messages.swiftdeps"
+  dependencies: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Messages.d"
+  const-values: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Messages.swiftconstvalues"
+  diagnostics: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Messages.dia"
+"/Users/zacharypalmer/Desktop/golden/golden/Core/LoadingPage/SplashScreenView.swift":
+  const-values: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/SplashScreenView.swiftconstvalues"
+  dependencies: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/SplashScreenView.d"
+  object: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/SplashScreenView.o"
+  swift-dependencies: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/SplashScreenView.swiftdeps"
+  diagnostics: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/SplashScreenView.dia"

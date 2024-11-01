@@ -1,0 +1,18 @@
+"/Users/zacharypalmer/Desktop/golden/golden/Core/TestGroup/TestTabBarView.swift":
+  swift-dependencies: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TestTabBarView.swiftdeps"
+  diagnostics: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TestTabBarView.dia"
+  const-values: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TestTabBarView.swiftconstvalues"
+  dependencies: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TestTabBarView.d"
+  object: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TestTabBarView.o"
+"/Users/zacharypalmer/Desktop/golden/golden/Service/AuthService.swift":
+  swift-dependencies: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/AuthService.swiftdeps"
+  diagnostics: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/AuthService.dia"
+  const-values: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/AuthService.swiftconstvalues"
+  dependencies: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/AuthService.d"
+  object: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/AuthService.o"
+"/Users/zacharypalmer/Desktop/golden/golden/Model/User.swift":
+  const-values: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/User.swiftconstvalues"
+  dependencies: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/User.d"
+  swift-dependencies: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/User.swiftdeps"
+  diagnostics: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/User.dia"
+  object: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/User.o"

@@ -1,0 +1,168 @@
+{
+  "source": "/Users/zacharypalmer/Desktop/golden/golden/Core/Messages/Activity.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "messages",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 50
+        }
+      },
+      {
+        "comment": "",
+        "key": "Find Messages",
+        "location": {
+          "startingColumn": 43,
+          "startingLine": 58
+        }
+      },
+      {
+        "comment": "",
+        "key": "When are are doing our Fantasy draft today? Im ready",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 93
+        }
+      },
+      {
+        "comment": "",
+        "key": "Zac Palmer",
+        "location": {
+          "startingColumn": 54,
+          "startingLine": 87
+        }
+      },
+      {
+        "comment": "",
+        "key": "7:30 PM",
+        "location": {
+          "startingColumn": 54,
+          "startingLine": 90
+        }
+      },
+      {
+        "comment": "",
+        "key": "Did you end up going to class?",
+        "location": {
+          "startingColumn": 54,
+          "startingLine": 125
+        }
+      },
+      {
+        "comment": "",
+        "key": "Josh Powers",
+        "location": {
+          "startingColumn": 58,
+          "startingLine": 116
+        }
+      },
+      {
+        "comment": "",
+        "key": "6:12 PM",
+        "location": {
+          "startingColumn": 58,
+          "startingLine": 120
+        }
+      },
+      {
+        "comment": "",
+        "key": "What time are we meeting up for the game tonight? I’m pumped!",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 159
+        }
+      },
+      {
+        "comment": "",
+        "key": "Lee Eberly",
+        "location": {
+          "startingColumn": 54,
+          "startingLine": 153
+        }
+      },
+      {
+        "comment": "",
+        "key": "4:36 PM",
+        "location": {
+          "startingColumn": 54,
+          "startingLine": 156
+        }
+      },
+      {
+        "comment": "",
+        "key": "Are we starting the project today? I’m good to go.",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 187
+        }
+      },
+      {
+        "comment": "",
+        "key": "Blake Gillian",
+        "location": {
+          "startingColumn": 54,
+          "startingLine": 181
+        }
+      },
+      {
+        "comment": "",
+        "key": "2:13 PM",
+        "location": {
+          "startingColumn": 54,
+          "startingLine": 184
+        }
+      },
+      {
+        "comment": "",
+        "key": "When are we having our team meeting? I’m ready to contribute.",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 215
+        }
+      },
+      {
+        "comment": "",
+        "key": "Kennedy Siegler",
+        "location": {
+          "startingColumn": 54,
+          "startingLine": 209
+        }
+      },
+      {
+        "comment": "",
+        "key": "12:33 PM",
+        "location": {
+          "startingColumn": 54,
+          "startingLine": 212
+        }
+      },
+      {
+        "comment": "",
+        "key": "Are we grabbing lunch before the big meeting? I’m starving.",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 245
+        }
+      },
+      {
+        "comment": "",
+        "key": "Jack Malo",
+        "location": {
+          "startingColumn": 54,
+          "startingLine": 239
+        }
+      },
+      {
+        "comment": "",
+        "key": "8:11 AM",
+        "location": {
+          "startingColumn": 54,
+          "startingLine": 242
+        }
+      }
+    ]
+  },
+  "version": 1
+}

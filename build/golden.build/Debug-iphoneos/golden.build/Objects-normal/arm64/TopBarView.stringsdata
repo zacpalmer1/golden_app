@@ -1,0 +1,24 @@
+{
+  "source": "/Users/zacharypalmer/Desktop/golden/golden/Core/Home/TopBar/TopBarView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Golden",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 22
+        }
+      },
+      {
+        "comment": "",
+        "key": "Friends",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 45
+        }
+      }
+    ]
+  },
+  "version": 1
+}

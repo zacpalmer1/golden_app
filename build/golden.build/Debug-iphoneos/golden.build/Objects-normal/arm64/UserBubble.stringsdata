@@ -1,0 +1,40 @@
+{
+  "source": "/Users/zacharypalmer/Desktop/golden/golden/Core/Home/UserBubble/UserBubble.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "12",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 41
+        }
+      },
+      {
+        "comment": "",
+        "key": "3",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 51
+        }
+      },
+      {
+        "comment": "",
+        "key": "8",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 57
+        }
+      },
+      {
+        "comment": "",
+        "key": "Josh Powers",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 26
+        }
+      }
+    ]
+  },
+  "version": 1
+}

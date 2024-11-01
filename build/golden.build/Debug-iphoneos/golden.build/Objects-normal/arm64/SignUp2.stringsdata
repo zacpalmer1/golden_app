@@ -1,0 +1,72 @@
+{
+  "source": "/Users/zacharypalmer/Desktop/golden/golden/Core/Authentification/AuthView/SignUp2.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Create Account",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 41
+        }
+      },
+      {
+        "comment": "",
+        "key": "Step 2 of 5",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 46
+        }
+      },
+      {
+        "comment": "",
+        "key": "First Name",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 54
+        }
+      },
+      {
+        "comment": "",
+        "key": "Last Name",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 65
+        }
+      },
+      {
+        "comment": "",
+        "key": "By tapping Continue, you acknowledge that you have read the Privacy Policy and agree to the Terms of Service",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 76
+        }
+      },
+      {
+        "comment": "",
+        "key": "First Name",
+        "location": {
+          "startingColumn": 35,
+          "startingLine": 58
+        }
+      },
+      {
+        "comment": "",
+        "key": "Last Name (optional)",
+        "location": {
+          "startingColumn": 35,
+          "startingLine": 69
+        }
+      },
+      {
+        "comment": "",
+        "key": "Continue",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 89
+        }
+      }
+    ]
+  },
+  "version": 1
+}

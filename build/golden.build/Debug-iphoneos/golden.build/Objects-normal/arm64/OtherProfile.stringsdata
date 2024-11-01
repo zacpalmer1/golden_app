@@ -1,0 +1,192 @@
+{
+  "source": "/Users/zacharypalmer/Desktop/golden/golden/Core/Profile/OtherProfile.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "September",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 161
+        }
+      },
+      {
+        "comment": "",
+        "key": "Josh Powers",
+        "location": {
+          "startingColumn": 46,
+          "startingLine": 101
+        }
+      },
+      {
+        "comment": "",
+        "key": "@joshpowers1",
+        "location": {
+          "startingColumn": 46,
+          "startingLine": 104
+        }
+      },
+      {
+        "comment": "",
+        "key": "Following:",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 110
+        }
+      },
+      {
+        "comment": "",
+        "key": "102",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 113
+        }
+      },
+      {
+        "comment": "",
+        "key": "Followers:",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 117
+        }
+      },
+      {
+        "comment": "",
+        "key": "156",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 120
+        }
+      },
+      {
+        "comment": "",
+        "key": "Follow",
+        "location": {
+          "startingColumn": 54,
+          "startingLine": 133
+        }
+      },
+      {
+        "comment": "",
+        "key": "Message",
+        "location": {
+          "startingColumn": 54,
+          "startingLine": 142
+        }
+      },
+      {
+        "comment": "",
+        "key": "S",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 166
+        }
+      },
+      {
+        "comment": "",
+        "key": "M",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 169
+        }
+      },
+      {
+        "comment": "",
+        "key": "T",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 172
+        }
+      },
+      {
+        "comment": "",
+        "key": "W",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 175
+        }
+      },
+      {
+        "comment": "",
+        "key": "T",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 178
+        }
+      },
+      {
+        "comment": "",
+        "key": "F",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 181
+        }
+      },
+      {
+        "comment": "",
+        "key": "S",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 184
+        }
+      },
+      {
+        "comment": "",
+        "key": "22",
+        "location": {
+          "startingColumn": 46,
+          "startingLine": 255
+        }
+      },
+      {
+        "comment": "",
+        "key": "21",
+        "location": {
+          "startingColumn": 46,
+          "startingLine": 269
+        }
+      },
+      {
+        "comment": "",
+        "key": "15",
+        "location": {
+          "startingColumn": 46,
+          "startingLine": 309
+        }
+      },
+      {
+        "comment": "",
+        "key": "5",
+        "location": {
+          "startingColumn": 46,
+          "startingLine": 379
+        }
+      },
+      {
+        "comment": "",
+        "key": "4",
+        "location": {
+          "startingColumn": 46,
+          "startingLine": 388
+        }
+      },
+      {
+        "comment": "",
+        "key": "2",
+        "location": {
+          "startingColumn": 46,
+          "startingLine": 406
+        }
+      },
+      {
+        "comment": "",
+        "key": "1",
+        "location": {
+          "startingColumn": 46,
+          "startingLine": 415
+        }
+      }
+    ]
+  },
+  "version": 1
+}

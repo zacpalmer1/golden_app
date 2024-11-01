@@ -1,0 +1,18 @@
+"/Users/zacharypalmer/Desktop/golden/golden/App/goldenApp.swift":
+  const-values: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/goldenApp.swiftconstvalues"
+  swift-dependencies: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/goldenApp.swiftdeps"
+  diagnostics: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/goldenApp.dia"
+  dependencies: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/goldenApp.d"
+  object: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/goldenApp.o"
+"/Users/zacharypalmer/Desktop/golden/golden/Core/Home/UserBubble/UserBubble.swift":
+  swift-dependencies: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/UserBubble.swiftdeps"
+  dependencies: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/UserBubble.d"
+  object: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/UserBubble.o"
+  diagnostics: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/UserBubble.dia"
+  const-values: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/UserBubble.swiftconstvalues"
+"/Users/zacharypalmer/Desktop/golden/golden/Core/Home/Home.swift":
+  const-values: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Home.swiftconstvalues"
+  diagnostics: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Home.dia"
+  swift-dependencies: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Home.swiftdeps"
+  dependencies: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Home.d"
+  object: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Home.o"

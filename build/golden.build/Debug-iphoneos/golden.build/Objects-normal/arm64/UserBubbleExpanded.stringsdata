@@ -1,0 +1,56 @@
+{
+  "source": "/Users/zacharypalmer/Desktop/golden/golden/Core/Home/UserBubble/UserBubbleExpanded.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "zacpalmer1",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 25
+        }
+      },
+      {
+        "comment": "",
+        "key": "...",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 20
+        }
+      },
+      {
+        "comment": "",
+        "key": "followers: 76",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 30
+        }
+      },
+      {
+        "comment": "",
+        "key": "following: 68",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 32
+        }
+      },
+      {
+        "comment": "",
+        "key": "Following",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 40
+        }
+      },
+      {
+        "comment": "",
+        "key": "November",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 50
+        }
+      }
+    ]
+  },
+  "version": 1
+}

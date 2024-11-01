@@ -1,0 +1,272 @@
+{
+  "source": "/Users/zacharypalmer/Desktop/golden/golden/Core/Profile/Profile.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Activity",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 126
+        }
+      },
+      {
+        "comment": "",
+        "key": "September",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 167
+        }
+      },
+      {
+        "comment": "",
+        "key": "Folders",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 429
+        }
+      },
+      {
+        "comment": "",
+        "key": "Zac Palmer",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 96
+        }
+      },
+      {
+        "comment": "",
+        "key": "@zacpalmer1",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 98
+        }
+      },
+      {
+        "comment": "",
+        "key": "Posts:",
+        "location": {
+          "startingColumn": 46,
+          "startingLine": 103
+        }
+      },
+      {
+        "comment": "",
+        "key": "122",
+        "location": {
+          "startingColumn": 46,
+          "startingLine": 105
+        }
+      },
+      {
+        "comment": "",
+        "key": "Streak:",
+        "location": {
+          "startingColumn": 46,
+          "startingLine": 108
+        }
+      },
+      {
+        "comment": "",
+        "key": "12",
+        "location": {
+          "startingColumn": 46,
+          "startingLine": 110
+        }
+      },
+      {
+        "comment": "",
+        "key": "Friends:",
+        "location": {
+          "startingColumn": 46,
+          "startingLine": 113
+        }
+      },
+      {
+        "comment": "",
+        "key": "103",
+        "location": {
+          "startingColumn": 46,
+          "startingLine": 115
+        }
+      },
+      {
+        "comment": "",
+        "key": "Josh Powers",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 134
+        }
+      },
+      {
+        "comment": "",
+        "key": "10:32 AM",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 138
+        }
+      },
+      {
+        "comment": "",
+        "key": "Lee Eberly",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 146
+        }
+      },
+      {
+        "comment": "",
+        "key": "Wow I was just ...",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 150
+        }
+      },
+      {
+        "comment": "",
+        "key": "Kennedy Siegler",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 158
+        }
+      },
+      {
+        "comment": "",
+        "key": "When are we h ...",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 162
+        }
+      },
+      {
+        "comment": "",
+        "key": "S",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 172
+        }
+      },
+      {
+        "comment": "",
+        "key": "M",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 175
+        }
+      },
+      {
+        "comment": "",
+        "key": "T",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 178
+        }
+      },
+      {
+        "comment": "",
+        "key": "W",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 181
+        }
+      },
+      {
+        "comment": "",
+        "key": "T",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 184
+        }
+      },
+      {
+        "comment": "",
+        "key": "F",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 187
+        }
+      },
+      {
+        "comment": "",
+        "key": "S",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 190
+        }
+      },
+      {
+        "comment": "",
+        "key": "22",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 261
+        }
+      },
+      {
+        "comment": "",
+        "key": "21",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 275
+        }
+      },
+      {
+        "comment": "",
+        "key": "15",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 315
+        }
+      },
+      {
+        "comment": "",
+        "key": "5",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 385
+        }
+      },
+      {
+        "comment": "",
+        "key": "4",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 394
+        }
+      },
+      {
+        "comment": "",
+        "key": "2",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 412
+        }
+      },
+      {
+        "comment": "",
+        "key": "1",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 421
+        }
+      },
+      {
+        "comment": "",
+        "key": "Arizona",
+        "location": {
+          "startingColumn": 54,
+          "startingLine": 460
+        }
+      },
+      {
+        "comment": "",
+        "key": "Charlotte",
+        "location": {
+          "startingColumn": 54,
+          "startingLine": 497
+        }
+      }
+    ]
+  },
+  "version": 1
+}

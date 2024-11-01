@@ -1,0 +1,18 @@
+"/Users/zacharypalmer/Desktop/golden/golden/Core/TabBarView/Timer/Timer.swift":
+  object: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Timer.o"
+  swift-dependencies: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Timer.swiftdeps"
+  dependencies: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Timer.d"
+  diagnostics: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Timer.dia"
+  const-values: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Timer.swiftconstvalues"
+"/Users/zacharypalmer/Desktop/golden/golden/App/ContentView.swift":
+  diagnostics: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/ContentView.dia"
+  dependencies: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/ContentView.d"
+  object: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/ContentView.o"
+  const-values: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/ContentView.swiftconstvalues"
+  swift-dependencies: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/ContentView.swiftdeps"
+"/Users/zacharypalmer/Desktop/golden/golden/Core/Profile/Profile.swift":
+  dependencies: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Profile.d"
+  object: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Profile.o"
+  const-values: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Profile.swiftconstvalues"
+  swift-dependencies: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Profile.swiftdeps"
+  diagnostics: "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Profile.dia"

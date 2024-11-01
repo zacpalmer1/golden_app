@@ -1,0 +1,18 @@
+{
+  "" : {
+    "diagnostics" : "/Users/zacharypalmer/Desktop/golden/build/Pods.build/Debug-iphoneos/FirebaseFirestoreSwift.build/Objects-normal/arm64/FirebaseFirestoreSwift-master.dia",
+    "emit-module-dependencies" : "/Users/zacharypalmer/Desktop/golden/build/Pods.build/Debug-iphoneos/FirebaseFirestoreSwift.build/Objects-normal/arm64/FirebaseFirestoreSwift-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/zacharypalmer/Desktop/golden/build/Pods.build/Debug-iphoneos/FirebaseFirestoreSwift.build/Objects-normal/arm64/FirebaseFirestoreSwift-master-emit-module.dia",
+    "swift-dependencies" : "/Users/zacharypalmer/Desktop/golden/build/Pods.build/Debug-iphoneos/FirebaseFirestoreSwift.build/Objects-normal/arm64/FirebaseFirestoreSwift-master.swiftdeps"
+  },
+  "/Users/zacharypalmer/Desktop/golden/Pods/FirebaseFirestoreSwift/FirebaseFirestoreSwift/Sources/FirebaseFirestoreSwift.swift" : {
+    "const-values" : "/Users/zacharypalmer/Desktop/golden/build/Pods.build/Debug-iphoneos/FirebaseFirestoreSwift.build/Objects-normal/arm64/FirebaseFirestoreSwift.swiftconstvalues",
+    "dependencies" : "/Users/zacharypalmer/Desktop/golden/build/Pods.build/Debug-iphoneos/FirebaseFirestoreSwift.build/Objects-normal/arm64/FirebaseFirestoreSwift.d",
+    "diagnostics" : "/Users/zacharypalmer/Desktop/golden/build/Pods.build/Debug-iphoneos/FirebaseFirestoreSwift.build/Objects-normal/arm64/FirebaseFirestoreSwift.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/FirebaseFirestoreSwift.build/Objects-normal/arm64/FirebaseFirestoreSwift.o",
+    "llvm-bc" : "/Users/zacharypalmer/Desktop/golden/build/Pods.build/Debug-iphoneos/FirebaseFirestoreSwift.build/Objects-normal/arm64/FirebaseFirestoreSwift.bc",
+    "object" : "/Users/zacharypalmer/Desktop/golden/build/Pods.build/Debug-iphoneos/FirebaseFirestoreSwift.build/Objects-normal/arm64/FirebaseFirestoreSwift.o",
+    "swift-dependencies" : "/Users/zacharypalmer/Desktop/golden/build/Pods.build/Debug-iphoneos/FirebaseFirestoreSwift.build/Objects-normal/arm64/FirebaseFirestoreSwift.swiftdeps",
+    "swiftmodule" : "/Users/zacharypalmer/Desktop/golden/build/Pods.build/Debug-iphoneos/FirebaseFirestoreSwift.build/Objects-normal/arm64/FirebaseFirestoreSwift~partial.swiftmodule"
+  }
+}

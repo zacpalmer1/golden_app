@@ -1,0 +1,112 @@
+{
+  "source": "/Users/zacharypalmer/Desktop/golden/golden/Core/Search/Favorites.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Search",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 52
+        }
+      },
+      {
+        "comment": "",
+        "key": "Trending",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 173
+        }
+      },
+      {
+        "comment": "",
+        "key": "Find Friends",
+        "location": {
+          "startingColumn": 39,
+          "startingLine": 60
+        }
+      },
+      {
+        "comment": "",
+        "key": "Zac P.",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 86
+        }
+      },
+      {
+        "comment": "",
+        "key": "Josh P.",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 113
+        }
+      },
+      {
+        "comment": "",
+        "key": "Lee E.",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 142
+        }
+      },
+      {
+        "comment": "",
+        "key": "Kennedy S.",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 164
+        }
+      },
+      {
+        "comment": "",
+        "key": "Jack Malo",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 182
+        }
+      },
+      {
+        "comment": "",
+        "key": "6k",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 184
+        }
+      },
+      {
+        "comment": "",
+        "key": "Rory Bostwick",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 192
+        }
+      },
+      {
+        "comment": "",
+        "key": "1.2k",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 194
+        }
+      },
+      {
+        "comment": "",
+        "key": "Blake Gillian",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 202
+        }
+      },
+      {
+        "comment": "",
+        "key": "19k",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 204
+        }
+      }
+    ]
+  },
+  "version": 1
+}

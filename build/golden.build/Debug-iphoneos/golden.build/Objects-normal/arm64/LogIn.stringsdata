@@ -1,0 +1,56 @@
+{
+  "source": "/Users/zacharypalmer/Desktop/golden/golden/Core/Authentification/AuthView/LogIn.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Golden",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 45
+        }
+      },
+      {
+        "comment": "",
+        "key": "Username",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 49
+        }
+      },
+      {
+        "comment": "",
+        "key": "Password",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 56
+        }
+      },
+      {
+        "comment": "",
+        "key": "Log In",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 66
+        }
+      },
+      {
+        "comment": "",
+        "key": "Dont have and account?",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 77
+        }
+      },
+      {
+        "comment": "",
+        "key": "Sign up",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 80
+        }
+      }
+    ]
+  },
+  "version": 1
+}

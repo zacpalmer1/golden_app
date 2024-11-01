@@ -1,0 +1,328 @@
+{
+  "" : {
+    "diagnostics" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/golden-master.dia",
+    "emit-module-dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/golden-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/golden-master-emit-module.dia",
+    "swift-dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/golden-master.swiftdeps"
+  },
+  "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/GeneratedAssetSymbols~partial.swiftmodule"
+  },
+  "/Users/zacharypalmer/Desktop/golden/golden/App/ContentView.swift" : {
+    "const-values" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/ContentView.swiftconstvalues",
+    "dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/ContentView.d",
+    "diagnostics" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/ContentView.dia",
+    "index-unit-output-path" : "/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/ContentView.o",
+    "llvm-bc" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/ContentView.bc",
+    "object" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/ContentView.o",
+    "swift-dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/ContentView.swiftdeps",
+    "swiftmodule" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/ContentView~partial.swiftmodule"
+  },
+  "/Users/zacharypalmer/Desktop/golden/golden/App/goldenApp.swift" : {
+    "const-values" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/goldenApp.swiftconstvalues",
+    "dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/goldenApp.d",
+    "diagnostics" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/goldenApp.dia",
+    "index-unit-output-path" : "/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/goldenApp.o",
+    "llvm-bc" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/goldenApp.bc",
+    "object" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/goldenApp.o",
+    "swift-dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/goldenApp.swiftdeps",
+    "swiftmodule" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/goldenApp~partial.swiftmodule"
+  },
+  "/Users/zacharypalmer/Desktop/golden/golden/Core/Authentification/AuthModel/LoginModel.swift" : {
+    "const-values" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/LoginModel.swiftconstvalues",
+    "dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/LoginModel.d",
+    "diagnostics" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/LoginModel.dia",
+    "index-unit-output-path" : "/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/LoginModel.o",
+    "llvm-bc" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/LoginModel.bc",
+    "object" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/LoginModel.o",
+    "swift-dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/LoginModel.swiftdeps",
+    "swiftmodule" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/LoginModel~partial.swiftmodule"
+  },
+  "/Users/zacharypalmer/Desktop/golden/golden/Core/Authentification/AuthModel/RegistrationModel.swift" : {
+    "const-values" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/RegistrationModel.swiftconstvalues",
+    "dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/RegistrationModel.d",
+    "diagnostics" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/RegistrationModel.dia",
+    "index-unit-output-path" : "/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/RegistrationModel.o",
+    "llvm-bc" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/RegistrationModel.bc",
+    "object" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/RegistrationModel.o",
+    "swift-dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/RegistrationModel.swiftdeps",
+    "swiftmodule" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/RegistrationModel~partial.swiftmodule"
+  },
+  "/Users/zacharypalmer/Desktop/golden/golden/Core/Authentification/AuthView/LogIn.swift" : {
+    "const-values" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/LogIn.swiftconstvalues",
+    "dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/LogIn.d",
+    "diagnostics" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/LogIn.dia",
+    "index-unit-output-path" : "/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/LogIn.o",
+    "llvm-bc" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/LogIn.bc",
+    "object" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/LogIn.o",
+    "swift-dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/LogIn.swiftdeps",
+    "swiftmodule" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/LogIn~partial.swiftmodule"
+  },
+  "/Users/zacharypalmer/Desktop/golden/golden/Core/Authentification/AuthView/SignUp1.swift" : {
+    "const-values" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/SignUp1.swiftconstvalues",
+    "dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/SignUp1.d",
+    "diagnostics" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/SignUp1.dia",
+    "index-unit-output-path" : "/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/SignUp1.o",
+    "llvm-bc" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/SignUp1.bc",
+    "object" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/SignUp1.o",
+    "swift-dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/SignUp1.swiftdeps",
+    "swiftmodule" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/SignUp1~partial.swiftmodule"
+  },
+  "/Users/zacharypalmer/Desktop/golden/golden/Core/Authentification/AuthView/SignUp2.swift" : {
+    "const-values" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/SignUp2.swiftconstvalues",
+    "dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/SignUp2.d",
+    "diagnostics" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/SignUp2.dia",
+    "index-unit-output-path" : "/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/SignUp2.o",
+    "llvm-bc" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/SignUp2.bc",
+    "object" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/SignUp2.o",
+    "swift-dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/SignUp2.swiftdeps",
+    "swiftmodule" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/SignUp2~partial.swiftmodule"
+  },
+  "/Users/zacharypalmer/Desktop/golden/golden/Core/Authentification/AuthView/SignUp3.swift" : {
+    "const-values" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/SignUp3.swiftconstvalues",
+    "dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/SignUp3.d",
+    "diagnostics" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/SignUp3.dia",
+    "index-unit-output-path" : "/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/SignUp3.o",
+    "llvm-bc" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/SignUp3.bc",
+    "object" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/SignUp3.o",
+    "swift-dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/SignUp3.swiftdeps",
+    "swiftmodule" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/SignUp3~partial.swiftmodule"
+  },
+  "/Users/zacharypalmer/Desktop/golden/golden/Core/Home/Groups/ModalGroupView.swift" : {
+    "const-values" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/ModalGroupView.swiftconstvalues",
+    "dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/ModalGroupView.d",
+    "diagnostics" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/ModalGroupView.dia",
+    "index-unit-output-path" : "/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/ModalGroupView.o",
+    "llvm-bc" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/ModalGroupView.bc",
+    "object" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/ModalGroupView.o",
+    "swift-dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/ModalGroupView.swiftdeps",
+    "swiftmodule" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/ModalGroupView~partial.swiftmodule"
+  },
+  "/Users/zacharypalmer/Desktop/golden/golden/Core/Home/Home.swift" : {
+    "const-values" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Home.swiftconstvalues",
+    "dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Home.d",
+    "diagnostics" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Home.dia",
+    "index-unit-output-path" : "/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Home.o",
+    "llvm-bc" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Home.bc",
+    "object" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Home.o",
+    "swift-dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Home.swiftdeps",
+    "swiftmodule" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Home~partial.swiftmodule"
+  },
+  "/Users/zacharypalmer/Desktop/golden/golden/Core/Home/HomeFeatured.swift" : {
+    "const-values" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/HomeFeatured.swiftconstvalues",
+    "dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/HomeFeatured.d",
+    "diagnostics" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/HomeFeatured.dia",
+    "index-unit-output-path" : "/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/HomeFeatured.o",
+    "llvm-bc" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/HomeFeatured.bc",
+    "object" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/HomeFeatured.o",
+    "swift-dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/HomeFeatured.swiftdeps",
+    "swiftmodule" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/HomeFeatured~partial.swiftmodule"
+  },
+  "/Users/zacharypalmer/Desktop/golden/golden/Core/Home/HomeYesterday.swift" : {
+    "const-values" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/HomeYesterday.swiftconstvalues",
+    "dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/HomeYesterday.d",
+    "diagnostics" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/HomeYesterday.dia",
+    "index-unit-output-path" : "/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/HomeYesterday.o",
+    "llvm-bc" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/HomeYesterday.bc",
+    "object" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/HomeYesterday.o",
+    "swift-dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/HomeYesterday.swiftdeps",
+    "swiftmodule" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/HomeYesterday~partial.swiftmodule"
+  },
+  "/Users/zacharypalmer/Desktop/golden/golden/Core/Home/TopBar/TopBarView.swift" : {
+    "const-values" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TopBarView.swiftconstvalues",
+    "dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TopBarView.d",
+    "diagnostics" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TopBarView.dia",
+    "index-unit-output-path" : "/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TopBarView.o",
+    "llvm-bc" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TopBarView.bc",
+    "object" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TopBarView.o",
+    "swift-dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TopBarView.swiftdeps",
+    "swiftmodule" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TopBarView~partial.swiftmodule"
+  },
+  "/Users/zacharypalmer/Desktop/golden/golden/Core/Home/UserBubble/UserBubble.swift" : {
+    "const-values" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/UserBubble.swiftconstvalues",
+    "dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/UserBubble.d",
+    "diagnostics" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/UserBubble.dia",
+    "index-unit-output-path" : "/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/UserBubble.o",
+    "llvm-bc" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/UserBubble.bc",
+    "object" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/UserBubble.o",
+    "swift-dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/UserBubble.swiftdeps",
+    "swiftmodule" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/UserBubble~partial.swiftmodule"
+  },
+  "/Users/zacharypalmer/Desktop/golden/golden/Core/Home/UserBubble/UserBubbleExpanded.swift" : {
+    "const-values" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/UserBubbleExpanded.swiftconstvalues",
+    "dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/UserBubbleExpanded.d",
+    "diagnostics" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/UserBubbleExpanded.dia",
+    "index-unit-output-path" : "/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/UserBubbleExpanded.o",
+    "llvm-bc" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/UserBubbleExpanded.bc",
+    "object" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/UserBubbleExpanded.o",
+    "swift-dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/UserBubbleExpanded.swiftdeps",
+    "swiftmodule" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/UserBubbleExpanded~partial.swiftmodule"
+  },
+  "/Users/zacharypalmer/Desktop/golden/golden/Core/LoadingPage/SplashScreenView.swift" : {
+    "const-values" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/SplashScreenView.swiftconstvalues",
+    "dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/SplashScreenView.d",
+    "diagnostics" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/SplashScreenView.dia",
+    "index-unit-output-path" : "/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/SplashScreenView.o",
+    "llvm-bc" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/SplashScreenView.bc",
+    "object" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/SplashScreenView.o",
+    "swift-dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/SplashScreenView.swiftdeps",
+    "swiftmodule" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/SplashScreenView~partial.swiftmodule"
+  },
+  "/Users/zacharypalmer/Desktop/golden/golden/Core/Messages/Activity.swift" : {
+    "const-values" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Activity.swiftconstvalues",
+    "dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Activity.d",
+    "diagnostics" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Activity.dia",
+    "index-unit-output-path" : "/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Activity.o",
+    "llvm-bc" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Activity.bc",
+    "object" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Activity.o",
+    "swift-dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Activity.swiftdeps",
+    "swiftmodule" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Activity~partial.swiftmodule"
+  },
+  "/Users/zacharypalmer/Desktop/golden/golden/Core/Messages/Messages.swift" : {
+    "const-values" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Messages.swiftconstvalues",
+    "dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Messages.d",
+    "diagnostics" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Messages.dia",
+    "index-unit-output-path" : "/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Messages.o",
+    "llvm-bc" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Messages.bc",
+    "object" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Messages.o",
+    "swift-dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Messages.swiftdeps",
+    "swiftmodule" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Messages~partial.swiftmodule"
+  },
+  "/Users/zacharypalmer/Desktop/golden/golden/Core/Post/CameraView.swift" : {
+    "const-values" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/CameraView.swiftconstvalues",
+    "dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/CameraView.d",
+    "diagnostics" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/CameraView.dia",
+    "index-unit-output-path" : "/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/CameraView.o",
+    "llvm-bc" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/CameraView.bc",
+    "object" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/CameraView.o",
+    "swift-dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/CameraView.swiftdeps",
+    "swiftmodule" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/CameraView~partial.swiftmodule"
+  },
+  "/Users/zacharypalmer/Desktop/golden/golden/Core/Profile/OtherProfile.swift" : {
+    "const-values" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/OtherProfile.swiftconstvalues",
+    "dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/OtherProfile.d",
+    "diagnostics" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/OtherProfile.dia",
+    "index-unit-output-path" : "/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/OtherProfile.o",
+    "llvm-bc" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/OtherProfile.bc",
+    "object" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/OtherProfile.o",
+    "swift-dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/OtherProfile.swiftdeps",
+    "swiftmodule" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/OtherProfile~partial.swiftmodule"
+  },
+  "/Users/zacharypalmer/Desktop/golden/golden/Core/Profile/Profile.swift" : {
+    "const-values" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Profile.swiftconstvalues",
+    "dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Profile.d",
+    "diagnostics" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Profile.dia",
+    "index-unit-output-path" : "/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Profile.o",
+    "llvm-bc" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Profile.bc",
+    "object" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Profile.o",
+    "swift-dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Profile.swiftdeps",
+    "swiftmodule" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Profile~partial.swiftmodule"
+  },
+  "/Users/zacharypalmer/Desktop/golden/golden/Core/Search/Favorites.swift" : {
+    "const-values" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Favorites.swiftconstvalues",
+    "dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Favorites.d",
+    "diagnostics" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Favorites.dia",
+    "index-unit-output-path" : "/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Favorites.o",
+    "llvm-bc" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Favorites.bc",
+    "object" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Favorites.o",
+    "swift-dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Favorites.swiftdeps",
+    "swiftmodule" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Favorites~partial.swiftmodule"
+  },
+  "/Users/zacharypalmer/Desktop/golden/golden/Core/Styles/Color.swift" : {
+    "const-values" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Color.swiftconstvalues",
+    "dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Color.d",
+    "diagnostics" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Color.dia",
+    "index-unit-output-path" : "/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Color.o",
+    "llvm-bc" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Color.bc",
+    "object" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Color.o",
+    "swift-dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Color.swiftdeps",
+    "swiftmodule" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Color~partial.swiftmodule"
+  },
+  "/Users/zacharypalmer/Desktop/golden/golden/Core/TabBarView/TabBarView.swift" : {
+    "const-values" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TabBarView.swiftconstvalues",
+    "dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TabBarView.d",
+    "diagnostics" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TabBarView.dia",
+    "index-unit-output-path" : "/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TabBarView.o",
+    "llvm-bc" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TabBarView.bc",
+    "object" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TabBarView.o",
+    "swift-dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TabBarView.swiftdeps",
+    "swiftmodule" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TabBarView~partial.swiftmodule"
+  },
+  "/Users/zacharypalmer/Desktop/golden/golden/Core/TabBarView/Timer/Timer.swift" : {
+    "const-values" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Timer.swiftconstvalues",
+    "dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Timer.d",
+    "diagnostics" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Timer.dia",
+    "index-unit-output-path" : "/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Timer.o",
+    "llvm-bc" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Timer.bc",
+    "object" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Timer.o",
+    "swift-dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Timer.swiftdeps",
+    "swiftmodule" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/Timer~partial.swiftmodule"
+  },
+  "/Users/zacharypalmer/Desktop/golden/golden/Core/TabBarView/Timer/TimerSplash.swift" : {
+    "const-values" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TimerSplash.swiftconstvalues",
+    "dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TimerSplash.d",
+    "diagnostics" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TimerSplash.dia",
+    "index-unit-output-path" : "/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TimerSplash.o",
+    "llvm-bc" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TimerSplash.bc",
+    "object" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TimerSplash.o",
+    "swift-dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TimerSplash.swiftdeps",
+    "swiftmodule" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TimerSplash~partial.swiftmodule"
+  },
+  "/Users/zacharypalmer/Desktop/golden/golden/Core/TestGroup/TestCarosel.swift" : {
+    "const-values" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TestCarosel.swiftconstvalues",
+    "dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TestCarosel.d",
+    "diagnostics" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TestCarosel.dia",
+    "index-unit-output-path" : "/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TestCarosel.o",
+    "llvm-bc" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TestCarosel.bc",
+    "object" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TestCarosel.o",
+    "swift-dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TestCarosel.swiftdeps",
+    "swiftmodule" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TestCarosel~partial.swiftmodule"
+  },
+  "/Users/zacharypalmer/Desktop/golden/golden/Core/TestGroup/TestTabBarView.swift" : {
+    "const-values" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TestTabBarView.swiftconstvalues",
+    "dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TestTabBarView.d",
+    "diagnostics" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TestTabBarView.dia",
+    "index-unit-output-path" : "/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TestTabBarView.o",
+    "llvm-bc" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TestTabBarView.bc",
+    "object" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TestTabBarView.o",
+    "swift-dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TestTabBarView.swiftdeps",
+    "swiftmodule" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/TestTabBarView~partial.swiftmodule"
+  },
+  "/Users/zacharypalmer/Desktop/golden/golden/Model/User.swift" : {
+    "const-values" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/User.swiftconstvalues",
+    "dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/User.d",
+    "diagnostics" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/User.dia",
+    "index-unit-output-path" : "/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/User.o",
+    "llvm-bc" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/User.bc",
+    "object" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/User.o",
+    "swift-dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/User.swiftdeps",
+    "swiftmodule" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/User~partial.swiftmodule"
+  },
+  "/Users/zacharypalmer/Desktop/golden/golden/Service/AuthService.swift" : {
+    "const-values" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/AuthService.swiftconstvalues",
+    "dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/AuthService.d",
+    "diagnostics" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/AuthService.dia",
+    "index-unit-output-path" : "/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/AuthService.o",
+    "llvm-bc" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/AuthService.bc",
+    "object" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/AuthService.o",
+    "swift-dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/AuthService.swiftdeps",
+    "swiftmodule" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/AuthService~partial.swiftmodule"
+  },
+  "/Users/zacharypalmer/Desktop/golden/golden/Service/UserService.swift" : {
+    "const-values" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/UserService.swiftconstvalues",
+    "dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/UserService.d",
+    "diagnostics" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/UserService.dia",
+    "index-unit-output-path" : "/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/UserService.o",
+    "llvm-bc" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/UserService.bc",
+    "object" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/UserService.o",
+    "swift-dependencies" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/UserService.swiftdeps",
+    "swiftmodule" : "/Users/zacharypalmer/Desktop/golden/build/golden.build/Debug-iphoneos/golden.build/Objects-normal/arm64/UserService~partial.swiftmodule"
+  }
+}

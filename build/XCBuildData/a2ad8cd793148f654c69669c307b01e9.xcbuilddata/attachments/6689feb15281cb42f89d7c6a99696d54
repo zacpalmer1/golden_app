@@ -1,0 +1,23 @@
+{
+  'version': 0,
+  'use-external-names': 'false',
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': "/Users/zacharypalmer/Desktop/golden/build/Debug-iphoneos/FirebaseFirestoreSwift/FirebaseFirestoreSwift.framework/Modules"
+    'contents': [{
+      'type': 'file',
+      'name': "module.modulemap",
+      'external-contents': "/Users/zacharypalmer/Desktop/golden/build/Pods.build/Debug-iphoneos/FirebaseFirestoreSwift.build/unextended-module.modulemap",
+    }]
+    },
+    {
+    'type': 'directory',
+    'name': "/Users/zacharypalmer/Desktop/golden/build/Debug-iphoneos/FirebaseFirestoreSwift/FirebaseFirestoreSwift.framework/Headers"
+    'contents': [{
+      'type': 'file',
+      'name': "FirebaseFirestoreSwift-Swift.h",
+      'external-contents': "/Users/zacharypalmer/Desktop/golden/build/Pods.build/Debug-iphoneos/FirebaseFirestoreSwift.build/unextended-interface-header.h",
+    }]
+    }]
+}
