@@ -20,6 +20,8 @@ struct Favorites: View {
     @StateObject private var colorSelection = ColorSelection()
     @State private var showMeshGradient = false
     @Environment(\.colorScheme) var colorScheme
+    @State private var trending = false
+    @State private var suggested = false
     var body: some View {
         ZStack {
             // Background image with dynamic opacity
@@ -29,9 +31,18 @@ struct Favorites: View {
             
                 VStack {
                     VStack(alignment: .leading, spacing: 10) {
-                        Text("Search")
-                            .font(.system(size: 30, weight: .heavy, design: .default))
-                            
+                        HStack{
+                            Text("Search")
+                                .font(.system(size: 30, weight: .heavy, design: .default))
+                            Spacer()
+                            Image(systemName: "line.3.horizontal.decrease.circle")
+                                .resizable()
+                                .foregroundStyle(.blue)
+                                
+                                .frame(width: 23, height: 23)
+                                .padding(.trailing, 17)
+                        }
+                        
                         HStack {
                             Image(systemName: "magnifyingglass") // Use system name or custom image
                                 .foregroundColor(.gray)
@@ -50,37 +61,55 @@ struct Favorites: View {
                         // Wrapping the below content in a ScrollView
                         ScrollView {
                             VStack(alignment: .leading, spacing: 10) {
-                                HStack(spacing: 0) {
-                                    Text("Trending")
-                                        .font(.system(size: 24, weight: .bold, design: .default))
-                                        .padding(.trailing, 6)
-                                        .foregroundColor(colorScheme == .dark ? .white : .black)
+                                Button(action: {
+                                    trending.toggle()
+                                }) {
+                                    HStack(spacing: 0) {
+                                        Text("Trending")
+                                            .font(.system(size: 24, weight: .bold, design: .default))
+                                            .padding(.trailing, 6)
+                                            .foregroundColor(colorScheme == .dark ? .white : .black)
+                                        
+                                        Image(systemName: "chevron.right")
+                                            .bold()
+                                            .foregroundColor(.gray)
+                                    }
                                     
-                                    Image(systemName: "chevron.right")
-                                        .bold()
-                                        .foregroundColor(.gray)
                                 }
+                                .fullScreenCover(isPresented: $trending) {
+                                    TrendingView()
+                                }
+                               
                                 // Horizontal ScrollView for Suggested Users
                                 ScrollView(.horizontal, showsIndicators: false) {
                                     HStack{
                                         ForEach(trendingUser, id: \.name){ trendingUser in
-                                            VStack(alignment:.leading){
-                                                HStack{
-                                                    Text(trendingUser.rank)
-                                                        .font(.system(size: 20, weight: .bold, design: .default))
-                                                    
-                                                    Text(trendingUser.name)
-                                                        .font(.system(size: 20, weight: .regular, design: .default))
-                                                        .foregroundColor(.gray)
+                                            Button(action: {
+                                                profile.toggle()
+                                            }) {
+                                                VStack(alignment:.leading){
+                                                    HStack{
+                                                        Text(trendingUser.rank)
+                                                            .font(.system(size: 20, weight: .bold, design: .default))
+                                                            .foregroundColor(colorScheme == .dark ? .white : .black)
+                                                        Text(trendingUser.name)
+                                                            .font(.system(size: 20, weight: .regular, design: .default))
+                                                            .foregroundColor(.gray)
+                                                    }
+                                                    Image(trendingUser.image)
+                                                        .resizable()
+                                                        .scaledToFill()
+                                                        .frame(width: 320, height: 210)
+                                                        .foregroundColor(.white)
+                                                        .cornerRadius(10)
                                                 }
-                                                Image(trendingUser.image)
-                                                    .resizable()
-                                                    .scaledToFill()
-                                                    .frame(width: 320, height: 210)
-                                                    .foregroundColor(.white)
-                                                    .cornerRadius(10)
+                                                .frame(maxWidth: .infinity)
                                             }
-                                            .frame(maxWidth: .infinity)
+                                            .fullScreenCover(isPresented: $profile) {
+                                                ViewProfile()
+                                                    .transition(.move(edge: .trailing))
+                                                
+                                            }
                                         }
                                     }
                                     .padding(.trailing, 54)
@@ -90,38 +119,58 @@ struct Favorites: View {
                                 .scrollTargetBehavior(.viewAligned)
                                 .padding(.bottom, 10)
                                 
-                                
-                                HStack(spacing: 0) {
-                                    Text("Suggested")
-                                        .font(.system(size: 24, weight: .bold, design: .default))
-                                        .padding(.trailing, 6)
-                                        .foregroundColor(colorScheme == .dark ? .white : .black)
+                                Button(action: {
+                                    suggested.toggle()
+                                }) {
+                                    HStack(spacing: 0) {
+                                        HStack(spacing: 0) {
+                                            Text("Suggested")
+                                                .font(.system(size: 24, weight: .bold, design: .default))
+                                                .padding(.trailing, 6)
+                                                .foregroundColor(colorScheme == .dark ? .white : .black)
+                                            
+                                            Image(systemName: "chevron.right")
+                                                .bold()
+                                                .foregroundColor(.gray)
+                                        }
+                                    }
                                     
-                                    Image(systemName: "chevron.right")
-                                        .bold()
-                                        .foregroundColor(.gray)
                                 }
+                                .fullScreenCover(isPresented: $suggested) {
+                                    SuggestedView()
+                                }
+                               
                                 ScrollView(.horizontal, showsIndicators: false) {
                                     HStack(spacing: 10) { // Set spacing to 0 to remove the default spacing
                                         // Suggested Users
                                         ForEach(suggestedUser, id: \.name){ suggestedUser in
-                                            VStack(spacing: 0) {
-                                                VStack(alignment:.leading){
-                                                    Text(suggestedUser.name)
-                                                        .font(.system(size: 14, weight: .bold, design: .default))
-                                                    Text(suggestedUser.username)
-                                                        .font(.system(size: 12, weight: .regular, design: .default))
-                                                        .foregroundColor(.gray)
-                                                    Image(suggestedUser.image)
-                                                        .resizable()
-                                                        .scaledToFill()
-                                                        .frame(width: 160, height: 160)
-                                                        .foregroundColor(.white)
-                                                        .cornerRadius(10)
-                                                    
+                                            Button(action: {
+                                                profile.toggle()
+                                            }) {
+                                                VStack(spacing: 0) {
+                                                    VStack(alignment:.leading){
+                                                        Text(suggestedUser.name)
+                                                            .font(.system(size: 14, weight: .bold, design: .default))
+                                                            .foregroundColor(colorScheme == .dark ? .white : .black)
+                                                        Text(suggestedUser.username)
+                                                            .font(.system(size: 12, weight: .regular, design: .default))
+                                                            .foregroundColor(.gray)
+                                                        Image(suggestedUser.image)
+                                                            .resizable()
+                                                            .scaledToFill()
+                                                            .frame(width: 160, height: 160)
+                                                            .foregroundColor(.white)
+                                                            .cornerRadius(10)
+                                                        
+                                                    }
                                                 }
+                                                .frame(maxWidth: .infinity)
                                             }
-                                            .frame(maxWidth: .infinity)
+                                            .fullScreenCover(isPresented: $profile) {
+                                                ViewProfile()
+                                                    .transition(.move(edge: .trailing))
+                                            }
+                                           
                                         }
                                     }
                                     .padding(.trailing, 45)

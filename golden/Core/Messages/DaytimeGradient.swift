@@ -9,6 +9,7 @@ import SwiftUI
 
 struct DaytimeGradient: View {
     @State private var isAnimating = false
+    var colors: [Color]
     var body: some View {
         ZStack{
             if #available(iOS 18.0, *) {
@@ -18,7 +19,7 @@ struct DaytimeGradient: View {
                     points: [[0.0,0.0],[isAnimating ? 0.1 : 0.9,0.0],[1.0,0.0],
                              [0.0,0.5],[0.5,isAnimating ? 1.0 : 0.1],[1.0,isAnimating ? 1.0 : 0.4],
                              [0.0,1.0],[isAnimating ? 0.1 : 0.9,1.0],[1.0,1.0]],
-                    colors: card4)
+                    colors: colors)
                 .onAppear{
                     withAnimation(.easeInOut(duration: 10).repeatForever(autoreverses: true)){
                         isAnimating.toggle()
@@ -34,5 +35,5 @@ struct DaytimeGradient: View {
 }
 
 #Preview {
-    DaytimeGradient()
+    DaytimeGradient(colors: card4)
 }

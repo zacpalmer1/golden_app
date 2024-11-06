@@ -10,6 +10,7 @@ import SwiftUI
 struct TopBarView: View {
     @Binding var selectedTab: Tabs
     @State private var showingModal = false
+    @Environment(\.colorScheme) var colorScheme
     var body: some View {
         
         ZStack{
@@ -29,12 +30,15 @@ struct TopBarView: View {
                             showingModal = true // Show the modal when the button is tapped
                         }) {
                             ZStack{
-                            RoundedRectangle(cornerRadius: 30)
-                                .foregroundStyle(.ultraThinMaterial)// Fill color for the RoundedRectangle
-                                .frame(width: 118, height: 35) // Background color of the view
-                                .overlay(
+                                Blur(style: colorScheme == .dark ? .dark : .systemChromeMaterial)
+                                
+                                    .foregroundStyle(.blue)// Fill color for the RoundedRectangle
+                                    .frame(width: 118, height: 35) // Background color of the view
+                                    .cornerRadius(30)
+                                    .opacity(0.5)
+                                    .overlay(
                                     RoundedRectangle(cornerRadius: 30)
-                                        .stroke(Color.gray, lineWidth: 0.2) // Stroke color and line width
+                                        .stroke(Color.gray, lineWidth: 0.4) // Stroke color and line width
                                 )
                             HStack{
                                 Image(systemName: "person.2.fill")
@@ -44,7 +48,7 @@ struct TopBarView: View {
                                 
                                 Text("Friends")
                                     .foregroundColor(.white)
-                                
+                                    .font(.system(size: 16, weight: .regular, design: .default))
                                 
                             }
                         }

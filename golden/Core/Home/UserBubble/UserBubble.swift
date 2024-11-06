@@ -6,7 +6,10 @@ struct UserBubble: View {
     @State var rotation: CGFloat = 0.0
 
     var userName: String
-
+    var profileImage: String
+    var streaks: String
+    var likes: String
+    var comments: String
     var body: some View {
         GeometryReader { geometry in
             ZStack {
@@ -17,7 +20,7 @@ struct UserBubble: View {
                     
 
                 HStack {
-                    Image("joshlarge")
+                    Image(profileImage)
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 40, height: 40)
@@ -29,7 +32,7 @@ struct UserBubble: View {
                     }) {
                         Text(userName)
                             .foregroundColor(.white)
-                            .frame(width: geometry.size.width * 0.35, alignment: .leading) // Dynamically sized based on screen width
+                            .frame(width: geometry.size.width * 0.30, alignment: .leading) // Dynamically sized based on screen width
                             .font(.system(size: 16, weight: .regular, design: .default))
                     }
                     .fullScreenCover(isPresented: $profile) {
@@ -42,7 +45,7 @@ struct UserBubble: View {
                     HStack(spacing: 4) {
                         Image(systemName: "sun.horizon.fill")
                             .foregroundColor(.white)
-                        Text("12")
+                        Text(streaks)
                             .foregroundColor(.white)
                             .font(.system(size: 15, weight: .regular, design: .rounded))
                     }
@@ -55,7 +58,7 @@ struct UserBubble: View {
                         HStack(spacing: 4) {
                             Image(systemName: "heart.fill")
                                 .foregroundColor(isPressed ? Color.pink : Color.primary)
-                            Text("3")
+                            Text(likes)
                                 .foregroundColor(.white)
                                 .font(.system(size: 15, weight: .regular, design: .rounded))
                         }
@@ -66,7 +69,7 @@ struct UserBubble: View {
                     HStack(spacing: 4) {
                         Image(systemName: "message.fill")
                             .foregroundColor(.white)
-                        Text("8")
+                        Text(comments)
                             .foregroundColor(.white)
                             .font(.system(size: 15, weight: .regular, design: .rounded))
                             .padding(.trailing, 15)
@@ -82,25 +85,34 @@ struct UserBubble: View {
 }
 
 struct TestBubbleView: View {
-    var userNames = ["Josh Powers", "Alice Smith", "Bob Johnson", "Sara Lee", "Tom Brown"]
-
+    @ObservedObject var scrollSyncManager: ScrollSyncManager
+    var userNames = ["Josh Powers", "Zac Palmer", "Kennedy Seigler", "Lindsay McNamara", "Blake Gillian"]
+    var profileImage = ["joshlarge", "zaclarge", "kennlarge", "lindalarge", "blakelarge"]
+    var streaks = ["5", "3", "4", "5", "2"]
+    var likes = ["41", "16", "23", "74", "84"]
+    var comments = ["3", "2", "8", "2", "5"]
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             Spacer()
-
-            ScrollView(.vertical, showsIndicators: false) {
-                VStack(spacing: 10) {
-                    ForEach(userNames.indices, id: \.self) { index in
-                        UserBubble(userName: userNames[index])
-                            .frame(height: 60)
+            ScrollViewReader { proxy in
+                ScrollView(.vertical, showsIndicators: false) {
+                    VStack(alignment: .leading, spacing: 10) {
+                        ForEach(userNames.indices, id: \.self) { index in
+                            UserBubble(userName: userNames[index], profileImage: profileImage[index], streaks: streaks[index], likes: likes[index], comments: comments[index])
+                                .frame(height: 60)
+                        }
                     }
+                    .padding(.horizontal) // Adjust the ScrollView padding as needed
                 }
-                .padding(.horizontal) // Adjust the ScrollView padding as needed
             }
-            .frame(maxHeight: 70) // Allow ScrollView to take available height
-            .scrollTargetBehavior(.paging)
-            .padding(.top, 630)
-            Spacer()
+            .scrollTargetLayout()
+            
+                .offset(x: scrollSyncManager.scrollOffset)
+                .frame(maxHeight: 70) // Allow ScrollView to take available height
+                .scrollTargetBehavior(.paging)
+                .padding(.top, 620)
+                Spacer()
+            
         }
         .edgesIgnoringSafeArea(.all)
         .colorScheme(.dark)
@@ -108,9 +120,5 @@ struct TestBubbleView: View {
 }
 
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        TestBubbleView()
-        
-    }
-}
+
+

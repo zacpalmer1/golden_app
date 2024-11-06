@@ -1,9 +1,9 @@
 import SwiftUI
 let usermessage = [
-    (image: "joshlarge", name: "Josh Powers", time: "12:49 PM", text: "Hey! Just wanted to check in and see how things are going with you. "),
-    (image: "kennlarge", name: "Kennedy Seigler", time: "3:12 PM", text: "It’s been a minute. Are you free this weekend to hang out or grab a coffee?"),
-    (image: "zaclarge", name: "Zac Palmer", time: "8:32 PM", text: "Got a bit of news! Let me know when you’re free to chat – nothing urgent."),
-    (image: "blakelarge", name: "Blake Gillian", time: "Yesterday", text: "I just saw something that totally reminded me of you 😂 I’ll send it your way!")
+    (image: "joshlarge", name: "Josh Powers", time: "12:49 PM", text: "Hey! Just wanted to check in and see how things are going with you. ", color:"orange"),
+    (image: "kennlarge", name: "Kennedy Seigler", time: "3:12 PM", text: "It’s been a minute. Are you free this weekend to hang out or grab a coffee?", color:"pink"),
+    (image: "zaclarge", name: "Zac Palmer", time: "8:32 PM", text: "Got a bit of news! Let me know when you’re free to chat – nothing urgent.", color:"green"),
+    (image: "blakelarge", name: "Blake Gillian", time: "Yesterday", text: "I just saw something that totally reminded me of you 😂 I’ll send it your way!", color:"red")
     
 ]
 
@@ -13,6 +13,7 @@ struct Activity: View {
     @State private var isPressed = false
     @StateObject private var colorSelection = ColorSelection()
     @State private var showMeshGradient = false
+    @State private var showingMessageModal = false
     @Environment(\.colorScheme) var colorScheme
     var body: some View {
         ZStack {
@@ -26,7 +27,21 @@ struct Activity: View {
                         HStack{
                             Text("Connect")
                                 .font(.system(size: 30, weight: .heavy, design: .default))
-                           
+                            Spacer()
+                            Button(action: {
+                                showingMessageModal = true // Show the modal when the button is tapped
+                            }) {
+                                Image(systemName: "square.and.pencil")
+                                    .resizable()
+                                    .foregroundStyle(.blue)
+                                    
+                                    .frame(width: 23, height: 23)
+                                }
+                            
+                        .sheet(isPresented: $showingMessageModal) {
+                            MessageModal() // The view to be presented in the modal
+                        }
+                            
                                 
                         }
                         .padding(.horizontal, 10)
@@ -65,7 +80,7 @@ struct Activity: View {
                                                 VStack(alignment:.center){
                                                     
                                                     ZStack{
-                                                        DaytimeGradient()
+                                                        DaytimeGradient(colors: red)
                                                             .frame(width: 91, height: 91)
                                                             .cornerRadius(80)
                                                         Rectangle()
@@ -97,17 +112,12 @@ struct Activity: View {
                                     Text("Messages")
                                         .padding(10)
                                         .font(.system(size: 24, weight: .bold, design: .default))
-                                    Spacer()
-                                    Image(systemName: "square.and.pencil")
-                                        .resizable()
-                                        .foregroundStyle(.gray)
-                                        
-                                        .frame(width: 23, height: 23)
+                                    
                                 }
                                     
                                         ForEach(usermessage, id: \.name){ usermessage in
                                             HStack(spacing:10){
-                                                DaytimeGradient()
+                                                DaytimeGradient(colors: red)
                                                     .frame(width: 10, height: 10)
                                                     .cornerRadius(20)
                                                     .foregroundColor(.orange)
@@ -237,7 +247,7 @@ struct Activity: View {
                                         .padding(.trailing, 7)
                                
                             }
-                            
+                            .padding(.bottom, 70)
                              // Add margin on both sides, allowing for more padding
                         }
                         

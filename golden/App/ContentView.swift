@@ -15,6 +15,7 @@ struct ContentView: View {
     @EnvironmentObject var colorSelection: ColorSelection
     @StateObject private var viewModel = VideoViewModel()
     @Namespace var animation
+    @StateObject private var scrollSyncManager = ScrollSyncManager()
     var body: some View {
         VStack {
             ZStack {
@@ -23,15 +24,15 @@ struct ContentView: View {
                     
                     Home().zIndex(0)
                         .environmentObject(colorSelection)
-                    
+                        .colorScheme(.dark)
                     TestTabBarView(selectedTab: $selectedTab)
                     
                     TopBarView(selectedTab: $selectedTab)
                         .offset(y: -362)
                         .padding(.bottom)
                     
-                    TestBubbleView()
-                        .padding(.bottom, 30)
+                    TestBubbleView(scrollSyncManager: scrollSyncManager)
+                        
                     
                 case .favorites:
                     Favorites().zIndex(0)
@@ -52,19 +53,22 @@ struct ContentView: View {
                     HomeYesterday().zIndex(0)
                         .environmentObject(colorSelection)
                     TestTabBarView(selectedTab: $selectedTab)
-                    UserBubble(userName: "Josh Powers") 
+                    
                     TopBarView(selectedTab: $selectedTab)
                         .offset(y: -362)
                         .padding(.bottom)
-                    
+                    TestBubbleView(scrollSyncManager: scrollSyncManager)
+                        
                 case .homeFeatured:
                     HomeFeatured().zIndex(0)
                         .environmentObject(colorSelection)
                     TestTabBarView(selectedTab: $selectedTab)
-                    UserBubble(userName: "Josh Powers") 
+                    
                     TopBarView(selectedTab: $selectedTab)
                         .offset(y: -362)
                         .padding(.bottom)
+                    TestBubbleView(scrollSyncManager: scrollSyncManager)
+                        
                 }
             }
         }

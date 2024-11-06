@@ -12,32 +12,13 @@ struct SettingsBlocked: View {
     @Environment(\.presentationMode) var presentationMode
     @State private var privateAccount = false
     @State private var showMeshGradient = false
+    @Environment(\.colorScheme) var colorScheme
     var body: some View {
         NavigationStack {
-            ZStack {
-                // Background image with dynamic opacity
-                MessagesGradient(colorSelection: colorSelection, show: showMeshGradient)
-                Rectangle()
-                    .foregroundStyle(.ultraThinMaterial)
-                    .ignoresSafeArea()
+     
                 
                 ZStack(alignment: .top) { // Aligns content to the top
-                    VStack(spacing: 0) {
-                        Rectangle()
-                            .fill(
-                                LinearGradient(
-                                    gradient: Gradient(colors: [Color.black, Color.clear]),
-                                    startPoint: .bottom,
-                                    endPoint: .top
-                                )
-                            )
-                            .frame(height: .infinity) // Set height for the gradient Rectangle
-                        
-                        Rectangle()
-                            .frame(height: 350) // Set height for the black Rectangle
-                            .foregroundColor(.black)
-                    }
-                    .ignoresSafeArea() // Ensures the rectangles extend to the edges
+                   
                     
                     
                     VStack {
@@ -45,7 +26,7 @@ struct SettingsBlocked: View {
                         VStack(alignment: .leading, spacing: 16) {
                             HStack{
                                 Text("Blocked Accounts")
-                                    .font(.system(size: 28, weight: .heavy, design: .rounded))
+                                    .font(.system(size: 28, weight: .heavy, design: .default))
                                     .padding(.top, 0)
                                 Spacer()
                                 Button(action: {
@@ -56,7 +37,7 @@ struct SettingsBlocked: View {
                                             .frame(width: 35)
                                             .foregroundStyle(.ultraThinMaterial)
                                         Image(systemName: "x.circle")
-                                            .foregroundColor(.white)
+                                            .foregroundColor(colorScheme == .dark ? .white : .black)
                                     }
                                 }
                             }
@@ -74,7 +55,7 @@ struct SettingsBlocked: View {
                             Divider()
                             HStack{
                                 Text("Block User")
-                                    .font(.system(size: 18, weight: .bold, design: .rounded))
+                                    .font(.system(size: 18, weight: .bold, design: .default))
                                 Spacer()
                                 Image(systemName: "plus.circle")
                                     .resizable()
@@ -99,7 +80,7 @@ struct SettingsBlocked: View {
                                         .foregroundColor(.red)
                                         .cornerRadius(10)
                                     Text("Unblock")
-                                        .font(.system(size: 16, weight: .bold, design: .rounded))
+                                        .font(.system(size: 16, weight: .bold, design: .default))
                                         .foregroundColor(.white)
                                 }
                             }
@@ -117,7 +98,7 @@ struct SettingsBlocked: View {
                                         .foregroundColor(.red)
                                         .cornerRadius(10)
                                     Text("Unblock")
-                                        .font(.system(size: 16, weight: .bold, design: .rounded))
+                                        .font(.system(size: 16, weight: .bold, design: .default))
                                         .foregroundColor(.white)
                                 }
                             }
@@ -135,14 +116,14 @@ struct SettingsBlocked: View {
                                         .foregroundColor(.red)
                                         .cornerRadius(10)
                                     Text("Unblock")
-                                        .font(.system(size: 16, weight: .bold, design: .rounded))
+                                        .font(.system(size: 16, weight: .bold, design: .default))
                                         .foregroundColor(.white)
                                 }
                             }
                             Divider()
                            
                             Text("Blocked users will not be able to access your profile. Any posts you make will not be visible anywhere of Golden to these users. That includes Groups, Messages, or Search. Users will not be notified that they are blocked.")
-                                .font(.system(size: 14, weight: .regular, design: .rounded))
+                                .font(.system(size: 12, weight: .regular, design: .default))
                             Divider()
                         
                         }
@@ -153,9 +134,11 @@ struct SettingsBlocked: View {
                     }
                     .frame(maxWidth: .infinity)
                 }
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             }
+        
         }
-    }
+    
 }
 
 #Preview {

@@ -16,32 +16,13 @@ struct SettingsNotifications: View {
     @State private var hour = false
     @State private var notificationEffect = false
     @State private var showMeshGradient = false
+    @Environment(\.colorScheme) var colorScheme
     var body: some View {
         NavigationStack {
             ZStack {
-                // Background image with dynamic opacity
-                MessagesGradient(colorSelection: colorSelection, show: showMeshGradient)
-                Rectangle()
-                    .foregroundStyle(.ultraThinMaterial)
-                    .ignoresSafeArea()
-                
+              
                 ZStack(alignment: .top) { // Aligns content to the top
-                    VStack(spacing: 0) {
-                        Rectangle()
-                            .fill(
-                                LinearGradient(
-                                    gradient: Gradient(colors: [Color.black, Color.clear]),
-                                    startPoint: .bottom,
-                                    endPoint: .top
-                                )
-                            )
-                            .frame(height: .infinity) // Set height for the gradient Rectangle
-                        
-                        Rectangle()
-                            .frame(height: 350) // Set height for the black Rectangle
-                            .foregroundColor(.black)
-                    }
-                    .ignoresSafeArea() // Ensures the rectangles extend to the edges
+                   
                     
                     
                     VStack {
@@ -49,7 +30,7 @@ struct SettingsNotifications: View {
                         VStack(alignment: .leading, spacing: 16) {
                             HStack{
                                 Text("Notifications")
-                                    .font(.system(size: 28, weight: .heavy, design: .rounded))
+                                    .font(.system(size: 28, weight: .heavy, design: .default))
                                     .padding(.top, 0)
                                 Spacer()
                                 Button(action: {
@@ -60,7 +41,7 @@ struct SettingsNotifications: View {
                                             .frame(width: 35)
                                             .foregroundStyle(.ultraThinMaterial)
                                         Image(systemName: "x.circle")
-                                            .foregroundColor(.white)
+                                            .foregroundColor(colorScheme == .dark ? .white : .black)
                                     }
                                 }
                             }
@@ -79,7 +60,7 @@ struct SettingsNotifications: View {
                             Divider()
                             HStack{
                                 Text("Pause all notifications")
-                                    .font(.system(size: 13, weight: .bold, design: .rounded))
+                                    .font(.system(size: 13, weight: .bold, design: .default))
                                 Spacer()
                                 Toggle(isOn: $notificationEffect) {
                                                 
@@ -91,7 +72,7 @@ struct SettingsNotifications: View {
                             
                             HStack{
                                 Text("Turn off notifications")
-                                    .font(.system(size: 13, weight: .bold, design: .rounded))
+                                    .font(.system(size: 13, weight: .bold, design: .default))
                                 Spacer()
                                 Toggle(isOn: $off) {
                                                 
@@ -103,7 +84,7 @@ struct SettingsNotifications: View {
                             
                             HStack{
                                 Text("Sleep mode")
-                                    .font(.system(size: 13, weight: .bold, design: .rounded))
+                                    .font(.system(size: 13, weight: .bold, design: .default))
                                 Spacer()
                                 Toggle(isOn: $sleep) {
                                                 
@@ -115,7 +96,7 @@ struct SettingsNotifications: View {
                             
                             HStack{
                                 Text("Notify 1hr before sunset")
-                                    .font(.system(size: 13, weight: .bold, design: .rounded))
+                                    .font(.system(size: 13, weight: .bold, design: .default))
                                 Spacer()
                                 Toggle(isOn: $hour) {
                                                 
@@ -127,7 +108,7 @@ struct SettingsNotifications: View {
                             
                             
                             Text("Notifications include sunset start and end times, weather alerts, messages, likes, and comments. Individual notifications cannot be turned off as these settings affect all notifications.")
-                                .font(.system(size: 14, weight: .regular, design: .rounded))
+                                .font(.system(size: 14, weight: .regular, design: .default))
                             Divider()
                             
                         
@@ -140,6 +121,7 @@ struct SettingsNotifications: View {
                     .frame(maxWidth: .infinity)
                 }
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         }
     }
 }

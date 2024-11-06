@@ -46,7 +46,7 @@ struct HomeYesterday: View {
                                         .resizable()
                                         .aspectRatio(contentMode: .fill)
                                         .frame(width: geometry.size.width, height: 750) // Adjust size as needed
-                                        .cornerRadius(45)
+                                        .cornerRadius(40)
                                         .containerRelativeFrame(.vertical, count: 1, spacing: 0)
                                     
                                         .scrollTransition { content, phase in
@@ -94,6 +94,7 @@ struct HomeYesterday: View {
                 }
             }
         }
+        .colorScheme(.dark)
     }
 }
 

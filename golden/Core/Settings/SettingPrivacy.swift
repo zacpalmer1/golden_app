@@ -13,32 +13,14 @@ struct SettingsPrivacy: View {
     @State private var privateAccount = false
     @State private var privateAcctivated = false
     @State private var showMeshGradient = false
+    @Environment(\.colorScheme) var colorScheme
     var body: some View {
         NavigationStack {
             ZStack {
-                // Background image with dynamic opacity
-                MessagesGradient(colorSelection: colorSelection, show: showMeshGradient)
-                Rectangle()
-                    .foregroundStyle(.ultraThinMaterial)
-                    .ignoresSafeArea()
+                
                 
                 ZStack(alignment: .top) { // Aligns content to the top
-                    VStack(spacing: 0) {
-                        Rectangle()
-                            .fill(
-                                LinearGradient(
-                                    gradient: Gradient(colors: [Color.black, Color.clear]),
-                                    startPoint: .bottom,
-                                    endPoint: .top
-                                )
-                            )
-                            .frame(height: .infinity) // Set height for the gradient Rectangle
-                        
-                        Rectangle()
-                            .frame(height: 350) // Set height for the black Rectangle
-                            .foregroundColor(.black)
-                    }
-                    .ignoresSafeArea() // Ensures the rectangles extend to the edges
+                   
                     
                     
                     VStack {
@@ -46,7 +28,7 @@ struct SettingsPrivacy: View {
                         VStack(alignment: .leading, spacing: 16) {
                             HStack{
                                 Text("Account Privacy")
-                                    .font(.system(size: 28, weight: .heavy, design: .rounded))
+                                    .font(.system(size: 30, weight: .heavy, design: .default))
                                     .padding(.top, 0)
                                 Spacer()
                                 Button(action: {
@@ -58,7 +40,7 @@ struct SettingsPrivacy: View {
                                             .foregroundStyle(.ultraThinMaterial)
                                         Image(systemName: "x.circle")
                                             
-                                            .foregroundColor(.white)
+                                            .foregroundColor(colorScheme == .dark ? .white : .black)
                                             
                                     }
                                 }
@@ -71,7 +53,7 @@ struct SettingsPrivacy: View {
                                         .frame(width: 80, height: 80)
                                         .symbolEffect(privateAccount ? .bounce.down.byLayer : .bounce.up.byLayer, value: privateAccount)
                                     Text("@zacpalmer1")
-                                        .font(.system(size: 16, weight: .bold, design: .rounded))
+                                        .font(.system(size: 16, weight: .bold, design: .default))
                                         .padding(.top, 5)
                                         .padding(.bottom, 5)
                                 }
@@ -81,7 +63,7 @@ struct SettingsPrivacy: View {
                             Divider()
                             HStack{
                                 Text("Private account")
-                                    .font(.system(size: 18, weight: .bold, design: .rounded))
+                                    .font(.system(size: 18, weight: .bold, design: .default))
                                 Spacer()
                                 Toggle(isOn: $privateAccount) {
                                                 
@@ -90,10 +72,10 @@ struct SettingsPrivacy: View {
                             }
                             Divider()
                             Text("When your account is public, your profile can be seen by any active users of Golden. ")
-                                .font(.system(size: 14, weight: .regular, design: .rounded))
+                                .font(.system(size: 14, weight: .regular, design: .default))
                                 .padding(.bottom, 5)
                             Text("When your account is private, only the followers you approve can see what you share, including your photos, videos, locations, as well as the those you are following and are following you. Certain info such as you profile picture, username, number of followers and following and groups you have joined are visible to everyone on golden.")
-                                .font(.system(size: 14, weight: .regular, design: .rounded))
+                                .font(.system(size: 14, weight: .regular, design: .default))
                         }
                         .padding(.top, 10)
                         .frame(maxWidth: .infinity) // Allow VStack to take up available width
@@ -103,7 +85,9 @@ struct SettingsPrivacy: View {
                     .frame(maxWidth: .infinity)
                 }
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         }
+        
     }
 }
 

@@ -1,11 +1,5 @@
-//
-//  Activity.swift
-//  golden
-//
-//  Created by Zachary Palmer on 10/25/23.
-//
-
 import SwiftUI
+
 struct Settings: View {
     @State private var usersearch: String = ""
     @StateObject private var colorSelection = ColorSelection()
@@ -14,167 +8,98 @@ struct Settings: View {
     @State private var settingsBlocked = false
     @State private var settingsNotifications = false
     @State private var showMeshGradient = false
+    @Environment(\.colorScheme) var colorScheme
     var body: some View {
         NavigationStack {
-            ZStack {
-                
-                
-                ZStack(alignment: .top) { // Aligns content to the top
-                    VStack(spacing: 0) {
-                        Rectangle()
-                            .fill(
-                                LinearGradient(
-                                    gradient: Gradient(colors: [Color.black, Color.clear]),
-                                    startPoint: .bottom,
-                                    endPoint: .top
-                                )
-                            )
-                            .frame(height: .infinity) // Set height for the gradient Rectangle
-                        
-                        Rectangle()
-                            .frame(height: 350) // Set height for the black Rectangle
-                            .foregroundColor(.black)
-                    }
-                    .ignoresSafeArea() // Ensures the rectangles extend to the edges
-                    
-                    
-                    VStack {
-                        
-                        VStack(alignment: .leading, spacing: 16) {
-                            HStack{
-                                Text("Settings")
-                                    .font(.system(size: 28, weight: .heavy, design: .rounded))
-                                    .padding(.top, 0)
-                                Spacer()
-                                Button(action: {
-                                    presentationMode.wrappedValue.dismiss()
-                                }) {
-                                    ZStack {
-                                        Circle()
-                                            .frame(width: 35)
-                                            .foregroundStyle(.ultraThinMaterial)
-                                        Image(systemName: "x.circle")
-                                            .foregroundColor(.white)
-                                    }
-                                }
+            ZStack(alignment: .top) { // Aligns content to the top
+                VStack(alignment: .leading, spacing: 16) {
+                    HStack {
+                        Text("Settings")
+                            .font(.system(size: 30, weight: .heavy, design: .default))
+                        Spacer()
+                        Button(action: {
+                            presentationMode.wrappedValue.dismiss()
+                        }) {
+                            ZStack {
+                                Circle()
+                                    .frame(width: 35)
+                                    .foregroundStyle(.clear)
+                                Image(systemName: "x.circle")
+                                    .foregroundColor(colorScheme == .dark ? .white : .black)
                             }
-                            Text("Your Account")
-                                .font(.system(size: 18, weight: .bold, design: .rounded))
-                                .padding(.bottom, 5)
-                            Button(action: {
-                                settingsPrivacy.toggle()
-                            }) {
-                                HStack{
-                                    Image(systemName:"lock.fill")
-                                        .foregroundColor(.white)
-                                    Text("Account Privacy")
-                                        .foregroundColor(.white)
-                                    Spacer()
-                                    Text("Public")
-                                        .foregroundColor(.gray)
-                                    Image(systemName: "chevron.right")
-                                        .bold()
-                                        .foregroundColor(.gray)
-                                }
-                            }
-                            .fullScreenCover(isPresented: $settingsPrivacy) {
-                                SettingsPrivacy()
-                            }
-                           
-                            Divider()
-                            Button(action: {
-                                settingsBlocked.toggle()
-                            }) {
-                                HStack{
-                                    Image(systemName:"person.slash.fill")
-                                        .bold()
-                                        .foregroundColor(.white)
-                                    Text("Blocked Accounts")
-                                        .foregroundColor(.white)
-                                    Spacer()
-                                    Text("3")
-                                        .foregroundColor(.gray)
-                                    Image(systemName: "chevron.right")
-                                        .bold()
-                                        .foregroundColor(.gray)
-                                }
-                            }
-                            .fullScreenCover(isPresented: $settingsBlocked) {
-                                SettingsBlocked()
-                            }
-                            
-                            Divider()
-                            Button(action: {
-                                settingsNotifications.toggle()
-                            }) {
-                                HStack{
-                                    Image(systemName:"bell.fill")
-                                        .foregroundColor(.white)
-                                    Text("Notifications")
-                                        .foregroundColor(.white)
-                                    Spacer()
-                                    
-                                    Image(systemName: "chevron.right")
-                                        .bold()
-                                        .foregroundColor(.gray)
-                                }
-                            }
-                            .fullScreenCover(isPresented: $settingsNotifications) {
-                                SettingsNotifications()
-                            }
-                            
-                            Divider()
-                            HStack{
-                                Image(systemName:"lifepreserver")
-                                    .bold()
-                                Text("Help")
-                                
-                                Spacer()
-                                
-                                Image(systemName: "chevron.right")
-                                    .bold()
-                                    .foregroundColor(.gray)
-                            }
-                            Divider()
-                            HStack{
-                                Image(systemName:"info.circle.fill")
-                                    .bold()
-                                Text("About")
-                                
-                                Spacer()
-                                
-                                Image(systemName: "chevron.right")
-                                    .bold()
-                                    .foregroundColor(.gray)
-                            }
-                            Divider()
-                            HStack{
-                                Image(systemName:"person.fill")
-                                    .bold()
-                                Text("Log Out")
-                                
-                                Spacer()
-                                
-                                Image(systemName: "chevron.right")
-                                    .bold()
-                                    .foregroundColor(.gray)
-                            }
-                            Divider()
-                                    
-                                
-                            
-                            
-                            
                         }
-                        .padding(.top, 10)
-                        .frame(maxWidth: .infinity) // Allow VStack to take up available width
-                        .padding(.horizontal, 25) // Add margin on both sides, allowing for more padding
-                        
                     }
-                    .frame(maxWidth: .infinity)
+
+                    Text("Your Account")
+                        .font(.system(size: 18, weight: .bold, design: .rounded))
+                        .padding(.bottom, 5)
+                    
+                    // Settings options
+                    Button(action: {
+                        settingsPrivacy.toggle()
+                    }) {
+                        settingsOptionRow(icon: "lock.fill", title: "Account Privacy", detail: "Public")
+                    }
+                    .fullScreenCover(isPresented: $settingsPrivacy) {
+                        SettingsPrivacy()
+                    }
+                    
+                    Divider()
+                    
+                    Button(action: {
+                        settingsBlocked.toggle()
+                    }) {
+                        settingsOptionRow(icon: "person.slash.fill", title: "Blocked Accounts", detail: "3")
+                    }
+                    .fullScreenCover(isPresented: $settingsBlocked) {
+                        SettingsBlocked()
+                    }
+                    
+                    Divider()
+                    
+                    Button(action: {
+                        settingsNotifications.toggle()
+                    }) {
+                        settingsOptionRow(icon: "bell.fill", title: "Notifications", detail: "")
+                    }
+                    .fullScreenCover(isPresented: $settingsNotifications) {
+                        SettingsNotifications()
+                    }
+                    
+                    Divider()
+                    
+                    settingsOptionRow(icon: "lifepreserver", title: "Help", detail: "")
+                    Divider()
+                    settingsOptionRow(icon: "info.circle.fill", title: "About", detail: "")
+                    Divider()
+                    settingsOptionRow(icon: "person.fill", title: "Log Out", detail: "")
+                    Divider()
                 }
+                .frame(maxWidth: .infinity)
+                .padding(.horizontal, 25)
+                .padding(.top, 0) // Remove any additional top padding
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top) // Align ZStack to the top
+            .padding(.top, 0) // Remove any additional padding added by NavigationStack if necessary
         }
+    }
+
+    // Helper function for each settings option row
+    private func settingsOptionRow(icon: String, title: String, detail: String) -> some View {
+        HStack {
+            Image(systemName: icon)
+                .foregroundColor(colorScheme == .dark ? .white : .black)
+            Text(title)
+                .foregroundColor(colorScheme == .dark ? .white : .black)
+            Spacer()
+            if !detail.isEmpty {
+                Text(detail)
+                    .foregroundColor(.gray)
+            }
+            Image(systemName: "chevron.right")
+                .foregroundColor(.gray)
+        }
+        .padding(.vertical, 5)
     }
 }
 

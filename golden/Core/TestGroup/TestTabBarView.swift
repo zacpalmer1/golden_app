@@ -11,7 +11,7 @@ struct TestTabBarView: View {
                 // Fixed height for background to prevent shifting
                 VStack(spacing: 0) {
                     ZStack {
-                        if selectedTab == .home {
+                        if selectedTab == .home || selectedTab == .homeFeatured || selectedTab == .homeYesterday {
                             // Background for home view with a larger height
                             LinearGradient(
                                 gradient: Gradient(colors: [Color.black.opacity(1.0), Color.clear]),
@@ -66,8 +66,11 @@ struct TestTabBarView: View {
                 .frame(width: 22, height: 22)
                 .padding(.vertical, 20) // Increase the tappable area without changing icon size
                 .background(Color.clear) // Ensure padding is not visible
-                .foregroundColor((selectedTab == tab) ? (colorScheme == .dark ? .white : .gray) : .gray)
-        }
+                .foregroundColor(
+                    selectedTab == .home ? .gray : (selectedTab == tab ? (colorScheme == .dark ? .white : .black) : .gray)
+                )
+
+     }
     }
 }
 

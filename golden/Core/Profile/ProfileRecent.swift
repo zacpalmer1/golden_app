@@ -93,7 +93,7 @@ struct ProfileRecent: View {
                 
             }
             ZStack{
-                DaytimeGradient()
+                DaytimeGradient(colors: card2)
                     .frame(height: 135)
                     .cornerRadius(19)
                     
