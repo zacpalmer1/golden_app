@@ -1,55 +1,111 @@
-//
-//  SynchronizedScrollViews.swift
-//  golden
-//
-//  Created by Zachary Palmer on 11/4/24.
-//
-
 import SwiftUI
 
-struct SynchronizedScrollViews: View {
-    @State private var scrollOffset: CGFloat = 0
+struct MainView: View {
+    @State private var currentIndex: Int = 0 // Shared index to synchronize both views
 
     var body: some View {
-        VStack {
-            ScrollViewReader { proxy1 in
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack {
-                        ForEach(0..<50) { index in
-                            Text("Item \(index)")
-                                .frame(width: 100, height: 100)
-                                .background(Color.blue)
-                                .border(Color.black)
-                        }
-                    }
-                    .background(GeometryReader { geo -> Color in
-                        DispatchQueue.main.async {
-                            self.scrollOffset = geo.frame(in: .global).minX
-                        }
-                        return Color.clear
-                    })
-                }
-            }
-            .frame(height: 120)
-
-            ScrollViewReader { proxy2 in
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack {
-                        ForEach(0..<50) { index in
-                            Text("Item \(index)")
-                                .frame(width: 100, height: 100)
-                                .background(Color.green)
-                                .border(Color.black)
-                        }
-                    }
-                    .offset(x: scrollOffset) // Apply the synchronized scroll position here
-                }
-            }
-            .frame(height: 120)
+        HStack {
+            // Two completely different views with their own scroll views
+            FirstScrollView(currentIndex: $currentIndex)
+            SecondScrollView(currentIndex: $currentIndex)
         }
     }
 }
 
-#Preview {
-    SynchronizedScrollViews()
+struct FirstScrollView: View {
+    @Binding var currentIndex: Int
+
+    var body: some View {
+        ScrollViewReader { proxy in
+            ScrollView {
+                VStack(spacing: 20) {
+                    ForEach(0..<50, id: \.self) { index in
+                        Text("First View Item \(index)")
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .background(Color.green.opacity(0.3))
+                            .cornerRadius(8)
+                            .id(index)
+                            .background(
+                                GeometryReader { geo in
+                                    Color.clear.onAppear {
+                                        updateIndexIfNeeded(geo: geo, index: index)
+                                    }
+                                    .onChange(of: geo.frame(in: .global).minY) { _ in
+                                        updateIndexIfNeeded(geo: geo, index: index)
+                                    }
+                                }
+                            )
+                    }
+                }
+            }
+            .onChange(of: currentIndex) { newIndex in
+                // Scroll to the updated index when it changes
+                withAnimation {
+                    proxy.scrollTo(newIndex, anchor: .center)
+                }
+            }
+        }
+    }
+
+    private func updateIndexIfNeeded(geo: GeometryProxy, index: Int) {
+        let frame = geo.frame(in: .global)
+        if frame.midY > 200 && frame.midY < 600 { // Adjust bounds based on screen size
+            if currentIndex != index {
+                currentIndex = index
+            }
+        }
+    }
+}
+
+struct SecondScrollView: View {
+    @Binding var currentIndex: Int
+
+    var body: some View {
+        ScrollViewReader { proxy in
+            ScrollView {
+                VStack(spacing: 20) {
+                    ForEach(0..<50, id: \.self) { index in
+                        Text("Second View Item \(index)")
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .background(Color.blue.opacity(0.3))
+                            .cornerRadius(8)
+                            .id(index)
+                            .background(
+                                GeometryReader { geo in
+                                    Color.clear.onAppear {
+                                        updateIndexIfNeeded(geo: geo, index: index)
+                                    }
+                                    .onChange(of: geo.frame(in: .global).minY) { _ in
+                                        updateIndexIfNeeded(geo: geo, index: index)
+                                    }
+                                }
+                            )
+                    }
+                }
+            }
+            .onChange(of: currentIndex) { newIndex in
+                // Scroll to the updated index when it changes
+                withAnimation {
+                    proxy.scrollTo(newIndex, anchor: .center)
+                }
+            }
+        }
+    }
+
+    private func updateIndexIfNeeded(geo: GeometryProxy, index: Int) {
+        let frame = geo.frame(in: .global)
+        if frame.midY > 200 && frame.midY < 600 { // Adjust bounds based on screen size
+            if currentIndex != index {
+                currentIndex = index
+            }
+        }
+    }
+}
+
+struct MainView_Previews: PreviewProvider {
+    static var previews: some View {
+        MainView()
+    }
 }

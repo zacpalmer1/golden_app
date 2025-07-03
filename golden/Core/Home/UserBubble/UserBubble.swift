@@ -1,124 +1,123 @@
 import SwiftUI
 
-struct UserBubble: View {
-    @State private var profile = false
-    @State private var isPressed = false
-    @State var rotation: CGFloat = 0.0
-
-    var userName: String
-    var profileImage: String
-    var streaks: String
-    var likes: String
-    var comments: String
-    var body: some View {
-        GeometryReader { geometry in
-            ZStack {
-                Rectangle()
-                    .frame(height: 55)
-                    .cornerRadius(14)
-                    .foregroundStyle(.ultraThinMaterial)
-                    
-
-                HStack {
-                    Image(profileImage)
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 40, height: 40)
-                        .clipped()
-                        .cornerRadius(11)
-                    
-                    Button(action: {
-                        profile.toggle()
-                    }) {
-                        Text(userName)
-                            .foregroundColor(.white)
-                            .frame(width: geometry.size.width * 0.30, alignment: .leading) // Dynamically sized based on screen width
-                            .font(.system(size: 16, weight: .regular, design: .default))
-                    }
-                    .fullScreenCover(isPresented: $profile) {
-                        ViewProfile()
-                            .transition(.move(edge: .trailing))
-                    }
-
-                    Spacer()
-
-                    HStack(spacing: 4) {
-                        Image(systemName: "sun.horizon.fill")
-                            .foregroundColor(.white)
-                        Text(streaks)
-                            .foregroundColor(.white)
-                            .font(.system(size: 15, weight: .regular, design: .rounded))
-                    }
-                    
-                    Spacer()
-                    Spacer()
-                    Button(action: {
-                        isPressed.toggle()
-                    }) {
-                        HStack(spacing: 4) {
-                            Image(systemName: "heart.fill")
-                                .foregroundColor(isPressed ? Color.pink : Color.primary)
-                            Text(likes)
-                                .foregroundColor(.white)
-                                .font(.system(size: 15, weight: .regular, design: .rounded))
-                        }
-                    }
-                    
-                    Spacer()
-                    Spacer()
-                    HStack(spacing: 4) {
-                        Image(systemName: "message.fill")
-                            .foregroundColor(.white)
-                        Text(comments)
-                            .foregroundColor(.white)
-                            .font(.system(size: 15, weight: .regular, design: .rounded))
-                            .padding(.trailing, 15)
-                    }
-                }
-                .padding(.horizontal, geometry.size.width * 0.02) // Dynamic padding
-            }
-        }
-        .colorScheme(.dark)
-        .frame(height: 60) // Consistent height across devices
-        .padding(.top, 10)
-    }
-}
-
 struct TestBubbleView: View {
     @ObservedObject var scrollSyncManager: ScrollSyncManager
-    var userNames = ["Josh Powers", "Zac Palmer", "Kennedy Seigler", "Lindsay McNamara", "Blake Gillian"]
-    var profileImage = ["joshlarge", "zaclarge", "kennlarge", "lindalarge", "blakelarge"]
-    var streaks = ["5", "3", "4", "5", "2"]
-    var likes = ["41", "16", "23", "74", "84"]
-    var comments = ["3", "2", "8", "2", "5"]
+    @Binding var isIconColored: Bool
     var body: some View {
         VStack(alignment: .leading) {
             Spacer()
             ScrollViewReader { proxy in
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack(alignment: .leading, spacing: 10) {
-                        ForEach(userNames.indices, id: \.self) { index in
-                            UserBubble(userName: userNames[index], profileImage: profileImage[index], streaks: streaks[index], likes: likes[index], comments: comments[index])
+                        ForEach(userFeedData, id: \.name) { user in
+                            UserBubble(user: user, isIconColored: $isIconColored) // Pass the entire user object
                                 .frame(height: 60)
+                                .containerRelativeFrame(.vertical, count: 1, spacing: 0)
+                                                                    
+                                .scrollTransition { content, phase in content
+                                        .opacity(phase.isIdentity ? 1 : 0.5)
+                                        .scaleEffect(x: phase.isIdentity ? 1 : 0.5, y: phase.isIdentity ? 1 : 0.5)
+                                }
+                                .id(user.name)
                         }
                     }
-                    .padding(.horizontal) // Adjust the ScrollView padding as needed
+                    .padding(.horizontal)
                 }
+                .scrollDisabled(true)
+                
+                .onChange(of: scrollSyncManager.currentIndex) { newIndex in
+                    withAnimation(.spring) {
+                        proxy.scrollTo(userFeedData[newIndex].name, anchor: .center)
+                    }
+                }
+                
             }
-            .scrollTargetLayout()
             
-                .offset(x: scrollSyncManager.scrollOffset)
-                .frame(maxHeight: 70) // Allow ScrollView to take available height
-                .scrollTargetBehavior(.paging)
-                .padding(.top, 620)
-                Spacer()
-            
+            .frame(maxHeight: 60)
+            .padding(.top, 620)
+            Spacer()
         }
         .edgesIgnoringSafeArea(.all)
         .colorScheme(.dark)
     }
 }
 
+struct UserBubble: View {
+    @State var user: UserFeedItem
+    @State private var profile = false
+    @Binding var isIconColored: Bool
+    var body: some View {
+        
+        Button(action: {
+            profile.toggle()
+        }) {
+            VStack(alignment: .leading) {
+                ZStack {
+                    if #available(iOS 26.0, *) {
+                                   RoundedRectangle(cornerRadius: 34, style: .continuous)
+                                       .fill(.clear)
+                                       .frame( height: 50)
+                                       .glassEffect( in: RoundedRectangle(cornerRadius: 34), isEnabled: true)
+                                       .padding()
+                               } else {
+                                   RoundedRectangle(cornerRadius: 34, style: .continuous)
+                                       .fill(.ultraThinMaterial)
+                                       .frame(height: 45)
+                                       .padding()
+                               }
 
+                       // .shadow(color: .black.opacity(0.4), radius: 3)
+                    HStack {
+                        
+                        Image(user.image)
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 30, height: 30)
+                            .clipped()
+                            .cornerRadius(9)
 
+                        Text(user.name)
+                            .font(.system(size: 16, weight: .regular, design: .default))
+                            .lineLimit(1)
+                            .foregroundColor(.white)
+                        Spacer()
 
+                        HStack(spacing: 15) {
+                            HStack {
+                                Image(systemName: "sun.horizon.fill")
+                                    .foregroundColor(.white)
+                                Text("\(user.streaks)")
+                                    .font(.system(size: 15, weight: .regular, design: .default))
+                                    .foregroundColor(.white)
+                            }
+                            HStack {
+                                Image(systemName: "heart.fill")
+                                    .foregroundColor(isIconColored ? .pink : .white)
+                                    .foregroundColor(.white)
+                                
+                                Text("\(user.likes)")
+                                    .font(.system(size: 15, weight: .regular, design: .default))
+                                    .foregroundColor(.white)
+                            }
+                            HStack {
+                                Image(systemName: "message.fill")
+                                    .foregroundColor(.white)
+                                Text("\(user.comments)")
+                                    .font(.system(size: 15, weight: .regular, design: .default))
+                                    .foregroundColor(.white)
+                            }
+                        }
+                        .layoutPriority(1)
+                    }
+                    .padding(.horizontal, 28)
+                    .padding(.trailing, 10)
+                }
+                .frame(maxWidth: .infinity)
+            }
+        }
+        .fullScreenCover(isPresented: $profile) {
+            ViewProfile(user: user) // Pass the selected user object here
+                .transition(.move(edge: .trailing))
+        }
+    }
+}

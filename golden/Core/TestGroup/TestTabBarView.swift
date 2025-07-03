@@ -2,55 +2,72 @@ import SwiftUI
 
 struct TestTabBarView: View {
     @Binding var selectedTab: Tabs
-    @Environment(\.colorScheme) var colorScheme
+    
     
     var body: some View {
         VStack(spacing: 0) {
             Spacer()
             ZStack {
                 // Fixed height for background to prevent shifting
-                VStack(spacing: 0) {
-                    ZStack {
-                        if selectedTab == .home || selectedTab == .homeFeatured || selectedTab == .homeYesterday {
-                            // Background for home view with a larger height
-                            LinearGradient(
-                                gradient: Gradient(colors: [Color.black.opacity(1.0), Color.clear]),
-                                startPoint: .bottom,
-                                endPoint: .top
-                            )
-                            .frame(height: 180)
-                            .offset(y: -40)
-                        } else {
-                            // Default background with blur for other tabs
-                            Blur(style: colorScheme == .dark ? .dark : .systemChromeMaterial)
-                                .frame(height: 90) // Match home view height to avoid shifting
-                            
-                        }
-                    }
-                }
-                .frame(height: 180) // Fixed frame height for background ZStack
 
                 // Main button rectangle with a material background
                 ZStack {
-                    // HStack for tab buttons
-                    HStack {
+                    HStack(spacing:0){
                         Spacer()
-                        tabButton(tab: .home, imageName: "sun.max.fill")
                         Spacer()
-                        tabButton(tab: .favorites, imageName: "magnifyingglass")
                         Spacer()
-                        TestView() // Adjust if needed
-                            .onLongPressGesture(minimumDuration: 1.0) {
-                                TestView()
+                        Spacer()
+                        ZStack{
+                            if #available(iOS 26.0, *) {
+                                           RoundedRectangle(cornerRadius: 54, style: .continuous)
+                                               .fill(.clear)
+                                               .frame(width: 300, height: 60)
+                                               .glassEffect( in: RoundedRectangle(cornerRadius: 44), isEnabled: true)
+                                               
+                                       } else {
+                                           RoundedRectangle(cornerRadius: 34, style: .continuous)
+                                               .fill(.ultraThinMaterial)
+                                               .frame(height: 45)
+                                               
+                                       }
+                            HStack{
+                                Spacer()
+                                tabButton(tab: .home, imageName: "sun.max.fill")
+                                Spacer()
+                                tabButton(tab: .activity, imageName: "hand.wave.fill")
+                                Spacer()
+                                tabButton(tab: .profile, imageName: "person.fill")
+                                Spacer()
+                                Text("12:34")
+                                    .font(.system(size: 23, weight: .heavy, design: .rounded))
+                                    .foregroundColor(.white)
+                                Spacer()
                             }
+                        }
                         Spacer()
-                        tabButton(tab: .activity, imageName: "hand.wave.fill")
+                        ZStack{
+                            
+                            if #available(iOS 26.0, *) {
+                                           RoundedRectangle(cornerRadius: 54, style: .continuous)
+                                               .fill(.clear)
+                                               .frame(width: 55, height: 55)
+                                               .glassEffect( in: RoundedRectangle(cornerRadius: 44), isEnabled: true)
+                                               
+                                       } else {
+                                           RoundedRectangle(cornerRadius: 34, style: .continuous)
+                                               .fill(.ultraThinMaterial)
+                                               .frame(height: 45)
+                                               
+                                       }
+                            tabButton(tab: .favorites, imageName: "magnifyingglass")
+                        }
                         Spacer()
-                        tabButton(tab: .profile, imageName: "person.fill")
+                        Spacer()
+                        Spacer()
                         Spacer()
                     }
                 }
-                .offset(y: -15)
+                .offset(y: -10)
             }
             .frame(height: 90) // Adjust frame height of entire ZStack for consistent tab item placement
         }
@@ -65,10 +82,7 @@ struct TestTabBarView: View {
                 .resizable()
                 .frame(width: 22, height: 22)
                 .padding(.vertical, 20) // Increase the tappable area without changing icon size
-                .background(Color.clear) // Ensure padding is not visible
-                .foregroundColor(
-                    selectedTab == .home ? .gray : (selectedTab == tab ? (colorScheme == .dark ? .white : .black) : .gray)
-                )
+                .foregroundColor(.white)
 
      }
     }

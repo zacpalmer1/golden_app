@@ -27,53 +27,87 @@ struct SuggestedView: View {
                                     Circle()
                                         .frame(width: 30)
                                         .foregroundStyle(.ultraThinMaterial)
-                                    Image(systemName: "chevron.backward")
+                                    Image(systemName: "chevron.down")
                                         .resizable()
-                                        .frame(width: 8, height: 14)
-                                        .foregroundColor(.white)
+                                        .frame(width: 14, height: 8)
+                                        .foregroundColor(colorScheme == .dark ? .white : .black)
                                         .bold()
-                                        .offset(x: -1)
                                 }
                             }
                                 
                         }
-                        .padding(.horizontal, 10)
-                        .padding(.horizontal, 7)
+                        
                         
                         VStack(alignment: .center){
                             ScrollView(.vertical, showsIndicators: false) {
-                                VStack(alignment: .center, spacing: 10) { // Set spacing to 0 to remove the default spacing
-                                    // Suggested Users
-                                    ForEach(trendingUser, id: \.name){ trendingUser in
-                                        Button(action: {
-                                            profile.toggle()
-                                        }) {
-                                            VStack(alignment:.leading){
-                                                HStack{
-                                                    Text(trendingUser.rank)
-                                                        .font(.system(size: 20, weight: .bold, design: .default))
-                                                        .foregroundColor(colorScheme == .dark ? .white : .black)
-                                                    Text(trendingUser.name)
-                                                        .font(.system(size: 20, weight: .regular, design: .default))
-                                                        .foregroundColor(.gray)
+                                HStack{
+                                    VStack(alignment: .center, spacing: 10) {
+                                        ForEach(suggestedUser, id: \.name){ suggestedUser in
+                                            Button(action: {
+                                                profile.toggle()
+                                            }) {
+                                                VStack(spacing: 0) {
+                                                    VStack(alignment:.leading){
+                                                        Text(suggestedUser.name)
+                                                            .font(.system(size: 14, weight: .bold, design: .default))
+                                                            .foregroundColor(colorScheme == .dark ? .white : .black)
+                                                        Text(suggestedUser.username)
+                                                            .font(.system(size: 12, weight: .regular, design: .default))
+                                                            .foregroundColor(.gray)
+                                                        Image(suggestedUser.image)
+                                                            .resizable()
+                                                            .scaledToFill()
+                                                            .frame(width: 170, height: 170)
+                                                            .foregroundColor(.white)
+                                                            .cornerRadius(10)
+                                                        
+                                                    }
                                                 }
-                                                Image(trendingUser.image)
-                                                    .resizable()
-                                                    .scaledToFill()
-                                                    .frame(width: 360, height: 270)
-                                                    .foregroundColor(.white)
-                                                    .cornerRadius(10)
+                                                .padding(.bottom, 20)
+                                                .frame(maxWidth: .infinity)
                                             }
-                                            .frame(maxWidth: .infinity)
+                                            .fullScreenCover(isPresented: $profile) {
+                                                ViewProfile(user: UserFeedItem(image: "joshlarge", name: "Josh Powers",  username:"joshpowers", followersCount: "98", streaks: "5", likes: "2", comments: "2", date:"Today",favoritePosts: ["joshpost1", "joshpost2", "joshpost3", "joshpost4", "joshpost5", "joshpost6"]))
+
+                                                    .transition(.move(edge: .trailing))
+                                                
+                                            }
                                         }
-                                        .fullScreenCover(isPresented: $profile) {
-                                            ViewProfile()
-                                                .transition(.move(edge: .trailing))
-                                            
+                                    }
+                                    VStack(alignment: .center, spacing: 10) {
+                                        ForEach(suggestedUser, id: \.name){ suggestedUser in
+                                            Button(action: {
+                                                profile.toggle()
+                                            }) {
+                                                VStack(spacing: 0) {
+                                                    VStack(alignment:.leading){
+                                                        Text(suggestedUser.name)
+                                                            .font(.system(size: 14, weight: .bold, design: .default))
+                                                            .foregroundColor(colorScheme == .dark ? .white : .black)
+                                                        Text(suggestedUser.username)
+                                                            .font(.system(size: 12, weight: .regular, design: .default))
+                                                            .foregroundColor(.gray)
+                                                        Image(suggestedUser.image)
+                                                            .resizable()
+                                                            .scaledToFill()
+                                                            .frame(width: 170, height: 170)
+                                                            .foregroundColor(.white)
+                                                            .cornerRadius(10)
+                                                        
+                                                    }
+                                                }
+                                                .padding(.bottom, 20)
+                                                .frame(maxWidth: .infinity)
+                                            }
+                                            .fullScreenCover(isPresented: $profile) {
+                                                ViewProfile(user: UserFeedItem(image: "joshlarge", name: "Josh Powers", username:"joshpowers", followersCount: "98", streaks: "5", likes: "2", comments: "2", date:"Today",favoritePosts: ["joshpost1", "joshpost2", "joshpost3", "joshpost4", "joshpost5", "joshpost6"]))
+
+                                                    .transition(.move(edge: .trailing))
+                                                
+                                            }
                                         }
                                     }
                                 }
-                               
                             }
                             .scrollBounceBehavior(.basedOnSize)
                             .scrollTargetLayout()
@@ -83,7 +117,7 @@ struct SuggestedView: View {
                         
                     }
                     
-                    
+                    .padding(.horizontal, 17)
                     .padding(.top, 10)
                     .frame(maxWidth: .infinity) // Allow VStack to take up available width
                 }

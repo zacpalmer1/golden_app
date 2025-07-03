@@ -16,29 +16,40 @@ struct ContentView: View {
     @StateObject private var viewModel = VideoViewModel()
     @Namespace var animation
     @StateObject private var scrollSyncManager = ScrollSyncManager()
+    @State private var isIconColored = false
     var body: some View {
         VStack {
             ZStack {
                 switch selectedTab {
                 case .home:
                     
-                    Home().zIndex(0)
+                    TopBarView(selectedTab: $selectedTab)
+                        .zIndex(1)
+                        .containerRelativeFrame(.vertical, alignment: .top)
+                        .edgesIgnoringSafeArea(.top)
+                    Home(isIconColored: $isIconColored).zIndex(0)
                         .environmentObject(colorSelection)
                         .colorScheme(.dark)
-                    TestTabBarView(selectedTab: $selectedTab)
                     
-                    TopBarView(selectedTab: $selectedTab)
-                        .offset(y: -362)
-                        .padding(.bottom)
-                    
-                    TestBubbleView(scrollSyncManager: scrollSyncManager)
+                    Newtesttabbar(user: UserFeedItem(
+                        image: "kennlarge",
+                        name: "Kennedy", // should exist in Assets.xcassets
+                        username: "hammerb12",
+                        followersCount: "5",
+                        streaks: "34",
+                        likes: "42",
+                        comments: "12",
+                        date: "12",
+                        favoritePosts: ["12, 12, 12"]
                         
+                    ))
+                    .zIndex(2)
                     
                 case .favorites:
                     Favorites().zIndex(0)
                         .environmentObject(colorSelection)
                     TestTabBarView(selectedTab: $selectedTab)
-
+                    
                 case .activity:
                     Activity().zIndex(0)
                         .environmentObject(colorSelection)
@@ -50,25 +61,24 @@ struct ContentView: View {
                     TestTabBarView(selectedTab: $selectedTab)
                     
                 case .homeYesterday:
-                    HomeYesterday().zIndex(0)
+                    TopBarView(selectedTab: $selectedTab)
+                        .zIndex(1)
+                        .containerRelativeFrame(.vertical, alignment: .top)
+                        .edgesIgnoringSafeArea(.top)
+                    HomeYesterday(isIconColored: $isIconColored).zIndex(0)
                         .environmentObject(colorSelection)
                     TestTabBarView(selectedTab: $selectedTab)
                     
-                    TopBarView(selectedTab: $selectedTab)
-                        .offset(y: -362)
-                        .padding(.bottom)
-                    TestBubbleView(scrollSyncManager: scrollSyncManager)
-                        
+                    
                 case .homeFeatured:
-                    HomeFeatured().zIndex(0)
+                    TopBarView(selectedTab: $selectedTab)
+                        .zIndex(1)
+                        .containerRelativeFrame(.vertical, alignment: .top)
+                        .edgesIgnoringSafeArea(.top)
+                    HomeFeatured(isIconColored: $isIconColored).zIndex(0)
                         .environmentObject(colorSelection)
                     TestTabBarView(selectedTab: $selectedTab)
                     
-                    TopBarView(selectedTab: $selectedTab)
-                        .offset(y: -362)
-                        .padding(.bottom)
-                    TestBubbleView(scrollSyncManager: scrollSyncManager)
-                        
                 }
             }
         }
@@ -76,8 +86,11 @@ struct ContentView: View {
 }
 
 #Preview {
-    
-    ContentView()
-            .environmentObject(ColorSelection()) 
+    Group{
+        ContentView()
+            .environmentObject(ColorSelection())
+        
+        
+    }
     
 }

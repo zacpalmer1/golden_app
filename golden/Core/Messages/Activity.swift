@@ -15,6 +15,7 @@ struct Activity: View {
     @State private var showMeshGradient = false
     @State private var showingMessageModal = false
     @Environment(\.colorScheme) var colorScheme
+    @State private var message = false
     var body: some View {
         ZStack {
             // Background image with dynamic opacity
@@ -108,25 +109,76 @@ struct Activity: View {
                             }
                             .padding(.leading, 10)
                             VStack(alignment: .leading, spacing: 10) {
-                                HStack{
+                                HStack {
                                     Text("Messages")
                                         .padding(10)
                                         .font(.system(size: 24, weight: .bold, design: .default))
-                                    
                                 }
-                                    
+
+                                ForEach(usermessage, id: \.name) { usermessage in
+                                    Button(action: {
+                                        message.toggle()
+                                    }) {
+                                        HStack(spacing: 10) {
+                                            DaytimeGradient(colors: red)
+                                                .frame(width: 10, height: 10)
+                                                .cornerRadius(20)
+                                                .foregroundColor(.orange)
+
+                                            Image(usermessage.image)
+                                                .resizable()
+                                                .scaledToFill()
+                                                .frame(width: 50, height: 50)
+                                                .foregroundColor(.white)
+                                                .cornerRadius(10)
+
+                                            VStack(alignment: .leading, spacing: 3) {
+                                                HStack {
+                                                    Text(usermessage.name)
+                                                        .font(.system(size: 16, weight: .bold, design: .default))
+                                                        .foregroundColor(colorScheme == .dark ? .white : .black)
+                                                    Spacer()
+                                                    HStack(spacing: 10) {
+                                                        Text(usermessage.time)
+                                                            .font(.system(size: 14, weight: .regular, design: .default))
+                                                            .foregroundColor(.gray)
+                                                        Image(systemName: "chevron.right")
+                                                            .resizable()
+                                                            .frame(width: 7, height: 10)
+                                                            .foregroundColor(.gray)
+                                                            .bold()
+                                                    }
+                                                }
+                                                
+                                                Text(usermessage.text)
+                                                    .font(.system(size: 14, weight: .regular, design: .default))
+                                                    .foregroundColor(.gray)
+                                                    .frame(maxWidth: .infinity, alignment: .leading) // Ensures leading alignment
+                                            }
+                                        }
+                                        .frame(maxWidth: .infinity)
+                                        Divider()
+                                    }
+                                    .fullScreenCover(isPresented: $message) {
+                                        Messages()
+                                    }
+                                }
+                            }
+                            .padding(.horizontal, 10)
+
+                            
+                                                        VStack(alignment: .leading, spacing: 10) {
                                         ForEach(usermessage, id: \.name){ usermessage in
                                             HStack(spacing:10){
-                                                DaytimeGradient(colors: red)
-                                                    .frame(width: 10, height: 10)
-                                                    .cornerRadius(20)
-                                                    .foregroundColor(.orange)
+                                                Circle()
+                                                    .frame(width: 10)
+                                                    .foregroundColor(colorScheme == .dark ? .black : .white)
                                                 Image(usermessage.image)
                                                     .resizable()
                                                     .scaledToFill()
                                                     .frame(width: 50, height: 50)
                                                     .foregroundColor(.white)
-                                                    .cornerRadius(56)
+                                                    .cornerRadius(10)
                                                 VStack(alignment:.leading, spacing:3){
                                                     HStack{
                                                         Text(usermessage.name)
@@ -153,7 +205,6 @@ struct Activity: View {
                                             }
                                             .frame(maxWidth: .infinity)
                                             Divider()
-                                                .padding(.leading, 20)
                                         }
                             
                                
@@ -171,51 +222,7 @@ struct Activity: View {
                                                     .scaledToFill()
                                                     .frame(width: 50, height: 50)
                                                     .foregroundColor(.white)
-                                                    .cornerRadius(56)
-                                                VStack(alignment:.leading, spacing:3){
-                                                    HStack{
-                                                        Text(usermessage.name)
-                                                            .font(.system(size: 16, weight: .bold, design: .default))
-                                                        Spacer()
-                                                        HStack(spacing: 10){
-                                                            Text(usermessage.time)
-                                                                .font(.system(size: 14, weight: .regular, design: .default))
-                                                                .foregroundColor(.gray)
-                                                            Image(systemName: "chevron.right")
-                                                                
-                                                                .resizable()
-                                                                .frame(width: 7, height: 10)
-                                                                .foregroundColor(.gray)
-                                                                .bold()
-                                                        }
-                                                    }
-                                                    Text(usermessage.text)
-                                                        .font(.system(size: 14, weight: .regular, design: .default))
-                                                        .foregroundColor(.gray)
-                                                    
-                                                }
-                                               
-                                            }
-                                            .frame(maxWidth: .infinity)
-                                            Divider()
-                                        }
-                            
-                               
-                            }
-                            .padding(.horizontal, 10)
-                            .padding(.trailing, 7)
-                            VStack(alignment: .leading, spacing: 10) {
-                                        ForEach(usermessage, id: \.name){ usermessage in
-                                            HStack(spacing:10){
-                                                Circle()
-                                                    .frame(width: 10)
-                                                    .foregroundColor(colorScheme == .dark ? .black : .white)
-                                                Image(usermessage.image)
-                                                    .resizable()
-                                                    .scaledToFill()
-                                                    .frame(width: 50, height: 50)
-                                                    .foregroundColor(.white)
-                                                    .cornerRadius(56)
+                                                    .cornerRadius(10)
                                                 VStack(alignment:.leading, spacing:3){
                                                     HStack{
                                                         Text(usermessage.name)

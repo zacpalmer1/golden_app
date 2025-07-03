@@ -18,9 +18,9 @@ struct FollowGradient: View {
                     points: [[0.0,0.0],[isAnimating ? 0.1 : 0.9,0.0],[1.0,0.0],
                              [0.0,0.5],[0.5,isAnimating ? 1.0 : 0.1],[1.0,isAnimating ? 1.0 : 0.4],
                              [0.0,1.0],[isAnimating ? 0.1 : 0.9,1.0],[1.0,1.0]],
-                    colors: follow)
+                    colors: pink)
                 .onAppear{
-                    withAnimation(.easeInOut(duration: 1).repeatForever(autoreverses: true)){
+                    withAnimation(.easeInOut(duration: 3).repeatForever(autoreverses: true)){
                         isAnimating.toggle()
                     }
                 }

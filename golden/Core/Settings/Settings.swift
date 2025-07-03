@@ -24,14 +24,17 @@ struct Settings: View {
                                 Circle()
                                     .frame(width: 35)
                                     .foregroundStyle(.clear)
-                                Image(systemName: "x.circle")
+                                Image(systemName: "chevron.down")
+                                    .resizable()
+                                    .frame(width: 14, height: 8)
                                     .foregroundColor(colorScheme == .dark ? .white : .black)
+                                    .bold()
                             }
                         }
                     }
 
                     Text("Your Account")
-                        .font(.system(size: 18, weight: .bold, design: .rounded))
+                        .font(.system(size: 18, weight: .bold, design: .default))
                         .padding(.bottom, 5)
                     
                     // Settings options
@@ -67,7 +70,9 @@ struct Settings: View {
                     }
                     
                     Divider()
-                    
+                    Text("More Info & Support")
+                        .font(.system(size: 18, weight: .bold, design: .default))
+                        .padding(.bottom, 5)
                     settingsOptionRow(icon: "lifepreserver", title: "Help", detail: "")
                     Divider()
                     settingsOptionRow(icon: "info.circle.fill", title: "About", detail: "")
@@ -90,6 +95,7 @@ struct Settings: View {
             Image(systemName: icon)
                 .foregroundColor(colorScheme == .dark ? .white : .black)
             Text(title)
+                .font(.system(size: 15, weight: .regular, design: .default))
                 .foregroundColor(colorScheme == .dark ? .white : .black)
             Spacer()
             if !detail.isEmpty {

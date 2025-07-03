@@ -69,7 +69,7 @@ struct TestView: View {
             }) {
                Text("12:34")
                     .font(.system(size: 24, weight: .heavy, design: .rounded))
-                    .foregroundColor(.gray)
+                    .foregroundColor(.white)
             }
         }
         .fullScreenCover(isPresented: $isCameraPresented) {

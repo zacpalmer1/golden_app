@@ -7,43 +7,27 @@ struct MyActivity: View {
 
     // Define the items with explicit color types
     let items = [
-        ("joshprofile", "Josh Powers", "heart.fill", "10:32 AM", Color.pink),
-        ("leeprofile", "Lee Eberly", "message.fill", "Wow I was just ...", Color.green),
-        ("kennprofile", "Kennedy Siegler", "hand.wave.fill", "Where was thi ...", Color.orange),
-        ("jackprofile", "Jack Malo", "heart.fill", "10:32 AM", Color.pink),
-        ("blakeprofile", "Blake Gillian", "heart.fill", "Wow I was just ...", Color.pink),
-        ("roryprofile", "Rory Bostwick", "message.fill", "When are we h ...", Color.green)
+        ("joshlarge", "Josh Powers", "heart.fill", "10:32 AM", Color.pink),
+        ("kennlarge", "Kennedy Seigler", "message.fill", "Wow I was just ...", Color.green),
+        ("lindalarge", "Lindsay McNamara", "hand.wave.fill", "Where was thi ...", Color.orange),
+        ("blakelarge", "Blake Gillian", "heart.fill", "10:32 AM", Color.pink),
+        ("zaclarge", "Zac Palmer", "heart.fill", "Wow I was just ...", Color.pink),
+        ("zac2large", "Zachary Palmer", "message.fill", "When are we h ...", Color.green)
     ]
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 16) {
-            Button(action: {
-                activity.toggle()
-            }) {
-                HStack(spacing: 0) {
-                    Text("Activity")
-                        .font(.system(size: 24, weight: .bold, design: .default))
-                        .padding(.trailing, 6)
-                        .foregroundColor(colorScheme == .dark ? .white : .black)
-                    
-                    Image(systemName: "chevron.right")
-                        .bold()
-                        .foregroundColor(.gray)
-                    
-                }
-            }
-            .fullScreenCover(isPresented: $activity) {
-                MyActivityExpanded()
-            }
-
+        VStack(alignment: .leading, spacing: 10) {
+           
             ScrollView(.vertical, showsIndicators: false) {
-                VStack(spacing:10 ) {
+                VStack(spacing:0 ) {
                     ForEach(0..<items.count) { index in
                         HStack {
                             Image(items[index].0)
                                 .resizable()
-                                .frame(width: 35, height: 35)
-
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 40, height: 40)
+                                .clipped()
+                                .cornerRadius(11)
                             Text(items[index].1)
                                 .foregroundColor(colorScheme == .dark ? .white : .black)
                                 .font(.system(size: 16, weight: .regular, design: .default))
@@ -57,13 +41,14 @@ struct MyActivity: View {
                                 .foregroundColor(colorScheme == .dark ? .white : .black)
                                 .font(.system(size: 14, weight: .regular, design: .default))
                         }
-                        
+                        .containerRelativeFrame(.vertical, count: 3, spacing: 0)
                     }
                     
                 }
                 
             }
-            .frame(height: 130) // Same height as the original
+            
+            .frame(height: 150) // Same height as the original
             .scrollTargetLayout()
             .scrollTargetBehavior(.paging)
         }

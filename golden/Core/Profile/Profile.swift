@@ -9,7 +9,30 @@ class VideoViewModel: ObservableObject {
     @Published var selectedVideoURL: URL?
     @Published var isDarkBackground: Bool = false
 }
-
+let exampleUsers: [UserFeedItem] = [
+    UserFeedItem(
+        image: "joshlarge",
+        name: "Josh Powers",
+        username: "joshpowers",
+        followersCount: "675",
+        streaks: "5",
+        likes: "2",
+        comments: "2",
+        date: "Today",
+        favoritePosts: ["joshlarge1", "joshlarge2", "joshlarge3", "joshlarge4", "joshlarge5", "joshlarge6"]
+    ),
+    UserFeedItem(
+        image: "kennlarge",
+        name: "Kennedy Seigler",
+        username: "kennseigler2",
+        followersCount: "1.2K",
+        streaks: "3",
+        likes: "4",
+        comments: "2",
+        date: "Today",
+        favoritePosts: ["kennlarge1", "kennlarge2", "kennlarge3", "kennlarge4", "kennlarge5", "kennlarge6"]
+    )
+]
 struct Profile: View {
     @State private var usersearch: String = ""
     @Environment(\.presentationMode) var presentationMode
@@ -17,7 +40,7 @@ struct Profile: View {
     @State private var settings = false
     @State private var isVideoPickerPresented: Bool = false
     @State private var scrollOffset: CGFloat = .zero
-    
+    @State private var activity = false
     @State private var showToolbar: Bool = false
     @EnvironmentObject var viewModel: VideoViewModel
     var body: some View {
@@ -70,14 +93,57 @@ struct Profile: View {
                 }
                 .frame(height: 302)
                 
-                VStack(alignment: .leading) {
+                VStack(alignment: .leading, spacing: 3) {
+                    Button(action: {
+                        activity.toggle()
+                    }) {
+                        HStack(spacing: 0) {
+                            Text("Activity")
+                                .font(.system(size: 24, weight: .bold, design: .default))
+                                .padding(.trailing, 6)
+                                .foregroundColor(.white)
+                            
+                            Image(systemName: "chevron.right")
+                                .bold()
+                                .foregroundColor(.gray)
+                            
+                        }
+                        .padding(.horizontal, 17)
+                    }
+                    .fullScreenCover(isPresented: $activity) {
+                        MyActivityExpanded()
+                    }
+                    .padding(.bottom, 10)
                     MyActivity()
+                        .padding(.horizontal, 17)
+                        .padding(.bottom, 20)
+                    Button(action: {
+                        activity.toggle()
+                    }) {
+                        HStack(spacing: 0) {
+                            Text("Favorites")
+                                .font(.system(size: 24, weight: .bold, design: .default))
+                                .padding(.trailing, 6)
+                                .foregroundColor(.white)
+                            
+                            Image(systemName: "chevron.right")
+                                .bold()
+                                .foregroundColor(.gray)
+                            
+                        }
+                        .padding(.horizontal, 17)
+                        .padding(.bottom, 10)
+                    }
+                    .fullScreenCover(isPresented: $activity) {
+                        MyActivityExpanded()
+                    }
+
                     ProfileRecent()
-                        .padding(.top, 13)
-                        .padding(.bottom, 15)
+                        .padding(.bottom, 20)
+                        
+                        .padding(.horizontal, 13)
                 }
                 .padding(.top, 13)
-                .padding(.horizontal, 20)
 
                 VStack(alignment: .leading) {
                     ZStack {
@@ -126,6 +192,7 @@ struct Profile: View {
                 
                 ToolbarItem(placement: .navigationBarTrailing) {
                     HStack {
+                        
                         Button(action: {
                             isVideoPickerPresented.toggle()
                         }) {
@@ -170,6 +237,10 @@ struct Profile: View {
         }
         .scrollIndicators(.hidden)
     }
+    private func checkScroll(geo: GeometryProxy) {
+        let offset = geo.frame(in: .global).minY
+        showToolbar = offset < -200
+    }
 }
 
 struct ScrollViewOffsetPreferenceKey: PreferenceKey {
@@ -179,6 +250,10 @@ struct ScrollViewOffsetPreferenceKey: PreferenceKey {
     }
 }
 
-#Preview {
-    Profile()
+struct Profile_Previews: PreviewProvider {
+    static var previews: some View {
+        let viewModel = VideoViewModel() // Create an instance of VideoViewModel
+        Profile()
+            .environmentObject(viewModel) // Pass the instance to the environment
+    }
 }

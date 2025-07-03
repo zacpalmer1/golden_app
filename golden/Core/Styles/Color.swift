@@ -39,10 +39,12 @@ let card: [Color] = [Color(hex: "#87BFFF"), Color(hex: "#8F0200"), Color(hex: "#
 let card2: [Color] = [Color(hex: "#7FDEFF"), Color(hex: "#2C2A4A"), Color(hex: "#4F518C"),Color(hex: "#907AD6"), Color(hex: "#0099CC"), Color(hex: "#2C2A4A"),Color(hex: "#7FDEFF"), Color(hex: "#907AD6"), Color(hex: "#7FDEFF")]
 let card3: [Color] = [Color(hex: "#62466B"), Color(hex: "#8C93A8"), Color(hex: "#45364B"),Color(hex: "#876194"), Color(hex: "#8C93A8"), Color(hex: "#62466B"),Color(hex: "#45364B"), Color(hex: "#876194"), Color(hex: "#62466B")]
 let card4: [Color] = [Color(hex: "#C92318"), Color(hex: "#FF7733"), Color(hex: "#DF4E2A"),Color(hex: "#F97862"), Color(hex: "#DF4E2A"), Color(hex: "#F97862"),Color(hex: "#FF7733"), Color(hex: "#C92318"), Color(hex: "#DF4E2A")]
-let follow: [Color] = [Color(hex: "#FF931F"), Color(hex: "#F57E00"), Color(hex: "#FF931F"),Color(hex: "#CC6900"), Color(hex: "#CC6900"), Color(hex: "#FF931F"),Color(hex: "#CC6900"), Color(hex: "#CC6900"), Color(hex: "#CC6900")]
+let follow: [Color] = [Color(hex: "#b71336"), Color(hex: "#dd33aa"), Color(hex: "#FF931F"),Color(hex: "#CC6900"), Color(hex: "#CC6900"), Color(hex: "#FF931F"),Color(hex: "#CC6900"), Color(hex: "#CC6900"), Color(hex: "#CC6900")]
 
 let orange: [Color] = [Color(hex: "#87BFFF"), Color(hex: "#8F0200"), Color(hex: "#FF8C42"),Color(hex: "#3B28CC"), Color(hex: "#3B28CC"), Color(hex: "#FF8C42"),Color(hex: "#FF3C38"), Color(hex: "#3B28CC"), Color(hex: "#FF8C42")]
-let pink: [Color] = [Color(hex: "#7FDEFF"), Color(hex: "#2C2A4A"), Color(hex: "#4F518C"),Color(hex: "#907AD6"), Color(hex: "#0099CC"), Color(hex: "#2C2A4A"),Color(hex: "#7FDEFF"), Color(hex: "#907AD6"), Color(hex: "#7FDEFF")]
+
+let pink: [Color] = [Color(hex: "#ff0000"), Color(hex: "#dd33aa"), Color(hex: "#ff0000"),Color(hex: "#b71336"), Color(hex: "#dd88cc"), Color(hex: "#cc1166"),Color(hex: "#dd88cc"), Color(hex: "#dd33aa"), Color(hex: "#ff0000")]
+
 let green: [Color] = [Color(hex: "#62466B"), Color(hex: "#8C93A8"), Color(hex: "#45364B"),Color(hex: "#876194"), Color(hex: "#8C93A8"), Color(hex: "#62466B"),Color(hex: "#45364B"), Color(hex: "#876194"), Color(hex: "#62466B")]
 let red: [Color] = [Color(hex: "#C92318"), Color(hex: "#FF7733"), Color(hex: "#DF4E2A"),Color(hex: "#F97862"), Color(hex: "#DF4E2A"), Color(hex: "#F97862"),Color(hex: "#FF7733"), Color(hex: "#C92318"), Color(hex: "#DF4E2A")]
 // Enviromental Colors

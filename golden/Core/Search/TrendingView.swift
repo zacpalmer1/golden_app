@@ -27,18 +27,18 @@ struct TrendingView: View {
                                     Circle()
                                         .frame(width: 30)
                                         .foregroundStyle(.ultraThinMaterial)
-                                    Image(systemName: "chevron.backward")
+                                    Image(systemName: "chevron.down")
                                         .resizable()
-                                        .frame(width: 8, height: 14)
-                                        .foregroundColor(.white)
+                                        .frame(width: 14, height: 8)
+                                        .foregroundColor(colorScheme == .dark ? .white : .black)
                                         .bold()
-                                        .offset(x: -1)
+                                        
                                 }
                             }
                                 
                         }
-                        .padding(.horizontal, 10)
-                        .padding(.horizontal, 7)
+                        
+                       
                         
                         VStack(alignment: .center){
                             ScrollView(.vertical, showsIndicators: false) {
@@ -51,23 +51,37 @@ struct TrendingView: View {
                                             VStack(alignment:.leading){
                                                 HStack{
                                                     Text(trendingUser.rank)
-                                                        .font(.system(size: 20, weight: .bold, design: .default))
+                                                        .font(.system(size: 23, weight: .bold, design: .default))
                                                         .foregroundColor(colorScheme == .dark ? .white : .black)
                                                     Text(trendingUser.name)
-                                                        .font(.system(size: 20, weight: .regular, design: .default))
+                                                        .font(.system(size: 23, weight: .regular, design: .default))
+                                                        .foregroundColor(.gray)
+                                                    Spacer()
+                                                    Text("Likes:")
+                                                        .font(.system(size: 18, weight: .bold, design: .default))
+                                                        .foregroundColor(colorScheme == .dark ? .white : .black)
+                                                    Text("1.2k")
+                                                        .font(.system(size: 18, weight: .regular, design: .default))
                                                         .foregroundColor(.gray)
                                                 }
-                                                Image(trendingUser.image)
-                                                    .resizable()
-                                                    .scaledToFill()
-                                                    .frame(width: 360, height: 270)
-                                                    .foregroundColor(.white)
-                                                    .cornerRadius(10)
+                                                ZStack(alignment:.bottom){
+                                                    Image(trendingUser.image)
+                                                        .resizable()
+                                                        .scaledToFill()
+                                                        .frame(width: 360, height: 470)
+                                                        .foregroundColor(.white)
+                                                        .cornerRadius(25)
+                                                   
+                                                        .padding(.bottom, 10)
+                                                }
+                                                .padding(.bottom, 20)
                                             }
+                                            
                                             .frame(maxWidth: .infinity)
                                         }
                                         .fullScreenCover(isPresented: $profile) {
-                                            ViewProfile()
+                                            ViewProfile(user: UserFeedItem(image: "joshlarge", name: "Josh Powers", username:"joshpowers", followersCount: "98", streaks: "5", likes: "2", comments: "2", date:"Today", favoritePosts: ["joshpost1", "joshpost2", "joshpost3", "joshpost4", "joshpost5", "joshpost6"]))
+
                                                 .transition(.move(edge: .trailing))
                                             
                                         }
@@ -78,15 +92,17 @@ struct TrendingView: View {
                             .scrollBounceBehavior(.basedOnSize)
                             .scrollTargetLayout()
                             .scrollTargetBehavior(.viewAligned)
+                            
                         }
                         
                         
                     }
                     
-                    
+                    .padding(.horizontal, 17)
                     .padding(.top, 10)
                     .frame(maxWidth: .infinity) // Allow VStack to take up available width
                 }
+                
                 .frame(maxWidth: .infinity)
                 .scrollIndicators(.hidden)
             }
